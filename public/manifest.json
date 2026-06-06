@@ -1,0 +1,39 @@
+{
+  "name": "FIFA World Cup 2026",
+  "short_name": "WC2026",
+  "description": "Official fan platform for FIFA World Cup 2026 – Live scores, schedule, standings, bracket and more",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050a1a",
+  "theme_color": "#003da5",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/wc2026-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/wc2026-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Live Center",
+      "short_name": "Live",
+      "url": "/live",
+      "icons": [{ "src": "/wc2026-logo.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Match Schedule",
+      "short_name": "Schedule",
+      "url": "/schedule",
+      "icons": [{ "src": "/wc2026-logo.png", "sizes": "96x96" }]
+    }
+  ],
+  "categories": ["sports", "entertainment"]
+}

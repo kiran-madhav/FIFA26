@@ -1,26 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss";
 
+/* ===========================
+   FIFA WC 2026 Design Tokens
+   =========================== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Core Brand */
+  --fifa-blue: #003da5;
+  --fifa-blue-light: #0052cc;
+  --fifa-blue-dark: #002570;
+  --fifa-gold: #ffd700;
+  --fifa-gold-light: #ffe55c;
+  --fifa-gold-dark: #ccac00;
+
+  /* Backgrounds (Dark Theme Default) */
+  --bg-primary: #050a1a;
+  --bg-secondary: #0a1428;
+  --bg-card: #0d1b35;
+  --bg-card-hover: #132040;
+  --bg-glass: rgba(13, 27, 53, 0.6);
+  --bg-glass-light: rgba(255, 255, 255, 0.05);
+
+  /* Text */
+  --text-primary: #f0f4ff;
+  --text-secondary: #8ba3cc;
+  --text-muted: #4a6494;
+  --text-gold: #ffd700;
+
+  /* Borders */
+  --border-primary: rgba(0, 61, 165, 0.4);
+  --border-gold: rgba(255, 215, 0, 0.4);
+  --border-glass: rgba(255, 255, 255, 0.08);
+
+  /* Status */
+  --live-red: #ff3b3b;
+  --win-green: #00d68f;
+  --draw-yellow: #ffc107;
+  --loss-red: #ff4d4d;
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, #050a1a 0%, #0a1428 40%, #001f6b 100%);
+  --gradient-gold: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
+  --gradient-blue: linear-gradient(135deg, #003da5 0%, #0063ff 100%);
+  --gradient-card: linear-gradient(135deg, rgba(0, 61, 165, 0.15) 0%, rgba(0, 82, 204, 0.05) 100%);
+
+  /* Shadows */
+  --shadow-card: 0 4px 24px rgba(0, 61, 165, 0.15);
+  --shadow-gold: 0 0 30px rgba(255, 215, 0, 0.2);
+  --shadow-live: 0 0 20px rgba(255, 59, 59, 0.4);
+  --shadow-glow: 0 0 40px rgba(0, 61, 165, 0.3);
+
+  /* Fonts */
+  --font-display: "Orbitron", sans-serif;
+  --font-heading: "Rajdhani", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+[data-theme="light"] {
+  --bg-primary: #f0f4ff;
+  --bg-secondary: #e4ecff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8f9ff;
+  --bg-glass: rgba(255, 255, 255, 0.8);
+  --bg-glass-light: rgba(0, 61, 165, 0.05);
+  --text-primary: #050a1a;
+  --text-secondary: #2a4a8a;
+  --text-muted: #6a84b4;
+  --border-primary: rgba(0, 61, 165, 0.2);
+  --border-glass: rgba(0, 0, 0, 0.08);
+  --gradient-hero: linear-gradient(135deg, #e4ecff 0%, #d0deff 40%, #b8d0ff 100%);
+  --shadow-card: 0 4px 24px rgba(0, 61, 165, 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ===========================
+   Base Styles
+   =========================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background var(--transition-slow), color var(--transition-slow);
+}
+
+/* ===========================
+   Scrollbar
+   =========================== */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--fifa-blue);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--fifa-blue-light);
+}
+
+/* ===========================
+   Typography Utilities
+   =========================== */
+.font-display {
+  font-family: var(--font-display);
+}
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+/* ===========================
+   Glass Card
+   =========================== */
+.glass-card {
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.glass-card-gold {
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-gold);
+}
+
+/* ===========================
+   Gradient Text
+   =========================== */
+.text-gradient-gold {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-blue {
+  background: var(--gradient-blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===========================
+   Live Pulse Animation
+   =========================== */
+@keyframes livePulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  75%,
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-live-pulse {
+  animation: livePulse 1.5s ease-in-out infinite;
+}
+.animate-ping-slow {
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+.animate-slide-up {
+  animation: slideInUp 0.4s ease forwards;
+}
+.animate-slide-left {
+  animation: slideInLeft 0.4s ease forwards;
+}
+
+/* ===========================
+   Shimmer Loading
+   =========================== */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--bg-card) 25%,
+    var(--bg-card-hover) 50%,
+    var(--bg-card) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* ===========================
+   Glow Effects
+   =========================== */
+.glow-blue {
+  box-shadow: 0 0 20px rgba(0, 61, 165, 0.5), 0 0 40px rgba(0, 61, 165, 0.2);
+}
+.glow-gold {
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4), 0 0 40px rgba(255, 215, 0, 0.15);
+}
+
+/* ===========================
+   Stat Badge
+   =========================== */
+.stat-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* ===========================
+   Team Flag Colors (for group highlighting)
+   =========================== */
+.qualify-zone {
+  background: rgba(0, 214, 143, 0.08);
+  border-left: 3px solid var(--win-green);
+}
+.playoff-zone {
+  background: rgba(255, 193, 7, 0.08);
+  border-left: 3px solid var(--draw-yellow);
+}
+
+/* ===========================
+   Bracket Lines
+   =========================== */
+.bracket-line {
+  stroke: var(--border-primary);
+  stroke-width: 2;
+  fill: none;
+}
+
+/* ===========================
+   Page Transitions
+   =========================== */
+.page-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* ===========================
+   Responsive Utilities
+   =========================== */
+@media (max-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+/* ===========================
+   Selection
+   =========================== */
+::selection {
+  background: rgba(0, 61, 165, 0.4);
+  color: var(--text-primary);
 }
