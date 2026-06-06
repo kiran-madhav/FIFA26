@@ -51,12 +51,6 @@ function ChampionPredictor() {
   const predictedTeam = prediction ? TEAMS.find((t) => t.id === prediction.teamId) : null;
   const risk = predictedTeam ? getRisk(predictedTeam.fifaRanking ?? 99) : null;
 
-  const handleConfirm = () => {
-    if (!confirmTeam) return;
-    setPrediction({ teamId: confirmTeam.id, stage: "Group Stage", timestamp: Date.now() });
-    setConfirmTeam(null);
-    setShowPicker(false);
-  };
 
   return (
     <div className="relative">
@@ -280,7 +274,11 @@ function ChampionPredictor() {
                           initial={{ opacity: 0, scale: 0.9 }}
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ delay: i * 0.02 }}
-                          onClick={() => setConfirmTeam(isConfirming ? null : team)}
+                          onClick={() => {
+                            setPrediction({ teamId: team.id, stage: "Group Stage", timestamp: Date.now() });
+                            setShowPicker(false);
+                            setConfirmTeam(null);
+                          }}
                           className={cn(
                             "relative flex flex-col items-center gap-1.5 p-3 rounded-xl border transition-all text-center",
                             isConfirming
@@ -312,54 +310,6 @@ function ChampionPredictor() {
                     </div>
                   )}
                 </div>
-
-                {/* Confirm Banner */}
-                <AnimatePresence>
-                  {confirmTeam && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
-                      className="flex flex-col sm:flex-row items-center gap-3 p-4 rounded-2xl border-2 border-[var(--fifa-gold)]/60 bg-[var(--fifa-gold)]/10"
-                    >
-                      <div className="flex items-center gap-3 flex-1">
-                        <span className="text-3xl"><Flag emoji={confirmTeam.flag} size={32} /></span>
-                        <div>
-                          <div className="font-bold text-[var(--text-primary)]">{confirmTeam.name}</div>
-                          <div className="text-xs text-[var(--text-muted)] flex items-center gap-1">
-                            {Array.from({ length: 5 }).map((_, i) => (
-                              <Flame
-                                key={i}
-                                size={11}
-                                className={i < getRisk(confirmTeam.fifaRanking ?? 99).stars ? "text-[var(--fifa-gold)]" : "text-[var(--border-glass)]"}
-                                fill={i < getRisk(confirmTeam.fifaRanking ?? 99).stars ? "currentColor" : "none"}
-                              />
-                            ))}
-                            <span className="ml-1" style={{ color: getRisk(confirmTeam.fifaRanking ?? 99).color }}>
-                              {getRisk(confirmTeam.fifaRanking ?? 99).label}
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="flex gap-2">
-                        <button
-                          id="cancel-prediction"
-                          onClick={() => setConfirmTeam(null)}
-                          className="px-4 py-2 rounded-xl border border-[var(--border-glass)] text-sm text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors"
-                        >
-                          Cancel
-                        </button>
-                        <button
-                          id="confirm-prediction"
-                          onClick={handleConfirm}
-                          className="px-5 py-2 rounded-xl bg-gradient-to-r from-[var(--fifa-gold)] to-orange-500 text-black font-bold text-sm hover:opacity-90 transition-opacity glow-gold"
-                        >
-                          🏆 Lock In Prediction!
-                        </button>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
               </div>
             )}
           </motion.div>
@@ -867,21 +817,20 @@ export default function PollsPage() {
           ))}
         </div>
 
-        {/* Sticky Submit Footer */}
+        {/* Submit Block (Above Footer) */}
         {!isSubmitted && (
-          <div className="fixed bottom-0 left-0 right-0 p-4 bg-[var(--bg-card)]/90 backdrop-blur-md border-t border-[var(--border-glass)] z-50 flex justify-center">
-            <div className="max-w-lg w-full flex items-center justify-between">
-              <div className="text-sm text-[var(--text-muted)] font-bold">
-                {Object.keys(userVotes).length} / {POLLS.length} polls answered
-              </div>
-              <button
-                disabled={Object.keys(userVotes).length < POLLS.length || !prediction || isSubmitting}
-                onClick={handleSubmit}
-                className="px-6 py-2.5 rounded-xl bg-[var(--fifa-gold)] text-black font-bold text-sm hover:bg-orange-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg"
-              >
-                {isSubmitting ? "Submitting..." : "Submit Predictions"}
-              </button>
+          <div className="mt-12 p-6 bg-[var(--bg-card)] rounded-2xl border border-[var(--border-glass)] flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg">
+            <div className="text-sm text-[var(--text-muted)] font-bold text-center sm:text-left">
+              {Object.keys(userVotes).length} / {POLLS.length} polls answered
+              {!prediction && <div className="text-red-500 text-xs mt-1">Please predict the Champion!</div>}
             </div>
+            <button
+              disabled={Object.keys(userVotes).length < POLLS.length || !prediction || isSubmitting}
+              onClick={handleSubmit}
+              className="px-8 py-3 rounded-xl bg-[var(--fifa-gold)] text-black font-bold text-base hover:bg-orange-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg w-full sm:w-auto"
+            >
+              {isSubmitting ? "Submitting..." : "Submit Predictions"}
+            </button>
           </div>
         )}
 
