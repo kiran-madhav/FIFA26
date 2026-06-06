@@ -602,8 +602,8 @@ function PollCard({ poll, showResults }: { poll: typeof POLLS[0], showResults: b
                       )}>
                         {option.label}
                       </div>
-                      {"sub" in option && option.sub && (
-                        <div className="text-[10px] text-[var(--text-muted)] truncate">{option.sub}</div>
+                      {"sub" in option && (option as { sub?: string }).sub && (
+                        <div className="text-[10px] text-[var(--text-muted)] truncate">{(option as { sub?: string }).sub}</div>
                       )}
                       {"club" in option && (option as { club?: string }).club && (
                         <div className="text-[10px] text-[var(--text-muted)] truncate">

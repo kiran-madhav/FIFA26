@@ -445,7 +445,7 @@ export default function HomePage() {
             { href: "/highlights", icon: Zap, label: "Highlights", desc: "Goals & key moments" },
             { href: "/fantasy", icon: Trophy, label: "Fantasy XI", desc: "Build your dream team" },
             { href: "/polls", icon: TrendingUp, label: "Fan Polls", desc: "Vote for the winner" },
-          ].map(({ href, icon: Icon, label, desc, badge }, i) => (
+          ].map(({ href, icon: Icon, label, desc }, i) => (
             <motion.div
               key={href}
               initial={{ opacity: 0, y: 20 }}
@@ -462,11 +462,6 @@ export default function HomePage() {
                     <div className="p-2 bg-[#003da5]/10 rounded-xl group-hover:bg-[#003da5] transition-colors duration-300 shadow-sm border border-[#003da5]/20">
                       <Icon size={24} className="text-[#003da5] group-hover:text-white transition-colors duration-300" />
                     </div>
-                    {badge && (
-                      <span className="px-1.5 py-0.5 text-[10px] font-bold bg-red-600 text-white rounded animate-live-pulse shadow-sm">
-                        {badge}
-                      </span>
-                    )}
                   </div>
                   <h3 className="font-extrabold text-[#002870] text-base mb-0.5 drop-shadow-sm">{label}</h3>
                   <p className="text-xs text-[#003da5]/80 font-bold">{desc}</p>

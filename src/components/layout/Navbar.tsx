@@ -72,7 +72,7 @@ export function Navbar() {
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-1">
-          {NAV_LINKS.map(({ href, label, icon: Icon, badge }) => {
+          {NAV_LINKS.map(({ href, label, icon: Icon }) => {
             const active = pathname === href;
             return (
               <Link
@@ -87,11 +87,6 @@ export function Navbar() {
               >
                 <Icon size={15} />
                 {label}
-                {badge && (
-                  <span className="ml-1 px-1 py-0.5 text-[9px] font-bold bg-red-500 text-white rounded animate-live-pulse">
-                    {badge}
-                  </span>
-                )}
                 {active && (
                   <motion.div
                     layoutId="nav-active"
@@ -127,7 +122,7 @@ export function Navbar() {
             className="lg:hidden overflow-hidden bg-[var(--bg-secondary)]/95 backdrop-blur-xl border-b border-[var(--border-glass)]"
           >
             <nav className="px-4 py-4 grid grid-cols-2 gap-2">
-              {NAV_LINKS.map(({ href, label, icon: Icon, badge }) => {
+              {NAV_LINKS.map(({ href, label, icon: Icon }) => {
                 const active = pathname === href;
                 return (
                   <Link
@@ -138,16 +133,11 @@ export function Navbar() {
                       "flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium transition-all",
                       active
                         ? "text-[var(--fifa-gold)] bg-[var(--fifa-blue)]/20 border border-[var(--fifa-blue)]/30"
-                        : "text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-glass-light)]"
+                        : "text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-glass-light)] border border-transparent"
                     )}
                   >
-                    <Icon size={16} />
-                    {label}
-                    {badge && (
-                      <span className="ml-auto px-1 py-0.5 text-[9px] font-bold bg-red-500 text-white rounded animate-live-pulse">
-                        {badge}
-                      </span>
-                    )}
+                    <Icon size={18} className={active ? "text-[var(--fifa-gold)]" : "text-[var(--text-muted)]"} />
+                    <span className="truncate">{label}</span>
                   </Link>
                 );
               })}
