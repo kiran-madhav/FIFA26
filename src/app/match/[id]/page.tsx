@@ -7,10 +7,11 @@ import { MapPin, Clock, ArrowLeft, Activity } from "lucide-react";
 import { MATCHES } from "@/lib/data/matches";
 import { formatDate, formatTime, getPhaseName, calcPrediction, cn } from "@/lib/utils";
 import { Flag } from "@/components/ui/Flag";
+import type { Match } from "@/types";
 
 export default function MatchDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
-  const match = MATCHES.find((m) => m.id === parseInt(id));
+  const match = MATCHES.find((m) => m.id === parseInt(id)) as unknown as Match;
   if (!match) notFound();
 
   const prediction = calcPrediction(
