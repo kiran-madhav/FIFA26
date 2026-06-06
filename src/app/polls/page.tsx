@@ -833,12 +833,6 @@ export default function PollsPage() {
             </button>
           </div>
         )}
-
-        <div className="mt-10 text-center">
-          <p className="text-xs text-[var(--text-muted)] mb-2">
-            Votes are synced globally in real-time · Powered by Supabase
-          </p>
-        </div>
       </div>
     </div>
   );
