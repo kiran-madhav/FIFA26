@@ -22,7 +22,7 @@ const calculateGroups = (): Group[] => {
   });
 
   // Process matches
-  MATCHES.forEach((match: Match) => {
+  MATCHES.forEach((match: any) => {
     if (match.phase === "Group" && match.homeScore !== null && match.awayScore !== null) {
       const homeStanding = standingsMap.get(match.homeTeam.id);
       const awayStanding = standingsMap.get(match.awayTeam.id);
