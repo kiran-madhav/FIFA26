@@ -14,8 +14,8 @@ export default function MatchDetailPage({ params }: { params: Promise<{ id: stri
   if (!match) notFound();
 
   const prediction = calcPrediction(
-    match.homeTeam.fifaRanking ?? 50,
-    match.awayTeam.fifaRanking ?? 50
+    (match.homeTeam as any).fifaRanking ?? 50,
+    (match.awayTeam as any).fifaRanking ?? 50
   );
 
   const [activeTab, setActiveTab] = useState<"preview" | "stats" | "lineup">("preview");
