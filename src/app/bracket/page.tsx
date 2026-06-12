@@ -65,8 +65,8 @@ function MatchNode({ matchId, topLabel, bottomLabel, onSelect, picks, isLeft, ro
       {/* Bracket Connector Lines */}
       {roundIdx < 4 && (
         <div className={cn(
-          "absolute w-6 sm:w-8 border-[var(--border-glass)]",
-          isLeft ? "-right-6 sm:-right-8" : "-left-6 sm:-left-8",
+          "absolute w-8 sm:w-12 border-[var(--border-glass)]",
+          isLeft ? "-right-8 sm:-right-12" : "-left-8 sm:-left-12",
           isTopMatch ? "border-t border-r rounded-tr-xl h-[50%]" : "border-b border-r rounded-br-xl h-[50%] -top-[50%]"
         )}
         style={{

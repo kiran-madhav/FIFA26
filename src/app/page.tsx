@@ -443,6 +443,7 @@ export default function HomePage() {
             { href: "/schedule", icon: Calendar, label: "Match Schedule", desc: "104 action-packed games" },
             { href: "/teams", icon: Users, label: "Team Pages", desc: "48 teams & full squads" },
             { href: "/bracket", icon: GitBranch, label: "Tournament Bracket", desc: "Predict the Knockouts" },
+            { href: "/highlights", icon: Zap, label: "Highlights", desc: "Goals & key moments" },
             { href: "/fantasy", icon: Trophy, label: "Fantasy XI", desc: "Build your dream team" },
             { href: "/polls", icon: TrendingUp, label: "Fan Polls", desc: "Vote for the winner" },
           ].map(({ href, icon: Icon, label, desc }, i) => (
