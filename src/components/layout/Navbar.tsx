@@ -16,6 +16,7 @@ const NAV_LINKS = [
   { href: "/teams", label: "Teams", icon: Users },
   { href: "/highlights", label: "Highlights", icon: Play },
   { href: "/fantasy", label: "Fantasy", icon: Star },
+  { href: "/bracket", label: "Bracket", icon: GitBranch },
   { href: "/polls", label: "Polls", icon: Swords },
 ];
 

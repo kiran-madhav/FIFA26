@@ -174,3 +174,24 @@ export const useChampionStore = create<ChampionStore>()(
     { name: "wc2026-champion-prediction" }
   )
 );
+
+// ========== Bracket Store ==========
+interface BracketStore {
+  picks: Record<string, string>; // matchId -> team identifier
+  setPick: (matchId: string, team: string) => void;
+  clearPicks: () => void;
+}
+
+export const useBracketStore = create<BracketStore>()(
+  persist(
+    (set) => ({
+      picks: {},
+      setPick: (matchId, team) =>
+        set((s) => ({
+          picks: { ...s.picks, [matchId]: team }
+        })),
+      clearPicks: () => set({ picks: {} }),
+    }),
+    { name: "wc2026-bracket" }
+  )
+);
