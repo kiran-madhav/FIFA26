@@ -626,6 +626,9 @@ export default function HomePage() {
               <Link href="/polls" className="flex items-center gap-2 px-8 py-4 rounded-xl border-2 border-[var(--fifa-gold)] text-[var(--fifa-gold)] text-lg font-bold hover:bg-[var(--fifa-gold)] hover:text-black transition-all shadow-lg shadow-[var(--fifa-gold)]/20">
                 Pick the Winner
               </Link>
+              <Link href="/bracket" className="flex items-center gap-2 px-8 py-4 rounded-xl bg-[var(--fifa-gold)] text-black text-lg font-bold hover:bg-orange-400 transition-all shadow-lg shadow-[var(--fifa-gold)]/20">
+                <GitBranch size={20} /> Predict Bracket
+              </Link>
             </div>
           </div>
           <motion.div
