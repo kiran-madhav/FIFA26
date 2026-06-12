@@ -6,7 +6,7 @@ export const MATCHES = [
     "group": "A",
     "matchDay": 1,
     "date": "2026-06-11T20:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 1,
       "name": "Mexico",
@@ -21,8 +21,8 @@ export const MATCHES = [
       "tla": "RSA",
       "flag": "🇿🇦"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 3,
+    "awayScore": 1,
     "stadium": {
       "name": "Estadio Azteca",
       "city": "Mexico City",
@@ -36,7 +36,7 @@ export const MATCHES = [
     "group": "A",
     "matchDay": 1,
     "date": "2026-06-11T23:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 3,
       "name": "South Korea",
@@ -51,8 +51,8 @@ export const MATCHES = [
       "tla": "CZE",
       "flag": "🇨🇿"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 0,
+    "awayScore": 0,
     "stadium": {
       "name": "Estadio Akron",
       "city": "Guadalajara",
