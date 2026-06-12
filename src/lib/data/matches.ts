@@ -51,8 +51,8 @@ export const MATCHES = [
       "tla": "CZE",
       "flag": "🇨🇿"
     },
-    "homeScore": 0,
-    "awayScore": 0,
+    "homeScore": 2,
+    "awayScore": 1,
     "stadium": {
       "name": "Estadio Akron",
       "city": "Guadalajara",
