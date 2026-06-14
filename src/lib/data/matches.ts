@@ -126,7 +126,7 @@ export const MATCHES = [
     "group": "C",
     "matchDay": 1,
     "date": "2026-06-13T20:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 11,
       "name": "Haiti",
@@ -141,8 +141,8 @@ export const MATCHES = [
       "tla": "SCO",
       "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 0,
+    "awayScore": 1,
     "stadium": {
       "name": "Gillette Stadium",
       "city": "Boston",
@@ -156,7 +156,7 @@ export const MATCHES = [
     "group": "D",
     "matchDay": 1,
     "date": "2026-06-13T23:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 15,
       "name": "Australia",
@@ -171,8 +171,8 @@ export const MATCHES = [
       "tla": "TUR",
       "flag": "🇹🇷"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 2,
+    "awayScore": 0,
     "stadium": {
       "name": "BC Place",
       "city": "Vancouver",
@@ -186,7 +186,7 @@ export const MATCHES = [
     "group": "C",
     "matchDay": 1,
     "date": "2026-06-13T20:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 9,
       "name": "Brazil",
@@ -201,8 +201,8 @@ export const MATCHES = [
       "tla": "MAR",
       "flag": "🇲🇦"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 1,
+    "awayScore": 1,
     "stadium": {
       "name": "MetLife Stadium",
       "city": "East Rutherford",
