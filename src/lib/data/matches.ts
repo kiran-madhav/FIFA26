@@ -76,13 +76,13 @@ export const MATCHES = [
     },
     "awayTeam": {
       "id": 6,
-      "name": "UEFA Playoff Winner",
-      "shortName": "UEFA PO",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "name": "Bosnia and Herzegovina",
+      "shortName": "Bosnia & Herz.",
+      "tla": "BIH",
+      "flag": "🇧🇦"
     },
-    "homeScore": 2,
-    "awayScore": 0,
+    "homeScore": 1,
+    "awayScore": 1,
     "stadium": {
       "name": "BMO Field",
       "city": "Toronto",
@@ -111,7 +111,7 @@ export const MATCHES = [
       "tla": "PAR",
       "flag": "🇵🇾"
     },
-    "homeScore": 2,
+    "homeScore": 4,
     "awayScore": 1,
     "stadium": {
       "name": "SoFi Stadium",
@@ -126,7 +126,7 @@ export const MATCHES = [
     "group": "C",
     "matchDay": 1,
     "date": "2026-06-13T20:00:00.000Z",
-    "status": "FINISHED",
+    "status": "SCHEDULED",
     "homeTeam": {
       "id": 11,
       "name": "Haiti",
@@ -141,8 +141,8 @@ export const MATCHES = [
       "tla": "SCO",
       "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
     },
-    "homeScore": 1,
-    "awayScore": 1,
+    "homeScore": null,
+    "awayScore": null,
     "stadium": {
       "name": "Gillette Stadium",
       "city": "Boston",
@@ -156,7 +156,7 @@ export const MATCHES = [
     "group": "D",
     "matchDay": 1,
     "date": "2026-06-13T23:00:00.000Z",
-    "status": "FINISHED",
+    "status": "SCHEDULED",
     "homeTeam": {
       "id": 15,
       "name": "Australia",
@@ -171,8 +171,8 @@ export const MATCHES = [
       "tla": "TUR",
       "flag": "🇹🇷"
     },
-    "homeScore": 0,
-    "awayScore": 2,
+    "homeScore": null,
+    "awayScore": null,
     "stadium": {
       "name": "BC Place",
       "city": "Vancouver",
@@ -216,7 +216,7 @@ export const MATCHES = [
     "group": "B",
     "matchDay": 1,
     "date": "2026-06-13T23:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 7,
       "name": "Qatar",
@@ -231,8 +231,8 @@ export const MATCHES = [
       "tla": "SUI",
       "flag": "🇨🇭"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 1,
+    "awayScore": 1,
     "stadium": {
       "name": "Levi's Stadium",
       "city": "San Francisco",
