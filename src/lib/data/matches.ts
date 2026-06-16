@@ -366,7 +366,7 @@ export const MATCHES = [
     "group": "H",
     "matchDay": 1,
     "date": "2026-06-15T20:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 31,
       "name": "Saudi Arabia",
@@ -381,8 +381,8 @@ export const MATCHES = [
       "tla": "URU",
       "flag": "🇺🇾"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 1,
+    "awayScore": 1,
     "stadium": {
       "name": "Hard Rock Stadium",
       "city": "Miami",
@@ -396,7 +396,7 @@ export const MATCHES = [
     "group": "H",
     "matchDay": 1,
     "date": "2026-06-15T23:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 29,
       "name": "Spain",
@@ -411,8 +411,8 @@ export const MATCHES = [
       "tla": "CPV",
       "flag": "🇨🇻"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 0,
+    "awayScore": 0,
     "stadium": {
       "name": "Mercedes-Benz Stadium",
       "city": "Atlanta",
@@ -426,7 +426,7 @@ export const MATCHES = [
     "group": "G",
     "matchDay": 1,
     "date": "2026-06-15T20:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 27,
       "name": "Iran",
@@ -441,8 +441,8 @@ export const MATCHES = [
       "tla": "NZL",
       "flag": "🇳🇿"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 2,
+    "awayScore": 2,
     "stadium": {
       "name": "SoFi Stadium",
       "city": "Los Angeles",
@@ -456,7 +456,7 @@ export const MATCHES = [
     "group": "G",
     "matchDay": 1,
     "date": "2026-06-15T23:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 25,
       "name": "Belgium",
@@ -471,8 +471,8 @@ export const MATCHES = [
       "tla": "EGY",
       "flag": "🇪🇬"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 1,
+    "awayScore": 1,
     "stadium": {
       "name": "Lumen Field",
       "city": "Seattle",
