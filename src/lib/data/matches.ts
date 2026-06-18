@@ -486,7 +486,7 @@ export const MATCHES = [
     "group": "I",
     "matchDay": 1,
     "date": "2026-06-16T20:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 33,
       "name": "France",
@@ -501,8 +501,8 @@ export const MATCHES = [
       "tla": "SEN",
       "flag": "🇸🇳"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 3,
+    "awayScore": 1,
     "stadium": {
       "name": "MetLife Stadium",
       "city": "East Rutherford",
@@ -516,7 +516,7 @@ export const MATCHES = [
     "group": "I",
     "matchDay": 1,
     "date": "2026-06-16T23:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 35,
       "name": "Iraq",
@@ -531,8 +531,8 @@ export const MATCHES = [
       "tla": "NOR",
       "flag": "🇳🇴"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 1,
+    "awayScore": 4,
     "stadium": {
       "name": "Gillette Stadium",
       "city": "Boston",
@@ -546,7 +546,7 @@ export const MATCHES = [
     "group": "J",
     "matchDay": 1,
     "date": "2026-06-16T20:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 37,
       "name": "Argentina",
@@ -561,8 +561,8 @@ export const MATCHES = [
       "tla": "ALG",
       "flag": "🇩🇿"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 3,
+    "awayScore": 0,
     "stadium": {
       "name": "GEHA Field at Arrowhead Stadium",
       "city": "Kansas City",
@@ -576,7 +576,7 @@ export const MATCHES = [
     "group": "J",
     "matchDay": 1,
     "date": "2026-06-16T23:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 39,
       "name": "Austria",
@@ -591,8 +591,8 @@ export const MATCHES = [
       "tla": "JOR",
       "flag": "🇯🇴"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 3,
+    "awayScore": 1,
     "stadium": {
       "name": "Levi's Stadium",
       "city": "San Francisco",
@@ -606,7 +606,7 @@ export const MATCHES = [
     "group": "L",
     "matchDay": 2,
     "date": "2026-06-17T20:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 47,
       "name": "Ghana",
@@ -621,8 +621,8 @@ export const MATCHES = [
       "tla": "PAN",
       "flag": "🇵🇦"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 1,
+    "awayScore": 0,
     "stadium": {
       "name": "BMO Field",
       "city": "Toronto",
@@ -636,7 +636,7 @@ export const MATCHES = [
     "group": "L",
     "matchDay": 2,
     "date": "2026-06-17T23:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 45,
       "name": "England",
@@ -651,8 +651,8 @@ export const MATCHES = [
       "tla": "CRO",
       "flag": "🇭🇷"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 4,
+    "awayScore": 2,
     "stadium": {
       "name": "AT&T Stadium",
       "city": "Dallas",
@@ -666,7 +666,7 @@ export const MATCHES = [
     "group": "K",
     "matchDay": 2,
     "date": "2026-06-17T20:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 41,
       "name": "Portugal",
@@ -681,8 +681,8 @@ export const MATCHES = [
       "tla": "COD",
       "flag": "🇨🇩"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 1,
+    "awayScore": 1,
     "stadium": {
       "name": "NRG Stadium",
       "city": "Houston",
@@ -696,7 +696,7 @@ export const MATCHES = [
     "group": "K",
     "matchDay": 2,
     "date": "2026-06-18T23:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 43,
       "name": "Uzbekistan",
@@ -711,8 +711,8 @@ export const MATCHES = [
       "tla": "COL",
       "flag": "🇨🇴"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 1,
+    "awayScore": 3,
     "stadium": {
       "name": "Estadio Azteca",
       "city": "Mexico City",
