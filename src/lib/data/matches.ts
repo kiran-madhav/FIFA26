@@ -726,7 +726,7 @@ export const MATCHES = [
     "group": "A",
     "matchDay": 2,
     "date": "2026-06-18T20:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 4,
       "name": "Czechia",
@@ -741,8 +741,8 @@ export const MATCHES = [
       "tla": "RSA",
       "flag": "🇿🇦"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 1,
+    "awayScore": 1,
     "stadium": {
       "name": "Mercedes-Benz Stadium",
       "city": "Atlanta",
@@ -756,7 +756,7 @@ export const MATCHES = [
     "group": "B",
     "matchDay": 2,
     "date": "2026-06-18T23:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 8,
       "name": "Switzerland",
@@ -766,13 +766,13 @@ export const MATCHES = [
     },
     "awayTeam": {
       "id": 6,
-      "name": "UEFA Playoff Winner",
-      "shortName": "UEFA PO",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "name": "Bosnia and Herzegovina",
+      "shortName": "Bosnia & Herz.",
+      "tla": "BIH",
+      "flag": "🇧🇦"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 4,
+    "awayScore": 1,
     "stadium": {
       "name": "SoFi Stadium",
       "city": "Los Angeles",
@@ -786,7 +786,7 @@ export const MATCHES = [
     "group": "B",
     "matchDay": 2,
     "date": "2026-06-18T20:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 5,
       "name": "Canada",
@@ -801,8 +801,8 @@ export const MATCHES = [
       "tla": "QAT",
       "flag": "🇶🇦"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 6,
+    "awayScore": 0,
     "stadium": {
       "name": "BC Place",
       "city": "Vancouver",
@@ -816,7 +816,7 @@ export const MATCHES = [
     "group": "A",
     "matchDay": 2,
     "date": "2026-06-18T23:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 1,
       "name": "Mexico",
@@ -831,8 +831,8 @@ export const MATCHES = [
       "tla": "KOR",
       "flag": "🇰🇷"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 1,
+    "awayScore": 0,
     "stadium": {
       "name": "Estadio Akron",
       "city": "Guadalajara",
@@ -846,7 +846,7 @@ export const MATCHES = [
     "group": "C",
     "matchDay": 2,
     "date": "2026-06-19T20:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 9,
       "name": "Brazil",
@@ -861,8 +861,8 @@ export const MATCHES = [
       "tla": "HAI",
       "flag": "🇭🇹"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 3,
+    "awayScore": 0,
     "stadium": {
       "name": "Lincoln Financial Field",
       "city": "Philadelphia",
@@ -876,7 +876,7 @@ export const MATCHES = [
     "group": "C",
     "matchDay": 2,
     "date": "2026-06-19T23:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 12,
       "name": "Scotland",
@@ -891,8 +891,8 @@ export const MATCHES = [
       "tla": "MAR",
       "flag": "🇲🇦"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 0,
+    "awayScore": 1,
     "stadium": {
       "name": "Gillette Stadium",
       "city": "Boston",
@@ -906,7 +906,7 @@ export const MATCHES = [
     "group": "D",
     "matchDay": 2,
     "date": "2026-06-19T20:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 16,
       "name": "Türkiye",
@@ -921,8 +921,8 @@ export const MATCHES = [
       "tla": "PAR",
       "flag": "🇵🇾"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 0,
+    "awayScore": 1,
     "stadium": {
       "name": "Levi's Stadium",
       "city": "San Francisco",
@@ -936,7 +936,7 @@ export const MATCHES = [
     "group": "D",
     "matchDay": 2,
     "date": "2026-06-19T23:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 13,
       "name": "United States",
@@ -951,8 +951,8 @@ export const MATCHES = [
       "tla": "AUS",
       "flag": "🇦🇺"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 2,
+    "awayScore": 0,
     "stadium": {
       "name": "Lumen Field",
       "city": "Seattle",
