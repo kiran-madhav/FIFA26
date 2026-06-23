@@ -5,7 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Home, Calendar, Radio, BarChart3, Users, Trophy, Play,
-  GitBranch, Star, Menu, X, Swords, ArrowLeft
+  GitBranch, Star, Menu, X, Swords, ArrowLeft, Sparkles
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -18,6 +18,7 @@ const NAV_LINKS = [
   { href: "/fantasy", label: "Fantasy", icon: Star },
   { href: "/bracket", label: "Bracket", icon: GitBranch },
   { href: "/polls", label: "Polls", icon: Swords },
+  { href: "/specialities", label: "2026 Specialities", icon: Sparkles },
 ];
 
 export function Navbar() {
