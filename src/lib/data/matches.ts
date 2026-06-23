@@ -1206,7 +1206,7 @@ export const MATCHES = [
     "group": "I",
     "matchDay": 2,
     "date": "2026-06-22T20:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 36,
       "name": "Norway",
@@ -1221,8 +1221,8 @@ export const MATCHES = [
       "tla": "SEN",
       "flag": "🇸🇳"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 3,
+    "awayScore": 2,
     "stadium": {
       "name": "MetLife Stadium",
       "city": "East Rutherford",
@@ -1236,7 +1236,7 @@ export const MATCHES = [
     "group": "I",
     "matchDay": 2,
     "date": "2026-06-22T23:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 33,
       "name": "France",
@@ -1251,8 +1251,8 @@ export const MATCHES = [
       "tla": "IRQ",
       "flag": "🇮🇶"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 3,
+    "awayScore": 0,
     "stadium": {
       "name": "Lincoln Financial Field",
       "city": "Philadelphia",
@@ -1266,7 +1266,7 @@ export const MATCHES = [
     "group": "J",
     "matchDay": 2,
     "date": "2026-06-22T20:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 37,
       "name": "Argentina",
@@ -1281,8 +1281,8 @@ export const MATCHES = [
       "tla": "AUT",
       "flag": "🇦🇹"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 2,
+    "awayScore": 0,
     "stadium": {
       "name": "AT&T Stadium",
       "city": "Dallas",
@@ -1296,7 +1296,7 @@ export const MATCHES = [
     "group": "J",
     "matchDay": 2,
     "date": "2026-06-22T23:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 40,
       "name": "Jordan",
@@ -1311,8 +1311,8 @@ export const MATCHES = [
       "tla": "ALG",
       "flag": "🇩🇿"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 1,
+    "awayScore": 2,
     "stadium": {
       "name": "Levi's Stadium",
       "city": "San Francisco",
