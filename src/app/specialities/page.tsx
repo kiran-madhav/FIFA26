@@ -507,24 +507,6 @@ export default function SpecialitiesPage() {
           ))}
         </div>
 
-        {/* Host Cities Map */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.97 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="relative rounded-2xl overflow-hidden"
-          style={{ border: "1px solid rgba(255,215,0,0.15)" }}
-        >
-          <Image
-            src="/specialities/host-cities.jpg"
-            alt="FIFA World Cup 2026 Host Cities Map"
-            width={1200}
-            height={650}
-            className="w-full object-contain"
-            style={{ background: "#0a1428" }}
-          />
-        </motion.div>
       </Section>
 
       {/* ── SECTION 4: STADIUMS ── */}
