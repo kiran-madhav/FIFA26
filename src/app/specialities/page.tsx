@@ -556,7 +556,7 @@ export default function SpecialitiesPage() {
         </motion.div>
 
         {/* Stadium Cards */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full max-w-6xl mx-auto">
           {stadiums.map((s, i) => (
             <motion.div
               key={s.name}
@@ -565,27 +565,27 @@ export default function SpecialitiesPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
               whileHover={{ y: -5, scale: 1.02 }}
-              className="rounded-xl p-4 flex flex-col w-full overflow-hidden break-words"
+              className="rounded-2xl p-6 md:p-8 flex flex-col items-center text-center w-full overflow-hidden break-words"
               style={{
                 background: "rgba(13,27,53,0.8)",
                 border: "1px solid rgba(255,215,0,0.15)",
-                boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
+                boxShadow: "0 6px 30px rgba(0,0,0,0.4)",
               }}
             >
-              <div className="flex justify-center mb-2">{s.icon}</div>
-              <div className="text-sm font-bold" style={{ color: "var(--text-primary)" }}>
+              <div className="flex justify-center mb-4 scale-125 md:scale-150">{s.icon}</div>
+              <div className="text-lg md:text-xl font-bold mb-1" style={{ color: "var(--text-primary)" }}>
                 {s.name}
               </div>
-              <div className="text-xs mb-2" style={{ color: "var(--text-secondary)" }}>
+              <div className="text-sm mb-6" style={{ color: "var(--text-secondary)" }}>
                 {s.city}
               </div>
               <div
-                className="text-lg font-black"
+                className="text-3xl md:text-4xl font-black drop-shadow-md"
                 style={{ fontFamily: "var(--font-display)", color: "#ffd700" }}
               >
                 {s.capacity}
               </div>
-              <div className="text-xs" style={{ color: "var(--text-muted)" }}>
+              <div className="text-xs md:text-sm font-semibold tracking-widest uppercase mt-2" style={{ color: "var(--text-muted)" }}>
                 Capacity
               </div>
             </motion.div>
