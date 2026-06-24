@@ -430,7 +430,7 @@ export default function SpecialitiesPage() {
           subtitle="The 2026 FIFA World Cup will be the largest tournament ever held, featuring more teams, more matches, and more host cities than any previous edition."
         />
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           {[
             { value: 48, label: "Teams", suffix: "", color: "#ffd700" },
             { value: 104, label: "Matches", suffix: "", color: "#0063ff" },
@@ -466,31 +466,6 @@ export default function SpecialitiesPage() {
           ))}
         </div>
 
-        {/* FIFA Sound branding strip */}
-        <div className="relative rounded-2xl overflow-hidden h-48 md:h-56">
-          <Image unoptimized={true}
-            src="/specialities/fifa-sound.jpg"
-            alt="FIFA 2026 Official Theme"
-            fill
-            className="object-cover"
-          />
-          <div
-            className="absolute inset-0 flex items-center justify-center"
-            style={{ background: "rgba(5,10,26,0.65)" }}
-          >
-            <div className="text-center">
-              <p
-                className="text-2xl md:text-3xl font-black flex items-center justify-center gap-3"
-                style={{ fontFamily: "var(--font-display)", color: "#ffd700" }}
-              >
-                <Music size={28} /> FIFA Sound — Official Theme 2026
-              </p>
-              <p className="mt-2 text-sm" style={{ color: "#8ba3cc" }}>
-                The official soundtrack to the world's greatest sporting event.
-              </p>
-            </div>
-          </div>
-        </div>
       </Section>
 
       {/* ── SECTION 3: HOST NATIONS ── */}
