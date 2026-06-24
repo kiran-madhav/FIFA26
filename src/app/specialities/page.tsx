@@ -3,6 +3,10 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform, useInView, AnimatePresence } from "framer-motion";
+import { 
+  Globe, Building2, Award, Cpu, Rocket, Star, Shield, User, 
+  Music, Target, Activity, Circle, MapPin, Zap, BrainCircuit, Flag, Video, Trophy, CircleDot, Sparkles
+} from "lucide-react";
 
 // ─── Animated Counter ────────────────────────────────────────────────────────
 function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: string }) {
@@ -137,10 +141,12 @@ function Section({
 }
 
 // ─── Section Title ────────────────────────────────────────────────────────────
-function SectionTitle({ emoji, title, subtitle }: { emoji: string; title: string; subtitle?: string }) {
+function SectionTitle({ icon, title, subtitle }: { icon: React.ReactNode; title: string; subtitle?: string }) {
   return (
     <div className="text-center mb-14">
-      <div className="text-5xl mb-4">{emoji}</div>
+      <div className="flex justify-center mb-4 text-[#ffd700] drop-shadow-md">
+        {icon}
+      </div>
       <h2
         className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words"
         style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
@@ -200,7 +206,7 @@ export default function SpecialitiesPage() {
 
   const badges = [
     {
-      icon: "🏆",
+      icon: <Trophy className="w-10 h-10 text-[#ffd700]" />,
       name: "Gold Champions Patch",
       desc: "Awarded to former World Cup-winning nations.",
       examples: ["Argentina", "Brazil", "Germany", "France", "Spain", "England", "Uruguay"],
@@ -208,7 +214,7 @@ export default function SpecialitiesPage() {
       border: "rgba(255,215,0,0.4)",
     },
     {
-      icon: "⚫",
+      icon: <Circle className="w-10 h-10 text-gray-400" />,
       name: "Standard Patch",
       desc: "Worn by nations that have never won a World Cup.",
       examples: [],
@@ -216,7 +222,7 @@ export default function SpecialitiesPage() {
       border: "rgba(255,255,255,0.15)",
     },
     {
-      icon: "⭐",
+      icon: <Star className="w-10 h-10 text-[#0063ff]" />,
       name: "Legacy Badge",
       desc: "Awarded to players who have appeared in five or more FIFA World Cups.",
       examples: ["Lionel Messi", "Cristiano Ronaldo", "Luka Modrić", "Manuel Neuer"],
@@ -224,7 +230,7 @@ export default function SpecialitiesPage() {
       border: "rgba(0,99,255,0.4)",
     },
     {
-      icon: "🌟",
+      icon: <Award className="w-10 h-10 text-[#ffd700]" />,
       name: "Golden Ball Badge",
       desc: "Awarded to previous World Cup MVP winners.",
       examples: ["Lionel Messi", "Luka Modrić"],
@@ -232,7 +238,7 @@ export default function SpecialitiesPage() {
       border: "rgba(255,215,0,0.3)",
     },
     {
-      icon: "⚽",
+      icon: <CircleDot className="w-10 h-10 text-[#ff8c00]" />,
       name: "Golden Boot Badge",
       desc: "Awarded to previous World Cup top scorers.",
       examples: ["Kylian Mbappé", "Harry Kane", "James Rodríguez"],
@@ -240,7 +246,7 @@ export default function SpecialitiesPage() {
       border: "rgba(255,140,0,0.35)",
     },
     {
-      icon: "🧤",
+      icon: <Shield className="w-10 h-10 text-[#00d68f]" />,
       name: "Golden Gloves Badge",
       desc: "Awarded to previous World Cup best goalkeepers.",
       examples: ["Emiliano Martínez", "Thibaut Courtois"],
@@ -248,7 +254,7 @@ export default function SpecialitiesPage() {
       border: "rgba(0,214,143,0.3)",
     },
     {
-      icon: "🚀",
+      icon: <User className="w-10 h-10 text-[#ff3b3b]" />,
       name: "Debut Badge",
       desc: "Awarded to players making their first FIFA World Cup appearance.",
       examples: [],
@@ -258,38 +264,38 @@ export default function SpecialitiesPage() {
   ];
 
   const ballFeatures = [
-    { icon: "🌎", title: "Inspired by Three Nations", desc: "Colors and design rooted in USA, Canada & Mexico" },
-    { icon: "🎯", title: "Advanced Aerodynamics", desc: "Precision-engineered panels for consistent flight path" },
-    { icon: "⚡", title: "Improved Flight Stability", desc: "Reduced wobble and turbulence at all speeds" },
-    { icon: "📡", title: "Connected Ball Technology", desc: "Embedded sensor communicates with tracking systems" },
-    { icon: "📊", title: "Real-Time Match Data", desc: "Ball position data delivered 500 times per second" },
+    { icon: <Globe className="w-6 h-6 text-[#ffd700]" />, title: "Inspired by Three Nations", desc: "Colors and design rooted in USA, Canada & Mexico" },
+    { icon: <Target className="w-6 h-6 text-[#ffd700]" />, title: "Advanced Aerodynamics", desc: "Precision-engineered panels for consistent flight path" },
+    { icon: <Zap className="w-6 h-6 text-[#ffd700]" />, title: "Improved Flight Stability", desc: "Reduced wobble and turbulence at all speeds" },
+    { icon: <Cpu className="w-6 h-6 text-[#ffd700]" />, title: "Connected Ball Technology", desc: "Embedded sensor communicates with tracking systems" },
+    { icon: <Activity className="w-6 h-6 text-[#ffd700]" />, title: "Real-Time Match Data", desc: "Ball position data delivered 500 times per second" },
   ];
 
   const techFeatures = [
-    { icon: "📡", title: "Connected Ball Sensor", desc: "IMU sensor embedded at the center of the ball" },
-    { icon: "🧠", title: "AI Tracking", desc: "Machine learning processes movement data instantly" },
-    { icon: "🚩", title: "Semi-Automated Offside", desc: "Precise limb-tracking eliminates subjective calls" },
-    { icon: "📊", title: "Real-Time Match Data", desc: "500Hz data feed to officials and broadcasters" },
-    { icon: "🎥", title: "VAR Integration", desc: "Synced with 12 dedicated VAR camera feeds" },
-    { icon: "🎯", title: "Precision Event Detection", desc: "Exact moment of kick, header or pass pinpointed" },
+    { icon: <Cpu className="w-8 h-8 text-[#0063ff]" />, title: "Connected Ball Sensor", desc: "IMU sensor embedded at the center of the ball" },
+    { icon: <BrainCircuit className="w-8 h-8 text-[#0063ff]" />, title: "AI Tracking", desc: "Machine learning processes movement data instantly" },
+    { icon: <Flag className="w-8 h-8 text-[#0063ff]" />, title: "Semi-Automated Offside", desc: "Precise limb-tracking eliminates subjective calls" },
+    { icon: <Activity className="w-8 h-8 text-[#0063ff]" />, title: "Real-Time Match Data", desc: "500Hz data feed to officials and broadcasters" },
+    { icon: <Video className="w-8 h-8 text-[#0063ff]" />, title: "VAR Integration", desc: "Synced with 12 dedicated VAR camera feeds" },
+    { icon: <Target className="w-8 h-8 text-[#0063ff]" />, title: "Precision Event Detection", desc: "Exact moment of kick, header or pass pinpointed" },
   ];
 
   const innovations = [
-    { icon: "🏆", title: "Largest World Cup Ever", desc: "48 teams, 104 matches, unprecedented scale" },
-    { icon: "🌍", title: "Three Host Nations", desc: "First tri-nation hosting in World Cup history" },
-    { icon: "⚽", title: "Expanded 48-Team Format", desc: "32-team era ends — a new chapter begins" },
-    { icon: "🎯", title: "New Round of 32", desc: "Brand-new knockout round added to the format" },
-    { icon: "🎖️", title: "Advanced Badge System", desc: "Most detailed player & nation recognition ever" },
-    { icon: "🤖", title: "Smart Match Ball Technology", desc: "Trionda brings AI officiating to the pitch" },
+    { icon: <Trophy className="w-8 h-8 text-[#ffd700]" />, title: "Largest World Cup Ever", desc: "48 teams, 104 matches, unprecedented scale" },
+    { icon: <Globe className="w-8 h-8 text-[#ffd700]" />, title: "Three Host Nations", desc: "First tri-nation hosting in World Cup history" },
+    { icon: <CircleDot className="w-8 h-8 text-[#ffd700]" />, title: "Expanded 48-Team Format", desc: "32-team era ends — a new chapter begins" },
+    { icon: <Target className="w-8 h-8 text-[#ffd700]" />, title: "New Round of 32", desc: "Brand-new knockout round added to the format" },
+    { icon: <Award className="w-8 h-8 text-[#ffd700]" />, title: "Advanced Badge System", desc: "Most detailed player & nation recognition ever" },
+    { icon: <Cpu className="w-8 h-8 text-[#ffd700]" />, title: "Smart Match Ball Technology", desc: "Trionda brings AI officiating to the pitch" },
   ];
 
   const stadiums = [
-    { name: "Azteca Stadium", city: "Mexico City", capacity: "87,523", flag: "🇲🇽" },
-    { name: "MetLife Stadium", city: "East Rutherford", capacity: "82,500", flag: "🇺🇸" },
-    { name: "AT&T Stadium", city: "Dallas", capacity: "80,000", flag: "🇺🇸" },
-    { name: "Arrowhead Stadium", city: "Kansas City", capacity: "76,416", flag: "🇺🇸" },
-    { name: "NRG Stadium", city: "Houston", capacity: "72,220", flag: "🇺🇸" },
-    { name: "Mercedes-Benz Stadium", city: "Atlanta", capacity: "71,000", flag: "🇺🇸" },
+    { name: "Azteca Stadium", city: "Mexico City", capacity: "87,523", icon: <MapPin size={28} className="text-[#006847]" /> },
+    { name: "MetLife Stadium", city: "East Rutherford", capacity: "82,500", icon: <MapPin size={28} className="text-[#B22234]" /> },
+    { name: "AT&T Stadium", city: "Dallas", capacity: "80,000", icon: <MapPin size={28} className="text-[#B22234]" /> },
+    { name: "Arrowhead Stadium", city: "Kansas City", capacity: "76,416", icon: <MapPin size={28} className="text-[#B22234]" /> },
+    { name: "NRG Stadium", city: "Houston", capacity: "72,220", icon: <MapPin size={28} className="text-[#B22234]" /> },
+    { name: "Mercedes-Benz Stadium", city: "Atlanta", capacity: "71,000", icon: <MapPin size={28} className="text-[#B22234]" /> },
   ];
 
   return (
@@ -361,7 +367,9 @@ export default function SpecialitiesPage() {
                 color: "#ffd700",
               }}
             >
-              ⭐ FIFA World Cup 2026
+              <div className="flex items-center justify-center gap-2">
+                <Sparkles size={14} /> FIFA World Cup 2026
+              </div>
             </div>
           </motion.div>
 
@@ -417,7 +425,7 @@ export default function SpecialitiesPage() {
       {/* ── SECTION 2: OVERVIEW ── */}
       <Section id="overview">
         <SectionTitle
-          emoji="🌐"
+          icon={<Globe size={48} />}
           title="Tournament Overview"
           subtitle="The 2026 FIFA World Cup will be the largest tournament ever held, featuring more teams, more matches, and more host cities than any previous edition."
         />
@@ -472,10 +480,10 @@ export default function SpecialitiesPage() {
           >
             <div className="text-center">
               <p
-                className="text-2xl md:text-3xl font-black"
+                className="text-2xl md:text-3xl font-black flex items-center justify-center gap-3"
                 style={{ fontFamily: "var(--font-display)", color: "#ffd700" }}
               >
-                🎵 FIFA Sound — Official Theme 2026
+                <Music size={28} /> FIFA Sound — Official Theme 2026
               </p>
               <p className="mt-2 text-sm" style={{ color: "#8ba3cc" }}>
                 The official soundtrack to the world's greatest sporting event.
@@ -488,16 +496,16 @@ export default function SpecialitiesPage() {
       {/* ── SECTION 3: HOST NATIONS ── */}
       <Section id="hosts">
         <SectionTitle
-          emoji="🌎"
+          icon={<Globe size={48} />}
           title="Host Nations"
           subtitle="For the first time in history, three nations are jointly hosting a FIFA World Cup."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {[
-            { flag: "🇺🇸", name: "United States", cities: 11, color: "#B22234", accent: "#3C3B6E" },
-            { flag: "🇨🇦", name: "Canada", cities: 2, color: "#FF0000", accent: "#FFFFFF" },
-            { flag: "🇲🇽", name: "Mexico", cities: 3, color: "#006847", accent: "#CE1126" },
+            { icon: <MapPin size={64} />, name: "United States", cities: 11, color: "#B22234", accent: "#3C3B6E" },
+            { icon: <MapPin size={64} />, name: "Canada", cities: 2, color: "#FF0000", accent: "#FFFFFF" },
+            { icon: <MapPin size={64} />, name: "Mexico", cities: 3, color: "#006847", accent: "#CE1126" },
           ].map((nation, i) => (
             <motion.div
               key={nation.name}
@@ -513,7 +521,7 @@ export default function SpecialitiesPage() {
                 boxShadow: `0 0 40px ${nation.color}20`,
               }}
             >
-              <div className="text-7xl mb-4">{nation.flag}</div>
+              <div className="mb-4" style={{ color: nation.accent || nation.color }}>{nation.icon}</div>
               <h3
                 className="text-2xl font-bold mb-2"
                 style={{ fontFamily: "var(--font-heading)", color: "var(--text-primary)" }}
@@ -539,7 +547,7 @@ export default function SpecialitiesPage() {
       {/* ── SECTION 4: STADIUMS ── */}
       <Section id="stadiums">
         <SectionTitle
-          emoji="🏟️"
+          icon={<Building2 size={48} />}
           title="Iconic Stadiums"
           subtitle="The tournament will be played across some of the largest and most advanced football venues ever used in World Cup history."
         />
@@ -579,7 +587,7 @@ export default function SpecialitiesPage() {
                 boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
               }}
             >
-              <div className="text-3xl mb-2">{s.flag}</div>
+              <div className="flex justify-center mb-2">{s.icon}</div>
               <div className="text-sm font-bold" style={{ color: "var(--text-primary)" }}>
                 {s.name}
               </div>
@@ -603,7 +611,7 @@ export default function SpecialitiesPage() {
       {/* ── SECTION 5: BADGES ── */}
       <Section id="badges">
         <SectionTitle
-          emoji="🎖️"
+          icon={<Award size={48} />}
           title="The Most Detailed Badge System Ever"
           subtitle="2026 introduces a historic 7-tier patch system recognising nations and individual player achievements."
         />
@@ -684,7 +692,7 @@ export default function SpecialitiesPage() {
             boxShadow: "0 0 40px rgba(255,59,59,0.1)",
           }}
         >
-          <div className="absolute top-4 right-4 text-5xl opacity-10">🧤</div>
+          <Shield className="absolute top-4 right-4 w-12 h-12 opacity-10 text-[#ff6b6b]" />
           <div
             className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 tracking-widest uppercase"
             style={{
@@ -693,7 +701,9 @@ export default function SpecialitiesPage() {
               color: "#ff6b6b",
             }}
           >
-            ⚡ Featured Fact
+            <div className="flex items-center justify-center gap-1">
+              <Zap size={14} /> Featured Fact
+            </div>
           </div>
           <h3
             className="text-2xl font-black mb-3"
@@ -714,7 +724,7 @@ export default function SpecialitiesPage() {
       {/* ── SECTION 6: MATCH BALL ── */}
       <Section id="matchball">
         <SectionTitle
-          emoji="⚽"
+          icon={<CircleDot size={48} />}
           title="Official Match Ball — Trionda"
           subtitle="The official ball of FIFA World Cup 2026, crafted by adidas to reflect the spirit of the three host nations."
         />
@@ -753,7 +763,9 @@ export default function SpecialitiesPage() {
                 boxShadow: "0 4px 20px rgba(255,215,0,0.4)",
               }}
             >
-              ⚽ adidas Trionda
+              <div className="flex items-center gap-2">
+                <CircleDot size={18} /> adidas Trionda
+              </div>
             </div>
           </motion.div>
 
@@ -796,7 +808,7 @@ export default function SpecialitiesPage() {
       {/* ── SECTION 7: SMART BALL TECHNOLOGY ── */}
       <Section id="technology">
         <SectionTitle
-          emoji="🤖"
+          icon={<Cpu size={48} />}
           title="Smart Ball Technology"
           subtitle="Trionda's embedded sensor sends real-time data to officiating systems, enabling faster and more accurate decisions than ever before."
         />
@@ -905,7 +917,7 @@ export default function SpecialitiesPage() {
       {/* ── SECTION 8: INNOVATIONS ── */}
       <Section id="innovations">
         <SectionTitle
-          emoji="🚀"
+          icon={<Rocket size={48} />}
           title="Tournament Innovations"
           subtitle="2026 isn't just a World Cup. It's a landmark moment in the evolution of football."
         />
@@ -987,7 +999,9 @@ export default function SpecialitiesPage() {
             />
           </div>
           <div className="relative z-10">
-            <div className="text-5xl mb-4">🏆</div>
+            <div className="flex justify-center mb-4">
+              <Trophy size={48} className="text-[#ffd700]" />
+            </div>
             <h2
               className="text-3xl md:text-4xl font-black mb-4"
               style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
