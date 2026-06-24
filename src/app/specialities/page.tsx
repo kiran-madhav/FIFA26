@@ -300,7 +300,7 @@ export default function SpecialitiesPage() {
       <div ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Parallax Background */}
         <motion.div className="absolute inset-0" style={{ y: heroY }}>
-          <Image
+          <Image quality={100}
             src="/specialities/hero-banner.jpg"
             alt="FIFA World Cup 2026"
             fill
@@ -433,7 +433,7 @@ export default function SpecialitiesPage() {
 
         {/* FIFA Sound branding strip */}
         <div className="relative rounded-2xl overflow-hidden h-48 md:h-56">
-          <Image
+          <Image quality={100}
             src="/specialities/fifa-sound.jpg"
             alt="FIFA 2026 Official Theme"
             fill
@@ -525,7 +525,7 @@ export default function SpecialitiesPage() {
           className="relative rounded-2xl overflow-hidden mb-12"
           style={{ border: "1px solid rgba(255,215,0,0.2)" }}
         >
-          <Image
+          <Image quality={100}
             src="/specialities/stadiums.jpg"
             alt="FIFA 2026 Stadium Capacities"
             width={1200}
@@ -589,7 +589,7 @@ export default function SpecialitiesPage() {
           className="relative rounded-2xl overflow-hidden mb-12"
           style={{ border: "1px solid rgba(255,215,0,0.2)" }}
         >
-          <Image
+          <Image quality={100}
             src="/specialities/badges.jpg"
             alt="FIFA 2026 Badge System"
             width={1200}
@@ -710,7 +710,7 @@ export default function SpecialitiesPage() {
                 border: "1px solid rgba(255,255,255,0.1)",
               }}
             >
-              <Image
+              <Image quality={100}
                 src="/specialities/trionda-ball.jpg"
                 alt="Trionda Official Match Ball"
                 width={700}
@@ -809,20 +809,23 @@ export default function SpecialitiesPage() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="relative rounded-2xl overflow-hidden"
+            className="relative rounded-2xl p-6 flex justify-center items-center"
             style={{
-              border: "1px solid rgba(0,99,255,0.25)",
-              boxShadow: "0 0 40px rgba(0,99,255,0.15)",
+              background: "rgba(13,27,53,0.7)",
+              backdropFilter: "blur(16px)",
+              border: "1px solid rgba(255,255,255,0.08)",
+              boxShadow: "0 4px 24px rgba(0,61,165,0.15)",
             }}
           >
-            <Image
-              src="/specialities/ball-tech.jpg"
-              alt="Trionda Smart Ball Technology"
-              width={700}
-              height={600}
-              className="w-full object-contain"
-              style={{ background: "#050a1a" }}
-            />
+            <div className="w-full max-w-[500px] rounded-xl overflow-hidden shadow-2xl border border-white/10" style={{ background: "#050a1a" }}>
+              <Image quality={100}
+                src="/specialities/ball-tech.jpg"
+                alt="Trionda Smart Ball Technology"
+                width={700}
+                height={700}
+                className="w-full h-auto object-contain"
+              />
+            </div>
           </motion.div>
         </div>
 
