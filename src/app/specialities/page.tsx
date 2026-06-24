@@ -534,17 +534,28 @@ export default function SpecialitiesPage() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="relative rounded-2xl overflow-hidden mb-12"
-          style={{ border: "1px solid rgba(255,215,0,0.2)" }}
+          className="relative mb-14 max-w-5xl mx-auto"
         >
-          <Image unoptimized={true}
-            src="/specialities/stadiums.jpg"
-            alt="FIFA 2026 Stadium Capacities"
-            width={1200}
-            height={800}
-            className="w-full object-contain"
-            style={{ background: "#0a1428" }}
-          />
+          <div className="relative w-full rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
+            <Image unoptimized={true}
+              src="/specialities/stadiums.jpg"
+              alt="FIFA 2026 Stadium Capacities"
+              width={1200}
+              height={800}
+              className="w-full max-h-[450px] md:max-h-[500px] object-cover object-center"
+              style={{ background: "#050a1a" }}
+            />
+            {/* Subtle Dark Overlay */}
+            <div className="absolute inset-0 bg-[#050a1a]/30 pointer-events-none" />
+            
+            {/* Edge Blending to remove harsh borders */}
+            <div 
+              className="absolute inset-0 pointer-events-none" 
+              style={{
+                background: "linear-gradient(to bottom, #050a1a 0%, transparent 15%, transparent 85%, #050a1a 100%), linear-gradient(to right, #050a1a 0%, transparent 10%, transparent 90%, #050a1a 100%)"
+              }}
+            />
+          </div>
         </motion.div>
 
         {/* Stadium Cards */}
@@ -598,17 +609,22 @@ export default function SpecialitiesPage() {
           initial={{ opacity: 0, scale: 0.97 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="relative rounded-2xl overflow-hidden mb-12"
-          style={{ border: "1px solid rgba(255,215,0,0.2)" }}
+          className="relative mb-14 max-w-4xl mx-auto flex justify-center"
         >
-          <Image unoptimized={true}
-            src="/specialities/badges.jpg"
-            alt="FIFA 2026 Badge System"
-            width={1200}
-            height={650}
-            className="w-full object-contain"
-            style={{ background: "#0a1428" }}
-          />
+          <div className="relative w-full rounded-[40px] overflow-hidden">
+            <Image unoptimized={true}
+              src="/specialities/badges.jpg"
+              alt="FIFA 2026 Badge System"
+              width={1200}
+              height={650}
+              className="w-full h-auto object-contain"
+            />
+            {/* Deep radial blend to soften rectangular edges into the background */}
+            <div 
+              className="absolute inset-0 pointer-events-none" 
+              style={{ background: "radial-gradient(ellipse at center, transparent 40%, rgba(5,10,26,0.8) 75%, #050a1a 98%)" }} 
+            />
+          </div>
         </motion.div>
 
         {/* Badge Cards */}
