@@ -446,24 +446,17 @@ export default function SpecialitiesPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
-              <GlassCard gold className="text-center h-full">
+              <div className="glass-card p-6 text-center h-full hover:glow-gold transition-all flex flex-col items-center justify-center">
                 <div
-                  className="text-5xl md:text-6xl font-black mb-2"
-                  style={{
-                    fontFamily: "var(--font-display)",
-                    color: stat.color,
-                    textShadow: `0 0 30px ${stat.color}60`,
-                  }}
+                  className="text-5xl md:text-6xl font-black mb-2 text-gradient-gold"
+                  style={{ fontFamily: "var(--font-display)" }}
                 >
                   <AnimatedCounter target={stat.value} suffix={stat.suffix} />
                 </div>
-                <div
-                  className="text-sm md:text-base font-semibold tracking-wider uppercase"
-                  style={{ color: "var(--text-secondary)" }}
-                >
+                <div className="text-sm md:text-base font-semibold tracking-wider uppercase text-[var(--text-secondary)]">
                   {stat.label}
                 </div>
-              </GlassCard>
+              </div>
             </motion.div>
           ))}
         </div>
@@ -509,12 +502,7 @@ export default function SpecialitiesPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.15 }}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="rounded-2xl p-6 md:p-8 flex flex-col h-full overflow-hidden break-words text-left"
-              style={{
-                background: `linear-gradient(135deg, rgba(13,27,53,0.9) 0%, ${nation.color}22 100%)`,
-                border: `1px solid ${nation.color}55`,
-                boxShadow: `0 4px 20px rgba(0,0,0,0.3)`,
-              }}
+              className="glass-card p-6 md:p-8 flex flex-col h-full overflow-hidden break-words text-left hover:glow-blue transition-all cursor-pointer"
             >
               <div className="mb-5">
                 <Image unoptimized={true}
@@ -590,12 +578,7 @@ export default function SpecialitiesPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
               whileHover={{ y: -5, scale: 1.02 }}
-              className="rounded-2xl p-6 md:p-8 flex flex-col items-center text-center w-full overflow-hidden break-words"
-              style={{
-                background: "rgba(13,27,53,0.8)",
-                border: "1px solid rgba(255,215,0,0.15)",
-                boxShadow: "0 6px 30px rgba(0,0,0,0.4)",
-              }}
+              className="glass-card p-6 md:p-8 flex flex-col items-center text-center w-full overflow-hidden break-words hover:glow-blue transition-all cursor-pointer"
             >
               <div className="flex justify-center mb-4 scale-125 md:scale-150">{s.icon}</div>
               <div className="text-lg md:text-xl font-bold mb-1" style={{ color: "var(--text-primary)" }}>
@@ -633,13 +616,7 @@ export default function SpecialitiesPage() {
           viewport={{ once: true }}
           className="relative mb-14 w-full flex justify-center"
         >
-          <div className="relative w-full rounded-[32px] overflow-hidden p-3 sm:p-4"
-            style={{ 
-              background: "rgba(13,27,53,0.6)", 
-              border: "1px solid rgba(255,215,0,0.2)",
-              boxShadow: "0 10px 40px rgba(0,0,0,0.5), inset 0 0 20px rgba(255,215,0,0.05)"
-            }}
-          >
+          <div className="relative w-full overflow-hidden p-3 sm:p-4 glass-card">
             <div className="relative w-full rounded-2xl overflow-hidden" style={{ background: "#050a1a" }}>
               <Image unoptimized={true}
                 src="/specialities/badges.jpg"
@@ -662,12 +639,7 @@ export default function SpecialitiesPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.07 }}
               whileHover={{ scale: 1.03, y: -3 }}
-              className="rounded-2xl p-4 md:p-5 flex flex-col w-full overflow-hidden break-words"
-              style={{
-                background: badge.color,
-                border: `1px solid ${badge.border}`,
-                boxShadow: `0 4px 20px rgba(0,0,0,0.3)`,
-              }}
+              className="glass-card p-5 flex flex-col w-full overflow-hidden break-words hover:glow-blue transition-all cursor-pointer"
             >
               <div className="text-4xl mb-3">{badge.icon}</div>
               <h3 className="text-base font-bold mb-1" style={{ color: "var(--text-primary)" }}>
@@ -703,12 +675,7 @@ export default function SpecialitiesPage() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative rounded-2xl p-5 md:p-7 overflow-hidden w-full break-words"
-          style={{
-            background: "linear-gradient(135deg,rgba(255,59,59,0.12) 0%,rgba(13,27,53,0.9) 100%)",
-            border: "1px solid rgba(255,59,59,0.35)",
-            boxShadow: "0 0 40px rgba(255,59,59,0.1)",
-          }}
+          className="relative glass-card p-6 md:p-8 overflow-hidden w-full break-words hover:glow-blue transition-all"
         >
           <Shield className="absolute top-4 right-4 w-12 h-12 opacity-10 text-[#ff6b6b]" />
           <div
@@ -797,11 +764,7 @@ export default function SpecialitiesPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 whileHover={{ x: 6 }}
-                className="flex items-start gap-4 rounded-xl p-4 overflow-hidden break-words w-full"
-                style={{
-                  background: "rgba(13,27,53,0.7)",
-                  border: "1px solid rgba(255,255,255,0.08)",
-                }}
+                className="glass-card flex items-start gap-4 p-4 overflow-hidden break-words w-full hover:glow-gold transition-all"
               >
                 <div
                   className="w-11 h-11 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
@@ -842,12 +805,7 @@ export default function SpecialitiesPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 whileHover={{ scale: 1.04 }}
-                className="rounded-xl p-5 overflow-hidden break-words w-full"
-                style={{
-                  background: "rgba(13,27,53,0.8)",
-                  border: "1px solid rgba(0,99,255,0.2)",
-                  boxShadow: "0 4px 20px rgba(0,61,165,0.15)",
-                }}
+                className="glass-card p-5 overflow-hidden break-words w-full hover:glow-blue transition-all cursor-pointer"
               >
                 <div className="text-3xl mb-3">{feat.icon}</div>
                 <div className="text-sm font-bold mb-1" style={{ color: "var(--text-primary)" }}>
@@ -866,13 +824,7 @@ export default function SpecialitiesPage() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="relative rounded-2xl p-6 flex justify-center items-center"
-            style={{
-              background: "rgba(13,27,53,0.7)",
-              backdropFilter: "blur(16px)",
-              border: "1px solid rgba(255,255,255,0.08)",
-              boxShadow: "0 4px 24px rgba(0,61,165,0.15)",
-            }}
+            className="relative glass-card p-6 flex justify-center items-center"
           >
             <div className="w-full max-w-[500px] rounded-xl overflow-hidden shadow-2xl border border-white/10" style={{ background: "#050a1a" }}>
               <Image unoptimized={true}
@@ -892,11 +844,7 @@ export default function SpecialitiesPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-10 rounded-2xl p-6"
-          style={{
-            background: "linear-gradient(135deg,rgba(0,61,165,0.15) 0%,rgba(13,27,53,0.8) 100%)",
-            border: "1px solid rgba(0,99,255,0.2)",
-          }}
+          className="mt-10 glass-card p-6 w-full"
         >
           <p className="text-center text-sm font-semibold mb-6" style={{ color: "#8ba3cc" }}>
             HOW TRIONDA COMMUNICATES
@@ -950,13 +898,7 @@ export default function SpecialitiesPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.55, delay: i * 0.1 }}
               whileHover={{ scale: 1.04, y: -6 }}
-              className="rounded-2xl p-6 text-center group cursor-default flex flex-col items-center justify-center w-full overflow-hidden break-words"
-              style={{
-                background: "rgba(13,27,53,0.8)",
-                border: "1px solid rgba(255,215,0,0.12)",
-                boxShadow: "0 4px 24px rgba(0,0,0,0.3)",
-                transition: "box-shadow 0.2s",
-              }}
+              className="glass-card p-6 text-center group cursor-pointer flex flex-col items-center justify-center w-full overflow-hidden break-words hover:glow-gold transition-all"
             >
               <div
                 className="w-16 h-16 mx-auto rounded-2xl flex items-center justify-center text-3xl mb-5 group-hover:scale-110 transition-transform"
@@ -986,11 +928,7 @@ export default function SpecialitiesPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="mt-20 rounded-2xl p-10 text-center relative overflow-hidden"
-          style={{
-            background: "linear-gradient(135deg,rgba(0,61,165,0.3) 0%,rgba(255,215,0,0.1) 100%)",
-            border: "1px solid rgba(255,215,0,0.25)",
-          }}
+          className="mt-20 glass-card-gold p-10 text-center relative overflow-hidden w-full"
         >
           <div className="absolute inset-0 opacity-5">
             <div
