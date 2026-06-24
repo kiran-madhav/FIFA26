@@ -480,9 +480,9 @@ export default function SpecialitiesPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {[
-            { icon: <MapPin size={64} />, name: "United States", cities: 11, color: "#B22234", accent: "#3C3B6E" },
-            { icon: <MapPin size={64} />, name: "Canada", cities: 2, color: "#FF0000", accent: "#FFFFFF" },
-            { icon: <MapPin size={64} />, name: "Mexico", cities: 3, color: "#006847", accent: "#CE1126" },
+            { icon: <MapPin size={64} />, flagUrl: "https://flagcdn.com/us.svg", name: "United States", cities: 11, color: "#B22234", accent: "#3C3B6E" },
+            { icon: <MapPin size={64} />, flagUrl: "https://flagcdn.com/ca.svg", name: "Canada", cities: 2, color: "#FF0000", accent: "#FFFFFF" },
+            { icon: <MapPin size={64} />, flagUrl: "https://flagcdn.com/mx.svg", name: "Mexico", cities: 3, color: "#006847", accent: "#CE1126" },
           ].map((nation, i) => (
             <motion.div
               key={nation.name}
@@ -500,9 +500,16 @@ export default function SpecialitiesPage() {
             >
               <div className="mb-4" style={{ color: nation.accent || nation.color }}>{nation.icon}</div>
               <h3
-                className="text-2xl font-bold mb-2"
+                className="text-2xl font-bold mb-3 flex items-center justify-center gap-3"
                 style={{ fontFamily: "var(--font-heading)", color: "var(--text-primary)" }}
               >
+                <Image unoptimized={true}
+                  src={nation.flagUrl}
+                  alt={`${nation.name} flag`}
+                  width={32}
+                  height={24}
+                  className="w-8 h-auto rounded-sm shadow-sm border border-white/10"
+                />
                 {nation.name}
               </h3>
               <div
