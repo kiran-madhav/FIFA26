@@ -77,7 +77,7 @@ function StickyNav() {
           className="fixed top-16 left-0 right-0 z-40 flex justify-center px-4"
         >
           <div
-            className="flex items-center gap-1 px-3 py-2 rounded-2xl text-xs font-semibold"
+            className="flex items-center gap-1 px-3 py-2 rounded-2xl text-xs font-semibold overflow-x-auto max-w-full no-scrollbar"
             style={{
               background: "rgba(5, 10, 26, 0.85)",
               backdropFilter: "blur(20px)",
@@ -142,7 +142,7 @@ function SectionTitle({ emoji, title, subtitle }: { emoji: string; title: string
     <div className="text-center mb-14">
       <div className="text-5xl mb-4">{emoji}</div>
       <h2
-        className="text-4xl md:text-5xl font-bold mb-4"
+        className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words"
         style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
       >
         {title}
@@ -293,7 +293,7 @@ export default function SpecialitiesPage() {
   ];
 
   return (
-    <div className="min-h-screen" style={{ background: "var(--bg-primary)" }}>
+    <div className="min-h-screen overflow-x-hidden w-full" style={{ background: "var(--bg-primary)" }}>
       <StickyNav />
 
       {/* ── HERO ── */}
@@ -342,7 +342,7 @@ export default function SpecialitiesPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.15 }}
-            className="text-5xl md:text-7xl font-black mb-6 leading-tight"
+            className="text-4xl sm:text-5xl md:text-7xl font-black mb-6 leading-tight break-words"
             style={{
               fontFamily: "var(--font-display)",
               background: "linear-gradient(135deg,#ffffff 0%,#ffd700 60%,#ff8c00 100%)",
@@ -479,7 +479,7 @@ export default function SpecialitiesPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.15 }}
               whileHover={{ scale: 1.04 }}
-              className="rounded-2xl p-8 text-center cursor-default"
+              className="rounded-2xl p-6 md:p-8 text-center cursor-default flex flex-col items-center justify-center w-full"
               style={{
                 background: `linear-gradient(135deg, rgba(13,27,53,0.9) 0%, ${nation.color}22 100%)`,
                 border: `1px solid ${nation.color}55`,
@@ -545,7 +545,7 @@ export default function SpecialitiesPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
               whileHover={{ y: -5, scale: 1.02 }}
-              className="rounded-xl p-4"
+              className="rounded-xl p-4 flex flex-col w-full overflow-hidden break-words"
               style={{
                 background: "rgba(13,27,53,0.8)",
                 border: "1px solid rgba(255,215,0,0.15)",
@@ -609,7 +609,7 @@ export default function SpecialitiesPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.07 }}
               whileHover={{ scale: 1.03, y: -3 }}
-              className="rounded-2xl p-5"
+              className="rounded-2xl p-4 md:p-5 flex flex-col w-full overflow-hidden break-words"
               style={{
                 background: badge.color,
                 border: `1px solid ${badge.border}`,
@@ -628,7 +628,7 @@ export default function SpecialitiesPage() {
                   {badge.examples.map((ex) => (
                     <span
                       key={ex}
-                      className="text-xs px-2 py-0.5 rounded-full"
+                      className="text-[10px] sm:text-xs px-2 py-0.5 rounded-full whitespace-nowrap"
                       style={{
                         background: "rgba(255,255,255,0.06)",
                         border: "1px solid rgba(255,255,255,0.12)",
@@ -650,7 +650,7 @@ export default function SpecialitiesPage() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative rounded-2xl p-7 overflow-hidden"
+          className="relative rounded-2xl p-5 md:p-7 overflow-hidden w-full break-words"
           style={{
             background: "linear-gradient(135deg,rgba(255,59,59,0.12) 0%,rgba(13,27,53,0.9) 100%)",
             border: "1px solid rgba(255,59,59,0.35)",
@@ -740,7 +740,7 @@ export default function SpecialitiesPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 whileHover={{ x: 6 }}
-                className="flex items-start gap-4 rounded-xl p-4"
+                className="flex items-start gap-4 rounded-xl p-4 overflow-hidden break-words w-full"
                 style={{
                   background: "rgba(13,27,53,0.7)",
                   border: "1px solid rgba(255,255,255,0.08)",
@@ -785,7 +785,7 @@ export default function SpecialitiesPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 whileHover={{ scale: 1.04 }}
-                className="rounded-xl p-5"
+                className="rounded-xl p-5 overflow-hidden break-words w-full"
                 style={{
                   background: "rgba(13,27,53,0.8)",
                   border: "1px solid rgba(0,99,255,0.2)",
@@ -892,7 +892,7 @@ export default function SpecialitiesPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.55, delay: i * 0.1 }}
               whileHover={{ scale: 1.04, y: -6 }}
-              className="rounded-2xl p-6 text-center group cursor-default"
+              className="rounded-2xl p-6 text-center group cursor-default flex flex-col items-center justify-center w-full overflow-hidden break-words"
               style={{
                 background: "rgba(13,27,53,0.8)",
                 border: "1px solid rgba(255,215,0,0.12)",
