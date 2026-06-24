@@ -534,25 +534,22 @@ export default function SpecialitiesPage() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="relative mb-14 max-w-5xl mx-auto"
+          className="relative mb-14 max-w-6xl mx-auto"
         >
-          <div className="relative w-full rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
+          <div className="relative w-full rounded-[32px] overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.5)]">
             <Image unoptimized={true}
               src="/specialities/stadiums.jpg"
               alt="FIFA 2026 Stadium Capacities"
               width={1200}
               height={800}
-              className="w-full max-h-[450px] md:max-h-[500px] object-cover object-center"
+              className="w-full max-h-[600px] md:max-h-[680px] object-cover object-center"
               style={{ background: "#050a1a" }}
             />
-            {/* Subtle Dark Overlay */}
-            <div className="absolute inset-0 bg-[#050a1a]/30 pointer-events-none" />
-            
-            {/* Edge Blending to remove harsh borders */}
+            {/* Subtle Edge Fade Only (No Center Darkening) */}
             <div 
               className="absolute inset-0 pointer-events-none" 
               style={{
-                background: "linear-gradient(to bottom, #050a1a 0%, transparent 15%, transparent 85%, #050a1a 100%), linear-gradient(to right, #050a1a 0%, transparent 10%, transparent 90%, #050a1a 100%)"
+                background: "linear-gradient(to bottom, #050a1a 0%, transparent 5%, transparent 95%, #050a1a 100%), linear-gradient(to right, #050a1a 0%, transparent 5%, transparent 95%, #050a1a 100%)"
               }}
             />
           </div>
@@ -609,21 +606,24 @@ export default function SpecialitiesPage() {
           initial={{ opacity: 0, scale: 0.97 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="relative mb-14 max-w-4xl mx-auto flex justify-center"
+          className="relative mb-14 max-w-5xl mx-auto flex justify-center w-full"
         >
-          <div className="relative w-full rounded-[40px] overflow-hidden">
-            <Image unoptimized={true}
-              src="/specialities/badges.jpg"
-              alt="FIFA 2026 Badge System"
-              width={1200}
-              height={650}
-              className="w-full h-auto object-contain"
-            />
-            {/* Deep radial blend to soften rectangular edges into the background */}
-            <div 
-              className="absolute inset-0 pointer-events-none" 
-              style={{ background: "radial-gradient(ellipse at center, transparent 40%, rgba(5,10,26,0.8) 75%, #050a1a 98%)" }} 
-            />
+          <div className="relative w-full rounded-[32px] overflow-hidden p-3 sm:p-4"
+            style={{ 
+              background: "rgba(13,27,53,0.6)", 
+              border: "1px solid rgba(255,215,0,0.2)",
+              boxShadow: "0 10px 40px rgba(0,0,0,0.5), inset 0 0 20px rgba(255,215,0,0.05)"
+            }}
+          >
+            <div className="relative w-full rounded-2xl overflow-hidden" style={{ background: "#050a1a" }}>
+              <Image unoptimized={true}
+                src="/specialities/badges.jpg"
+                alt="FIFA 2026 Badge System"
+                width={1200}
+                height={650}
+                className="w-full h-auto object-contain"
+              />
+            </div>
           </div>
         </motion.div>
 
