@@ -141,20 +141,22 @@ function Section({
 }
 
 // ─── Section Title ────────────────────────────────────────────────────────────
-function SectionTitle({ icon, title, subtitle }: { icon: React.ReactNode; title: string; subtitle?: string }) {
+function SectionTitle({ icon, title, subtitle }: { icon?: React.ReactNode; title: string; subtitle?: string }) {
   return (
-    <div className="text-center mb-14">
-      <div className="flex justify-center mb-4 text-[#ffd700] drop-shadow-md">
-        {icon}
-      </div>
+    <div className="flex flex-col items-center justify-center text-center w-full max-w-4xl mx-auto mb-14">
+      {icon && (
+        <div className="flex items-center justify-center mb-4 text-[#ffd700] drop-shadow-md">
+          {icon}
+        </div>
+      )}
       <h2
-        className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words"
+        className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words text-center w-full"
         style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
       >
         {title}
       </h2>
       {subtitle && (
-        <p className="text-lg max-w-2xl mx-auto" style={{ color: "var(--text-secondary)" }}>
+        <p className="text-lg max-w-2xl text-center mx-auto leading-relaxed" style={{ color: "var(--text-secondary)" }}>
           {subtitle}
         </p>
       )}
@@ -892,26 +894,11 @@ export default function SpecialitiesPage() {
       {/* ── SECTION 8: INNOVATIONS ── */}
       <Section id="innovations">
         <SectionTitle
-          icon={<Rocket size={48} />}
           title="Tournament Innovations"
           subtitle="2026 isn't just a World Cup. It's a landmark moment in the evolution of football."
         />
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.97 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          className="relative rounded-2xl overflow-hidden mb-12 shadow-2xl border border-white/10"
-        >
-          <Image unoptimized={true}
-            src="/specialities/neon-hero.jpg"
-            alt="FIFA World Cup 2026 Innovations"
-            width={1200}
-            height={675}
-            className="w-full h-auto object-contain"
-            style={{ background: "#050a1a" }}
-          />
-        </motion.div>
+
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {innovations.map((item, i) => (
