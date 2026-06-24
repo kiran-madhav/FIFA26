@@ -478,11 +478,29 @@ export default function SpecialitiesPage() {
           subtitle="For the first time in history, three nations are jointly hosting a FIFA World Cup."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 w-full">
           {[
-            { icon: <MapPin size={64} />, flagUrl: "https://flagcdn.com/us.svg", name: "United States", cities: 11, color: "#B22234", accent: "#3C3B6E" },
-            { icon: <MapPin size={64} />, flagUrl: "https://flagcdn.com/ca.svg", name: "Canada", cities: 2, color: "#FF0000", accent: "#FFFFFF" },
-            { icon: <MapPin size={64} />, flagUrl: "https://flagcdn.com/mx.svg", name: "Mexico", cities: 3, color: "#006847", accent: "#CE1126" },
+            { 
+              flagUrl: "https://flagcdn.com/us.svg", 
+              name: "United States", 
+              cities: 11, 
+              color: "#bf0a30",
+              description: "The tournament's primary host with 11 world-class stadiums from coast to coast.",
+            },
+            { 
+              flagUrl: "https://flagcdn.com/ca.svg", 
+              name: "Canada", 
+              cities: 2, 
+              color: "#ff0000",
+              description: "Vancouver and Toronto host matches in Canada's first-ever Men's World Cup.",
+            },
+            { 
+              flagUrl: "https://flagcdn.com/mx.svg", 
+              name: "Mexico", 
+              cities: 3, 
+              color: "#006847",
+              description: "The legendary Estadio Azteca hosts the opener. Mexico becomes the first country to host three World Cups.",
+            },
           ].map((nation, i) => (
             <motion.div
               key={nation.name}
@@ -490,38 +508,38 @@ export default function SpecialitiesPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.15 }}
-              whileHover={{ scale: 1.04 }}
-              className="rounded-2xl p-6 md:p-8 text-center cursor-default flex flex-col items-center justify-center w-full"
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="rounded-2xl p-6 md:p-8 flex flex-col h-full overflow-hidden break-words text-left"
               style={{
                 background: `linear-gradient(135deg, rgba(13,27,53,0.9) 0%, ${nation.color}22 100%)`,
                 border: `1px solid ${nation.color}55`,
-                boxShadow: `0 0 40px ${nation.color}20`,
+                boxShadow: `0 4px 20px rgba(0,0,0,0.3)`,
               }}
             >
-              <div className="mb-4" style={{ color: nation.accent || nation.color }}>{nation.icon}</div>
-              <h3
-                className="text-2xl font-bold mb-3 flex items-center justify-center gap-3"
-                style={{ fontFamily: "var(--font-heading)", color: "var(--text-primary)" }}
-              >
+              <div className="mb-5">
                 <Image unoptimized={true}
                   src={nation.flagUrl}
                   alt={`${nation.name} flag`}
-                  width={32}
-                  height={24}
-                  className="w-8 h-auto rounded-sm shadow-sm border border-white/10"
+                  width={40}
+                  height={30}
+                  className="w-10 h-auto rounded-[4px] shadow-sm border border-white/10"
                 />
+              </div>
+              <h3
+                className="text-xl md:text-2xl font-bold mb-1"
+                style={{ fontFamily: "var(--font-heading)", color: "var(--text-primary)" }}
+              >
                 {nation.name}
               </h3>
-              <div
-                className="inline-block px-4 py-1.5 rounded-full text-sm font-bold"
-                style={{
-                  background: `${nation.color}30`,
-                  border: `1px solid ${nation.color}60`,
-                  color: "#ffd700",
-                }}
-              >
-                {nation.cities} Host {nation.cities === 1 ? "City" : "Cities"}
+              <div className="flex items-center gap-2 mb-4">
+                <MapPin size={14} style={{ color: "#ffd700" }} />
+                <span className="text-sm font-semibold tracking-wide" style={{ color: "#ffd700" }}>
+                  {nation.cities} Host {nation.cities === 1 ? "City" : "Cities"}
+                </span>
               </div>
+              <p className="text-sm leading-relaxed mt-auto" style={{ color: "var(--text-secondary)" }}>
+                {nation.description}
+              </p>
             </motion.div>
           ))}
         </div>
