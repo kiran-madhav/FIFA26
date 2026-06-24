@@ -299,19 +299,27 @@ export default function SpecialitiesPage() {
       {/* ── HERO ── */}
       <div ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Parallax Background */}
-        <motion.div className="absolute inset-0" style={{ y: heroY }}>
-          <Image quality={100}
+        <motion.div className="absolute inset-0 bg-[#050a1a]" style={{ y: heroY }}>
+          {/* Background Blur for Wide Screens */}
+          <Image unoptimized={true}
+            src="/specialities/hero-banner.jpg"
+            alt=""
+            fill
+            className="object-cover opacity-40 blur-3xl"
+          />
+          {/* Main Hero Image */}
+          <Image unoptimized={true}
             src="/specialities/hero-banner.jpg"
             alt="FIFA World Cup 2026"
             fill
             priority
-            className="object-cover"
+            className="object-cover md:object-contain"
           />
           <div
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(to bottom, rgba(5,10,26,0.55) 0%, rgba(5,10,26,0.2) 40%, rgba(5,10,26,0.9) 100%)",
+                "linear-gradient(to bottom, rgba(5,10,26,0.65) 0%, rgba(5,10,26,0.2) 40%, rgba(5,10,26,0.95) 100%)",
             }}
           />
         </motion.div>
@@ -433,7 +441,7 @@ export default function SpecialitiesPage() {
 
         {/* FIFA Sound branding strip */}
         <div className="relative rounded-2xl overflow-hidden h-48 md:h-56">
-          <Image quality={100}
+          <Image unoptimized={true}
             src="/specialities/fifa-sound.jpg"
             alt="FIFA 2026 Official Theme"
             fill
@@ -525,7 +533,7 @@ export default function SpecialitiesPage() {
           className="relative rounded-2xl overflow-hidden mb-12"
           style={{ border: "1px solid rgba(255,215,0,0.2)" }}
         >
-          <Image quality={100}
+          <Image unoptimized={true}
             src="/specialities/stadiums.jpg"
             alt="FIFA 2026 Stadium Capacities"
             width={1200}
@@ -589,7 +597,7 @@ export default function SpecialitiesPage() {
           className="relative rounded-2xl overflow-hidden mb-12"
           style={{ border: "1px solid rgba(255,215,0,0.2)" }}
         >
-          <Image quality={100}
+          <Image unoptimized={true}
             src="/specialities/badges.jpg"
             alt="FIFA 2026 Badge System"
             width={1200}
@@ -710,7 +718,7 @@ export default function SpecialitiesPage() {
                 border: "1px solid rgba(255,255,255,0.1)",
               }}
             >
-              <Image quality={100}
+              <Image unoptimized={true}
                 src="/specialities/trionda-ball.jpg"
                 alt="Trionda Official Match Ball"
                 width={700}
@@ -818,7 +826,7 @@ export default function SpecialitiesPage() {
             }}
           >
             <div className="w-full max-w-[500px] rounded-xl overflow-hidden shadow-2xl border border-white/10" style={{ background: "#050a1a" }}>
-              <Image quality={100}
+              <Image unoptimized={true}
                 src="/specialities/ball-tech.jpg"
                 alt="Trionda Smart Ball Technology"
                 width={700}
@@ -889,7 +897,7 @@ export default function SpecialitiesPage() {
           viewport={{ once: true }}
           className="relative rounded-2xl overflow-hidden mb-12 shadow-2xl border border-white/10"
         >
-          <Image quality={100}
+          <Image unoptimized={true}
             src="/specialities/neon-hero.jpg"
             alt="FIFA World Cup 2026 Innovations"
             width={1200}
