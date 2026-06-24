@@ -299,27 +299,46 @@ export default function SpecialitiesPage() {
       {/* ── HERO ── */}
       <div ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Parallax Background */}
-        <motion.div className="absolute inset-0 bg-[#050a1a]" style={{ y: heroY }}>
-          {/* Background Blur for Wide Screens */}
-          <Image unoptimized={true}
-            src="/specialities/hero-banner.jpg"
-            alt=""
-            fill
-            className="object-cover opacity-40 blur-3xl"
-          />
+        <motion.div className="absolute inset-0 bg-[#050a1a] overflow-hidden" style={{ y: heroY }}>
           {/* Main Hero Image */}
           <Image unoptimized={true}
             src="/specialities/hero-banner.jpg"
             alt="FIFA World Cup 2026"
             fill
             priority
-            className="object-cover md:object-contain"
+            className="object-cover md:object-contain object-center z-0"
           />
+
+          {/* Cinematic Gradient Extensions & Blending */}
+          <div className="absolute inset-0 z-10 pointer-events-none">
+            {/* Left Edge Ambient Blend (Warm tones from Canada/Mexico flags) */}
+            <div 
+              className="absolute inset-y-0 left-0 w-[40vw] md:w-[35vw]" 
+              style={{ background: "linear-gradient(to right, rgba(5,10,26,1) 0%, rgba(5,10,26,0.85) 30%, rgba(139,28,28,0.25) 70%, transparent 100%)" }} 
+            />
+            
+            {/* Right Edge Ambient Blend (Cool/Red tones from USA flag) */}
+            <div 
+              className="absolute inset-y-0 right-0 w-[40vw] md:w-[35vw]" 
+              style={{ background: "linear-gradient(to left, rgba(5,10,26,1) 0%, rgba(5,10,26,0.85) 30%, rgba(26,43,92,0.25) 70%, transparent 100%)" }} 
+            />
+            
+            {/* Top Fade */}
+            <div 
+              className="absolute inset-x-0 top-0 h-[15vh]" 
+              style={{ background: "linear-gradient(to bottom, rgba(5,10,26,1) 0%, rgba(5,10,26,0.4) 50%, transparent 100%)" }}
+            />
+            
+            {/* Center Trophy Glow (Gold) */}
+            <div className="absolute top-[40%] left-1/2 -translate-x-1/2 w-[40vw] h-[40vw] max-w-[600px] max-h-[600px] bg-[#ffd700] rounded-full mix-blend-screen blur-[120px] opacity-10" />
+          </div>
+
+          {/* Bottom Fade & Text Overlay */}
           <div
-            className="absolute inset-0"
+            className="absolute inset-0 z-20 pointer-events-none"
             style={{
               background:
-                "linear-gradient(to bottom, rgba(5,10,26,0.65) 0%, rgba(5,10,26,0.2) 40%, rgba(5,10,26,0.95) 100%)",
+                "linear-gradient(to bottom, transparent 0%, rgba(5,10,26,0.1) 40%, rgba(5,10,26,0.95) 90%, #050a1a 100%)",
             }}
           />
         </motion.div>
