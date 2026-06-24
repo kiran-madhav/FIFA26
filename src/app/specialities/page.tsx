@@ -133,7 +133,7 @@ function Section({
       initial={{ opacity: 0, y: 40 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.7, ease: "easeOut" }}
-      className={`py-20 px-4 max-w-7xl mx-auto ${className}`}
+      className={`py-20 px-4 w-full max-w-7xl mx-auto flex flex-col items-center justify-center ${className}`}
     >
       {children}
     </motion.section>
@@ -143,7 +143,7 @@ function Section({
 // ─── Section Title ────────────────────────────────────────────────────────────
 function SectionTitle({ icon, title, subtitle }: { icon?: React.ReactNode; title: string; subtitle?: string }) {
   return (
-    <div className="flex flex-col items-center justify-center text-center w-full max-w-4xl mx-auto mb-14">
+    <div className="flex flex-col items-center justify-center text-center w-full mx-auto mb-14">
       {icon && (
         <div className="flex items-center justify-center mb-4 text-[#ffd700] drop-shadow-md">
           {icon}
@@ -156,7 +156,7 @@ function SectionTitle({ icon, title, subtitle }: { icon?: React.ReactNode; title
         {title}
       </h2>
       {subtitle && (
-        <p className="text-lg max-w-2xl text-center mx-auto leading-relaxed" style={{ color: "var(--text-secondary)" }}>
+        <p className="text-lg max-w-3xl text-center mx-auto leading-relaxed" style={{ color: "var(--text-secondary)" }}>
           {subtitle}
         </p>
       )}
@@ -534,7 +534,7 @@ export default function SpecialitiesPage() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="relative mb-14 max-w-6xl mx-auto"
+          className="relative mb-14 w-full"
         >
           <div className="relative w-full rounded-[32px] overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.5)]">
             <Image unoptimized={true}
@@ -606,7 +606,7 @@ export default function SpecialitiesPage() {
           initial={{ opacity: 0, scale: 0.97 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="relative mb-14 max-w-5xl mx-auto flex justify-center w-full"
+          className="relative mb-14 w-full flex justify-center"
         >
           <div className="relative w-full rounded-[32px] overflow-hidden p-3 sm:p-4"
             style={{ 
