@@ -883,6 +883,22 @@ export default function SpecialitiesPage() {
           subtitle="2026 isn't just a World Cup. It's a landmark moment in the evolution of football."
         />
 
+        <motion.div
+          initial={{ opacity: 0, scale: 0.97 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className="relative rounded-2xl overflow-hidden mb-12 shadow-2xl border border-white/10"
+        >
+          <Image quality={100}
+            src="/specialities/neon-hero.jpg"
+            alt="FIFA World Cup 2026 Innovations"
+            width={1200}
+            height={675}
+            className="w-full h-auto object-contain"
+            style={{ background: "#050a1a" }}
+          />
+        </motion.div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {innovations.map((item, i) => (
             <motion.div
