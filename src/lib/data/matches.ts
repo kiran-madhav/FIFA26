@@ -1806,7 +1806,7 @@ export const MATCHES = [
     "group": "I",
     "matchDay": 3,
     "date": "2026-06-26T20:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 36,
       "name": "Norway",
@@ -1821,8 +1821,8 @@ export const MATCHES = [
       "tla": "FRA",
       "flag": "🇫🇷"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 1,
+    "awayScore": 4,
     "stadium": {
       "name": "Gillette Stadium",
       "city": "Boston",
@@ -1836,7 +1836,7 @@ export const MATCHES = [
     "group": "I",
     "matchDay": 3,
     "date": "2026-06-26T23:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 34,
       "name": "Senegal",
@@ -1851,8 +1851,8 @@ export const MATCHES = [
       "tla": "IRQ",
       "flag": "🇮🇶"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 5,
+    "awayScore": 0,
     "stadium": {
       "name": "BMO Field",
       "city": "Toronto",
@@ -1866,7 +1866,7 @@ export const MATCHES = [
     "group": "G",
     "matchDay": 3,
     "date": "2026-06-26T20:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 26,
       "name": "Egypt",
@@ -1881,8 +1881,8 @@ export const MATCHES = [
       "tla": "IRN",
       "flag": "🇮🇷"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 1,
+    "awayScore": 1,
     "stadium": {
       "name": "Lumen Field",
       "city": "Seattle",
@@ -1896,7 +1896,7 @@ export const MATCHES = [
     "group": "G",
     "matchDay": 3,
     "date": "2026-06-26T23:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 28,
       "name": "New Zealand",
@@ -1911,8 +1911,8 @@ export const MATCHES = [
       "tla": "BEL",
       "flag": "🇧🇪"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 1,
+    "awayScore": 5,
     "stadium": {
       "name": "BC Place",
       "city": "Vancouver",
@@ -1926,7 +1926,7 @@ export const MATCHES = [
     "group": "H",
     "matchDay": 3,
     "date": "2026-06-26T20:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 30,
       "name": "Cape Verde",
@@ -1941,8 +1941,8 @@ export const MATCHES = [
       "tla": "KSA",
       "flag": "🇸🇦"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 0,
+    "awayScore": 0,
     "stadium": {
       "name": "NRG Stadium",
       "city": "Houston",
@@ -1956,7 +1956,7 @@ export const MATCHES = [
     "group": "H",
     "matchDay": 3,
     "date": "2026-06-26T23:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 32,
       "name": "Uruguay",
@@ -1971,8 +1971,8 @@ export const MATCHES = [
       "tla": "ESP",
       "flag": "🇪🇸"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 0,
+    "awayScore": 1,
     "stadium": {
       "name": "Estadio Akron",
       "city": "Guadalajara",
