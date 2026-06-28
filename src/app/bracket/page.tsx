@@ -288,14 +288,16 @@ export default function BracketPage() {
                     <span className="text-2xl font-black text-white uppercase tracking-widest">{champion}</span>
                   </div>
                 ) : (
-                  <div className="relative z-10 h-[160px] w-[140px] opacity-70 grayscale contrast-125 mb-4">
-                    <Image 
-                      src="/logo.png"
-                      alt="FIFA World Cup Trophy Placeholder"
-                      fill
-                      className="object-contain"
-                      priority
-                    />
+                  <div className="relative z-10 flex flex-col items-center gap-6 mt-4 opacity-40 grayscale contrast-125 transition-all">
+                    <div className="relative h-[200px] w-[150px]">
+                      <Image 
+                        src="/wc2026-trophy.jpg"
+                        alt="FIFA World Cup Trophy Placeholder"
+                        fill
+                        className="object-cover rounded-2xl border border-[var(--border-glass)]"
+                        priority
+                      />
+                    </div>
                   </div>
                 )}
               </div>
