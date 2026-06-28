@@ -161,9 +161,18 @@ export default function BracketPage() {
             <Map className="text-[var(--fifa-gold)] hidden sm:block" size={48} />
             Round of 32 Bracket
           </h1>
-          <p className="text-[var(--text-secondary)] font-medium max-w-2xl mx-auto px-4">
-            Predict the path to glory. Select the winners of each match to build your ultimate World Cup 2026 bracket.
-          </p>
+          <div className="max-w-2xl mx-auto px-4 space-y-3">
+            <p className="text-[var(--text-primary)] font-bold text-lg">
+              Predict the path to glory!
+            </p>
+            <div className="inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-4 bg-[var(--bg-card)] border border-[var(--border-glass)] rounded-xl p-3 sm:px-6 shadow-lg">
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--fifa-gold)] text-black font-black text-xs">1</span>
+              <p className="text-sm text-[var(--text-secondary)]">Click on the team you think will win each match</p>
+              <span className="hidden sm:block text-[var(--border-glass)]">|</span>
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--fifa-gold)] text-black font-black text-xs">2</span>
+              <p className="text-sm text-[var(--text-secondary)]">Advance them all the way to the Final!</p>
+            </div>
+          </div>
         </div>
 
         {/* BRACKET WRAPPER (Scrollable horizontally on mobile) */}
