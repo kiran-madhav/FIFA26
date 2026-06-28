@@ -5,6 +5,7 @@ import { useBracketStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
 import { Trophy, Lock, Map, Calendar } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { TEAMS } from "@/lib/data/teams";
 
 function FlagEmoji({ emoji, className }: { emoji: string; className?: string }) {
@@ -271,15 +272,31 @@ export default function BracketPage() {
               </h3>
               
               {/* Trophy Glow */}
-              <div className="relative w-48 h-64 flex items-center justify-center mb-16">
+              <div className="relative w-48 h-64 flex flex-col items-center justify-center mb-16">
                 <div className="absolute inset-0 bg-[var(--fifa-gold)]/40 blur-[100px] rounded-full" />
                 {champion ? (
-                  <div className="relative z-10 flex flex-col items-center">
-                    <Trophy size={110} className="text-[var(--fifa-gold)] mb-6 drop-shadow-[0_0_20px_rgba(250,220,102,0.6)]" />
+                  <div className="relative z-10 flex flex-col items-center gap-6 mt-4">
+                    <div className="relative h-[160px] w-[140px]">
+                      <Image 
+                        src="/logo.png"
+                        alt="FIFA World Cup Trophy"
+                        fill
+                        className="object-contain drop-shadow-[0_0_20px_rgba(250,220,102,0.6)]"
+                        priority
+                      />
+                    </div>
                     <span className="text-2xl font-black text-white uppercase tracking-widest">{champion}</span>
                   </div>
                 ) : (
-                  <Trophy size={110} className="text-[var(--border-glass)] relative z-10" />
+                  <div className="relative z-10 h-[160px] w-[140px] opacity-70 grayscale contrast-125 mb-4">
+                    <Image 
+                      src="/logo.png"
+                      alt="FIFA World Cup Trophy Placeholder"
+                      fill
+                      className="object-contain"
+                      priority
+                    />
+                  </div>
                 )}
               </div>
 
