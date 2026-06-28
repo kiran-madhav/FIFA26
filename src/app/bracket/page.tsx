@@ -295,14 +295,15 @@ export default function BracketPage() {
                 {/* Glow Layer (z-10) - Overlays the image slightly for effect */}
                 <div className="absolute inset-0 bg-[var(--fifa-gold)]/40 blur-[100px] rounded-full z-10 pointer-events-none transition-opacity duration-700" style={{ opacity: champion ? 1 : 0.3 }} />
                 
-                {/* Anchored Text Layer (z-20) */}
-                {champion && (
-                  <div className="absolute -bottom-12 z-20 flex justify-center w-full">
-                    <span className="text-2xl font-black text-white uppercase tracking-widest whitespace-nowrap drop-shadow-lg">
-                      {champion}
-                    </span>
-                  </div>
-                )}
+                {/* Floating Text Layer (z-20) */}
+                <div className="absolute -bottom-12 z-20 flex justify-center w-full animate-float">
+                  <span className={cn(
+                    "text-2xl font-black text-white uppercase tracking-widest whitespace-nowrap drop-shadow-lg transition-opacity duration-700",
+                    champion ? "opacity-100" : "opacity-0"
+                  )}>
+                    {champion || "TBD"}
+                  </span>
+                </div>
               </div>
 
               {/* Final Match Node */}
