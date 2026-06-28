@@ -35,7 +35,9 @@ function MatchNode({ matchId, topLabel, bottomLabel, onSelect, picks, isLeft, ro
   
   // Calculate relative sizes to draw connector lines
   // We'll use simple CSS borders for the bracket tree
-  const isTopMatch = parseInt(matchId.replace("M", "")) % 2 !== 0;
+  const matchStr = matchId.match(/\d+$/);
+  const matchNum = matchStr ? parseInt(matchStr[0], 10) : 1;
+  const isTopMatch = matchNum % 2 !== 0;
 
   const topFlag = TEAMS.find(t => t.name === topLabel)?.flag || "";
   const bottomFlag = TEAMS.find(t => t.name === bottomLabel)?.flag || "";
@@ -71,7 +73,7 @@ function MatchNode({ matchId, topLabel, bottomLabel, onSelect, picks, isLeft, ro
       {/* Bracket Connector Lines */}
       {roundIdx < 4 && (
         <div className={cn(
-          "absolute w-8 sm:w-12 border-[var(--border-glass)]",
+          "absolute w-8 sm:w-12 border-[var(--border-glass)] pointer-events-none",
           isLeft ? "-right-8 sm:-right-12" : "-left-8 sm:-left-12",
           isTopMatch ? "border-t border-r rounded-tr-xl h-[50%]" : "border-b border-r rounded-br-xl h-[50%] -top-[50%]"
         )}
