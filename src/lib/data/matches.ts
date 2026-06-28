@@ -1536,7 +1536,7 @@ export const MATCHES = [
     "group": "B",
     "matchDay": 3,
     "date": "2026-06-24T23:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 6,
       "name": "UEFA Playoff Winner",
@@ -1551,8 +1551,8 @@ export const MATCHES = [
       "tla": "QAT",
       "flag": "🇶🇦"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 3,
+    "awayScore": 1,
     "stadium": {
       "name": "Lumen Field",
       "city": "Seattle",
