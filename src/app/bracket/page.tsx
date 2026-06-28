@@ -5,27 +5,28 @@ import { useBracketStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
 import { Trophy, Lock, Map, Calendar } from "lucide-react";
 import Link from "next/link";
+import { TEAMS } from "@/lib/data/teams";
 
 const LEFT_R32 = [
-  ["1E", "3 ABCDF", "M1"],
-  ["1I", "3 CDFGH", "M2"],
-  ["2A", "2B", "M3"],
-  ["1F", "2C", "M4"],
-  ["2K", "2L", "M5"],
-  ["1H", "2J", "M6"],
-  ["1D", "3 BEFIJ", "M7"],
-  ["1G", "3 AEHIJ", "M8"],
+  ["Germany", "Paraguay", "M1"],
+  ["France", "Sweden", "M2"],
+  ["South Africa", "Canada", "M3"],
+  ["Netherlands", "Morocco", "M4"],
+  ["Portugal", "Croatia", "M5"],
+  ["Spain", "Austria", "M6"],
+  ["United States", "Bosnia and Herzegovina", "M7"],
+  ["Belgium", "Senegal", "M8"],
 ];
 
 const RIGHT_R32 = [
-  ["1C", "2F", "M9"],
-  ["2E", "2I", "M10"],
-  ["1A", "3 CEFHI", "M11"],
-  ["1L", "3 EHIJK", "M12"],
-  ["1J", "2H", "M13"],
-  ["2D", "2G", "M14"],
-  ["1B", "3 EFGIJ", "M15"],
-  ["1K", "3 DEIJL", "M16"],
+  ["Brazil", "Japan", "M9"],
+  ["Côte d'Ivoire", "Norway", "M10"],
+  ["Mexico", "Ecuador", "M11"],
+  ["England", "DR Congo", "M12"],
+  ["Argentina", "Cape Verde", "M13"],
+  ["Australia", "Egypt", "M14"],
+  ["Switzerland", "Algeria", "M15"],
+  ["Colombia", "Ghana", "M16"],
 ];
 
 function MatchNode({ matchId, topLabel, bottomLabel, onSelect, picks, isLeft, roundIdx }: any) {
@@ -36,29 +37,34 @@ function MatchNode({ matchId, topLabel, bottomLabel, onSelect, picks, isLeft, ro
   // We'll use simple CSS borders for the bracket tree
   const isTopMatch = parseInt(matchId.replace("M", "")) % 2 !== 0;
 
+  const topFlag = TEAMS.find(t => t.name === topLabel)?.flag || "";
+  const bottomFlag = TEAMS.find(t => t.name === bottomLabel)?.flag || "";
+
   return (
     <div className="relative flex items-center my-2 group">
       <div className={cn(
-        "flex flex-col border border-[var(--border-glass)] rounded-md bg-[var(--bg-card)] shadow-lg overflow-hidden w-24 sm:w-28 flex-shrink-0 relative z-10 transition-colors",
+        "flex flex-col border border-[var(--border-glass)] rounded-md bg-[var(--bg-card)] shadow-lg overflow-hidden w-28 sm:w-36 flex-shrink-0 relative z-10 transition-colors",
         winner ? "border-[var(--fifa-blue)]/50" : ""
       )}>
         <button 
           onClick={() => onSelect(matchId, topLabel)}
           className={cn(
-            "px-2 py-1.5 text-[10px] sm:text-xs font-bold text-center border-b border-[var(--border-glass)] transition-colors",
+            "px-2 py-1.5 text-[10px] sm:text-xs font-bold text-left border-b border-[var(--border-glass)] transition-colors flex items-center gap-2",
             winner === topLabel ? "bg-[var(--fifa-gold)] text-black" : "text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]"
           )}
         >
-          {topLabel || "TBD"}
+          {topFlag && <span className="text-sm">{topFlag}</span>}
+          <span className="truncate">{topLabel || "TBD"}</span>
         </button>
         <button 
           onClick={() => onSelect(matchId, bottomLabel)}
           className={cn(
-            "px-2 py-1.5 text-[10px] sm:text-xs font-bold text-center transition-colors",
+            "px-2 py-1.5 text-[10px] sm:text-xs font-bold text-left transition-colors flex items-center gap-2",
             winner === bottomLabel ? "bg-[var(--fifa-gold)] text-black" : "text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]"
           )}
         >
-          {bottomLabel || "TBD"}
+          {bottomFlag && <span className="text-sm">{bottomFlag}</span>}
+          <span className="truncate">{bottomLabel || "TBD"}</span>
         </button>
       </div>
 
@@ -136,6 +142,9 @@ export default function BracketPage() {
   const finalTop = picks["L_SF_1"];
   const finalBottom = picks["R_SF_1"];
   const champion = picks["FINAL"];
+
+  const finalTopFlag = TEAMS.find(t => t.name === finalTop)?.flag || "";
+  const finalBottomFlag = TEAMS.find(t => t.name === finalBottom)?.flag || "";
 
   return (
     <div className="min-h-screen pt-24 pb-20 relative overflow-hidden bg-[var(--bg-primary)]">
@@ -232,27 +241,29 @@ export default function BracketPage() {
               </div>
 
               {/* Final Match Node */}
-              <div className="w-32 z-10 mb-12">
+              <div className="w-36 z-10 mb-12">
                  <div className={cn(
                     "flex flex-col border-2 border-[var(--fifa-gold)]/50 rounded-lg bg-[var(--bg-card)] shadow-[0_0_20px_rgba(250,220,102,0.15)] overflow-hidden",
                   )}>
                   <button 
                     onClick={() => handleSelect("FINAL", finalTop)}
                     className={cn(
-                      "px-2 py-2.5 text-xs font-bold text-center border-b border-[var(--border-glass)] transition-colors",
+                      "px-2 py-2.5 text-xs font-bold text-left border-b border-[var(--border-glass)] transition-colors flex items-center gap-2",
                       champion === finalTop && finalTop ? "bg-[var(--fifa-gold)] text-black" : "text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]"
                     )}
                   >
-                    {finalTop || "TBD"}
+                    {finalTopFlag && <span className="text-sm">{finalTopFlag}</span>}
+                    <span className="truncate">{finalTop || "TBD"}</span>
                   </button>
                   <button 
                     onClick={() => handleSelect("FINAL", finalBottom)}
                     className={cn(
-                      "px-2 py-2.5 text-xs font-bold text-center transition-colors",
+                      "px-2 py-2.5 text-xs font-bold text-left transition-colors flex items-center gap-2",
                       champion === finalBottom && finalBottom ? "bg-[var(--fifa-gold)] text-black" : "text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]"
                     )}
                   >
-                    {finalBottom || "TBD"}
+                    {finalBottomFlag && <span className="text-sm">{finalBottomFlag}</span>}
+                    <span className="truncate">{finalBottom || "TBD"}</span>
                   </button>
                 </div>
               </div>
