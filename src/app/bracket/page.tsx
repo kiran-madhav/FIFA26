@@ -275,7 +275,7 @@ export default function BracketPage() {
               <div className="relative w-48 h-64 flex flex-col items-center justify-center mb-16">
                 <div className="absolute inset-0 bg-[var(--fifa-gold)]/40 blur-[100px] rounded-full" />
                 {champion ? (
-                  <div className="relative z-10 flex flex-col items-center gap-6 mt-4 animate-float">
+                  <div className="relative z-10 flex flex-col items-center gap-6 mt-4 transition-all duration-500">
                     <div className="relative h-[200px] w-[150px]">
                       <Image 
                         src="/wc2026-trophy.jpg"
