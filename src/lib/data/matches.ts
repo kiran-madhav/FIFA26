@@ -1986,7 +1986,7 @@ export const MATCHES = [
     "group": "L",
     "matchDay": 3,
     "date": "2026-06-27T20:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 48,
       "name": "Panama",
@@ -2001,8 +2001,8 @@ export const MATCHES = [
       "tla": "ENG",
       "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 0,
+    "awayScore": 2,
     "stadium": {
       "name": "MetLife Stadium",
       "city": "East Rutherford",
@@ -2016,7 +2016,7 @@ export const MATCHES = [
     "group": "L",
     "matchDay": 3,
     "date": "2026-06-27T23:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 46,
       "name": "Croatia",
@@ -2031,8 +2031,8 @@ export const MATCHES = [
       "tla": "GHA",
       "flag": "🇬🇭"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 2,
+    "awayScore": 1,
     "stadium": {
       "name": "Lincoln Financial Field",
       "city": "Philadelphia",
@@ -2046,7 +2046,7 @@ export const MATCHES = [
     "group": "J",
     "matchDay": 3,
     "date": "2026-06-27T20:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 38,
       "name": "Algeria",
@@ -2061,8 +2061,8 @@ export const MATCHES = [
       "tla": "AUT",
       "flag": "🇦🇹"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 3,
+    "awayScore": 3,
     "stadium": {
       "name": "GEHA Field at Arrowhead Stadium",
       "city": "Kansas City",
@@ -2076,7 +2076,7 @@ export const MATCHES = [
     "group": "J",
     "matchDay": 3,
     "date": "2026-06-27T23:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 40,
       "name": "Jordan",
@@ -2091,8 +2091,8 @@ export const MATCHES = [
       "tla": "ARG",
       "flag": "🇦🇷"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 1,
+    "awayScore": 3,
     "stadium": {
       "name": "AT&T Stadium",
       "city": "Dallas",
@@ -2106,7 +2106,7 @@ export const MATCHES = [
     "group": "K",
     "matchDay": 3,
     "date": "2026-06-27T20:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 44,
       "name": "Colombia",
@@ -2121,8 +2121,8 @@ export const MATCHES = [
       "tla": "POR",
       "flag": "🇵🇹"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 0,
+    "awayScore": 0,
     "stadium": {
       "name": "Hard Rock Stadium",
       "city": "Miami",
@@ -2136,7 +2136,7 @@ export const MATCHES = [
     "group": "K",
     "matchDay": 3,
     "date": "2026-06-27T23:00:00.000Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 42,
       "name": "DR Congo",
@@ -2151,8 +2151,8 @@ export const MATCHES = [
       "tla": "UZB",
       "flag": "🇺🇿"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 3,
+    "awayScore": 1,
     "stadium": {
       "name": "Mercedes-Benz Stadium",
       "city": "Atlanta",
