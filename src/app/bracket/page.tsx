@@ -148,6 +148,14 @@ export default function BracketPage() {
   const finalTopFlag = TEAMS.find(t => t.name === finalTop)?.flag || "";
   const finalBottomFlag = TEAMS.find(t => t.name === finalBottom)?.flag || "";
 
+  // Derive Bronze Match participants
+  const leftSFLoser = finalTop ? (finalTop === lSF[0].top ? lSF[0].bottom : lSF[0].top) : null;
+  const rightSFLoser = finalBottom ? (finalBottom === rSF[0].top ? rSF[0].bottom : rSF[0].top) : null;
+  const bronzeWinner = picks["BRONZE"];
+
+  const leftSFLoserFlag = TEAMS.find(t => t.name === leftSFLoser)?.flag || "";
+  const rightSFLoserFlag = TEAMS.find(t => t.name === rightSFLoser)?.flag || "";
+
   return (
     <div className="min-h-screen pt-24 pb-20 relative overflow-hidden bg-[var(--bg-primary)]">
       
@@ -281,24 +289,28 @@ export default function BracketPage() {
 
               {/* Bronze Match */}
               <div className="flex flex-col items-center">
-                <span className="text-[10px] font-bold text-[var(--text-muted)] tracking-widest uppercase mb-2">Bronze Winner</span>
-                <div className="w-24">
+                <span className="text-[10px] font-bold text-[var(--text-muted)] tracking-widest uppercase mb-2">Third Place</span>
+                <div className="w-32 sm:w-36">
                   <div className="flex flex-col border border-[var(--border-glass)] rounded-md bg-[var(--bg-secondary)]/50 overflow-hidden">
                     <button 
-                      onClick={() => handleSelect("BRONZE", picks["BRONZE_TOP"])}
+                      onClick={() => handleSelect("BRONZE", leftSFLoser || "")}
                       className={cn(
-                        "px-2 py-1.5 text-[10px] font-bold text-center border-b border-[var(--border-glass)] transition-colors text-[var(--text-primary)] hover:bg-[var(--bg-card)]"
+                        "px-2 py-2 text-[10px] sm:text-xs font-bold text-left border-b border-[var(--border-glass)] transition-colors flex items-center gap-2",
+                        bronzeWinner === leftSFLoser && leftSFLoser ? "bg-[#CD7F32] text-white" : "text-[var(--text-primary)] hover:bg-[var(--bg-card)]"
                       )}
                     >
-                      {picks["BRONZE_TOP"] || "Loser SF1"}
+                      {leftSFLoserFlag && <span className="text-sm">{leftSFLoserFlag}</span>}
+                      <span className="truncate">{leftSFLoser || "Loser SF1"}</span>
                     </button>
                     <button 
-                      onClick={() => handleSelect("BRONZE", picks["BRONZE_BOTTOM"])}
+                      onClick={() => handleSelect("BRONZE", rightSFLoser || "")}
                       className={cn(
-                        "px-2 py-1.5 text-[10px] font-bold text-center transition-colors text-[var(--text-primary)] hover:bg-[var(--bg-card)]"
+                        "px-2 py-2 text-[10px] sm:text-xs font-bold text-left transition-colors flex items-center gap-2",
+                        bronzeWinner === rightSFLoser && rightSFLoser ? "bg-[#CD7F32] text-white" : "text-[var(--text-primary)] hover:bg-[var(--bg-card)]"
                       )}
                     >
-                      {picks["BRONZE_BOTTOM"] || "Loser SF2"}
+                      {rightSFLoserFlag && <span className="text-sm">{rightSFLoserFlag}</span>}
+                      <span className="truncate">{rightSFLoser || "Loser SF2"}</span>
                     </button>
                   </div>
                 </div>
