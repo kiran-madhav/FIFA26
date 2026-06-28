@@ -267,37 +267,40 @@ export default function BracketPage() {
 
             {/* CENTER (Finals & Trophy) */}
             <div className="flex flex-col items-center justify-center min-w-[200px] px-8 relative">
-              <h3 className="font-display text-2xl font-black text-white tracking-widest uppercase mb-12 absolute top-0 text-center w-full">
+              <h3 className="font-display text-2xl font-black text-white tracking-widest uppercase mb-12 absolute top-0 text-center w-full z-30">
                 World Champions
               </h3>
               
-              {/* Trophy Glow */}
+              {/* Trophy Glow & Image Layout */}
               <div className="relative w-48 h-64 flex flex-col items-center justify-center mb-16">
-                <div className="absolute inset-0 bg-[var(--fifa-gold)]/40 blur-[100px] rounded-full" />
-                {champion ? (
-                  <div className="relative z-10 flex flex-col items-center gap-6 mt-4 transition-all duration-500">
-                    <div className="relative h-[200px] w-[150px]">
-                      <Image 
-                        src="/wc2026-trophy.jpg"
-                        alt="FIFA World Cup Trophy"
-                        fill
-                        className="object-cover rounded-2xl shadow-[0_0_30px_rgba(250,220,102,0.4)] border border-[var(--fifa-gold)]/30"
-                        priority
-                      />
-                    </div>
-                    <span className="absolute -bottom-12 text-2xl font-black text-white uppercase tracking-widest whitespace-nowrap drop-shadow-lg">{champion}</span>
+                
+                {/* Floating Image Layer (z-0) */}
+                <div className="absolute inset-0 z-0 flex items-center justify-center animate-float">
+                  <div className="relative h-[200px] w-[150px]">
+                    <Image 
+                      src="/wc2026-trophy.jpg"
+                      alt="FIFA World Cup Trophy"
+                      fill
+                      className={cn(
+                        "object-cover rounded-2xl transition-all duration-700",
+                        champion 
+                          ? "shadow-[0_0_30px_rgba(250,220,102,0.4)] border border-[var(--fifa-gold)]/30" 
+                          : "opacity-40 grayscale contrast-125 border border-[var(--border-glass)]"
+                      )}
+                      priority
+                    />
                   </div>
-                ) : (
-                  <div className="relative z-10 flex flex-col items-center gap-6 mt-4 opacity-40 grayscale contrast-125 transition-all">
-                    <div className="relative h-[200px] w-[150px]">
-                      <Image 
-                        src="/wc2026-trophy.jpg"
-                        alt="FIFA World Cup Trophy Placeholder"
-                        fill
-                        className="object-cover rounded-2xl border border-[var(--border-glass)]"
-                        priority
-                      />
-                    </div>
+                </div>
+
+                {/* Glow Layer (z-10) - Overlays the image slightly for effect */}
+                <div className="absolute inset-0 bg-[var(--fifa-gold)]/40 blur-[100px] rounded-full z-10 pointer-events-none transition-opacity duration-700" style={{ opacity: champion ? 1 : 0.3 }} />
+                
+                {/* Anchored Text Layer (z-20) */}
+                {champion && (
+                  <div className="absolute -bottom-12 z-20 flex justify-center w-full">
+                    <span className="text-2xl font-black text-white uppercase tracking-widest whitespace-nowrap drop-shadow-lg">
+                      {champion}
+                    </span>
                   </div>
                 )}
               </div>
