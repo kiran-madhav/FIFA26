@@ -7,6 +7,24 @@ import { Trophy, Lock, Map, Calendar } from "lucide-react";
 import Link from "next/link";
 import { TEAMS } from "@/lib/data/teams";
 
+function FlagEmoji({ emoji, className }: { emoji: string; className?: string }) {
+  if (!emoji) return null;
+  const emojiHex = Array.from(emoji)
+    .map(c => c.codePointAt(0)?.toString(16))
+    .filter(Boolean)
+    .join('-');
+  return (
+    /* eslint-disable-next-line @next/next/no-img-element */
+    <img 
+      src={`https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/${emojiHex}.svg`} 
+      alt="flag"
+      className={cn("inline-block w-[1em] h-[1em]", className)}
+      draggable={false}
+      style={{ minWidth: '1em', minHeight: '1em' }}
+    />
+  );
+}
+
 const LEFT_R32 = [
   ["Germany", "Paraguay", "M1"],
   ["France", "Sweden", "M2"],
@@ -57,7 +75,7 @@ function MatchNode({ matchId, topLabel, bottomLabel, onSelect, picks, isLeft, ro
               : "text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]"
           )}
         >
-          {topFlag && <span className="text-xl drop-shadow-sm">{topFlag}</span>}
+          {topFlag && <FlagEmoji emoji={topFlag} className="text-xl drop-shadow-sm" />}
           <span className={cn("truncate", !topLabel || topLabel === "TBD" ? "text-[var(--text-muted)]/40 font-normal" : "")}>{topLabel || "TBD"}</span>
         </button>
         <button 
@@ -69,7 +87,7 @@ function MatchNode({ matchId, topLabel, bottomLabel, onSelect, picks, isLeft, ro
               : "text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]"
           )}
         >
-          {bottomFlag && <span className="text-xl drop-shadow-sm">{bottomFlag}</span>}
+          {bottomFlag && <FlagEmoji emoji={bottomFlag} className="text-xl drop-shadow-sm" />}
           <span className={cn("truncate", !bottomLabel || bottomLabel === "TBD" ? "text-[var(--text-muted)]/40 font-normal" : "")}>{bottomLabel || "TBD"}</span>
         </button>
       </div>
@@ -277,7 +295,7 @@ export default function BracketPage() {
                       champion === finalTop && finalTop ? "bg-[var(--fifa-gold)]/5 text-[var(--fifa-gold)]" : "text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]"
                     )}
                   >
-                    {finalTopFlag && <span className="text-2xl drop-shadow-sm">{finalTopFlag}</span>}
+                    {finalTopFlag && <FlagEmoji emoji={finalTopFlag} className="text-2xl drop-shadow-sm" />}
                     <span className={cn("truncate", !finalTop || finalTop === "TBD" ? "text-[var(--text-muted)]/40 font-normal" : "")}>{finalTop || "TBD"}</span>
                   </button>
                   <button 
@@ -287,7 +305,7 @@ export default function BracketPage() {
                       champion === finalBottom && finalBottom ? "bg-[var(--fifa-gold)]/5 text-[var(--fifa-gold)]" : "text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]"
                     )}
                   >
-                    {finalBottomFlag && <span className="text-2xl drop-shadow-sm">{finalBottomFlag}</span>}
+                    {finalBottomFlag && <FlagEmoji emoji={finalBottomFlag} className="text-2xl drop-shadow-sm" />}
                     <span className={cn("truncate", !finalBottom || finalBottom === "TBD" ? "text-[var(--text-muted)]/40 font-normal" : "")}>{finalBottom || "TBD"}</span>
                   </button>
                 </div>
@@ -305,7 +323,7 @@ export default function BracketPage() {
                         bronzeWinner === leftSFLoser && leftSFLoser ? "bg-[#CD7F32]/5 text-[#CD7F32]" : "text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]"
                       )}
                     >
-                      {leftSFLoserFlag && <span className="text-xl drop-shadow-sm">{leftSFLoserFlag}</span>}
+                      {leftSFLoserFlag && <FlagEmoji emoji={leftSFLoserFlag} className="text-xl drop-shadow-sm" />}
                       <span className={cn("truncate", !leftSFLoser ? "text-[var(--text-muted)]/40 font-normal" : "")}>{leftSFLoser || "Loser SF1"}</span>
                     </button>
                     <button 
@@ -315,7 +333,7 @@ export default function BracketPage() {
                         bronzeWinner === rightSFLoser && rightSFLoser ? "bg-[#CD7F32]/5 text-[#CD7F32]" : "text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]"
                       )}
                     >
-                      {rightSFLoserFlag && <span className="text-xl drop-shadow-sm">{rightSFLoserFlag}</span>}
+                      {rightSFLoserFlag && <FlagEmoji emoji={rightSFLoserFlag} className="text-xl drop-shadow-sm" />}
                       <span className={cn("truncate", !rightSFLoser ? "text-[var(--text-muted)]/40 font-normal" : "")}>{rightSFLoser || "Loser SF2"}</span>
                     </button>
                   </div>
