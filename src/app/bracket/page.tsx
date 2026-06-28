@@ -170,6 +170,7 @@ export default function BracketPage() {
 
   const finalTopFlag = TEAMS.find(t => t.name === finalTop)?.flag || "";
   const finalBottomFlag = TEAMS.find(t => t.name === finalBottom)?.flag || "";
+  const championFlag = TEAMS.find(t => t.name === champion)?.flag || "";
 
   // Derive Bronze Match participants
   const leftSFLoser = finalTop ? (finalTop === lSF[0].top ? lSF[0].bottom : lSF[0].top) : null;
@@ -297,12 +298,13 @@ export default function BracketPage() {
                 
                 {/* Floating Text Layer (z-20) */}
                 <div className="absolute bottom-2 z-20 flex justify-center w-full animate-float">
-                  <span className={cn(
-                    "text-2xl font-black text-white uppercase tracking-widest whitespace-nowrap drop-shadow-lg transition-opacity duration-700",
+                  <div className={cn(
+                    "flex items-center gap-3 text-2xl font-black text-white uppercase tracking-widest whitespace-nowrap drop-shadow-lg transition-opacity duration-700",
                     champion ? "opacity-100" : "opacity-0"
                   )}>
-                    {champion || "TBD"}
-                  </span>
+                    {championFlag && <FlagEmoji emoji={championFlag} className="text-3xl drop-shadow-md" />}
+                    <span>{champion || "TBD"}</span>
+                  </div>
                 </div>
               </div>
 
