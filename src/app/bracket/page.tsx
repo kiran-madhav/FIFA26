@@ -45,35 +45,39 @@ function MatchNode({ matchId, topLabel, bottomLabel, onSelect, picks, isLeft, ro
   return (
     <div className="relative flex items-center my-2 group">
       <div className={cn(
-        "flex flex-col border border-[var(--border-glass)] rounded-md bg-[var(--bg-card)] shadow-lg overflow-hidden w-28 sm:w-36 flex-shrink-0 relative z-10 transition-colors",
-        winner ? "border-[var(--fifa-blue)]/50" : ""
+        "flex flex-col border rounded-xl bg-[var(--bg-card)] shadow-lg overflow-hidden w-32 sm:w-40 xl:w-44 flex-shrink-0 relative z-10 transition-all duration-300",
+        winner ? "border-[var(--fifa-gold)] shadow-[0_0_15px_rgba(250,220,102,0.15)] scale-[1.02]" : "border-[var(--border-glass)] hover:border-[var(--border-glass)]/60 hover:scale-[1.02] hover:shadow-xl"
       )}>
         <button 
           onClick={() => onSelect(matchId, topLabel)}
           className={cn(
-            "px-2 py-1.5 text-[10px] sm:text-xs font-bold text-left border-b border-[var(--border-glass)] transition-colors flex items-center gap-2",
-            winner === topLabel ? "bg-[var(--fifa-gold)] text-black" : "text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]"
+            "px-3 py-2 text-[10px] sm:text-xs font-black text-left border-b border-[var(--border-glass)] transition-colors flex items-center gap-3 cursor-pointer",
+            winner === topLabel 
+              ? "bg-[var(--fifa-gold)]/10 text-[var(--fifa-gold)]" 
+              : "text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]"
           )}
         >
-          {topFlag && <span className="text-sm">{topFlag}</span>}
-          <span className="truncate">{topLabel || "TBD"}</span>
+          {topFlag && <span className="text-sm drop-shadow-sm">{topFlag}</span>}
+          <span className={cn("truncate", !topLabel || topLabel === "TBD" ? "text-[var(--text-muted)] font-medium" : "")}>{topLabel || "TBD"}</span>
         </button>
         <button 
           onClick={() => onSelect(matchId, bottomLabel)}
           className={cn(
-            "px-2 py-1.5 text-[10px] sm:text-xs font-bold text-left transition-colors flex items-center gap-2",
-            winner === bottomLabel ? "bg-[var(--fifa-gold)] text-black" : "text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]"
+            "px-3 py-2 text-[10px] sm:text-xs font-black text-left transition-colors flex items-center gap-3 cursor-pointer",
+            winner === bottomLabel 
+              ? "bg-[var(--fifa-gold)]/10 text-[var(--fifa-gold)]" 
+              : "text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]"
           )}
         >
-          {bottomFlag && <span className="text-sm">{bottomFlag}</span>}
-          <span className="truncate">{bottomLabel || "TBD"}</span>
+          {bottomFlag && <span className="text-sm drop-shadow-sm">{bottomFlag}</span>}
+          <span className={cn("truncate", !bottomLabel || bottomLabel === "TBD" ? "text-[var(--text-muted)] font-medium" : "")}>{bottomLabel || "TBD"}</span>
         </button>
       </div>
 
       {/* Bracket Connector Lines */}
       {roundIdx < 4 && (
         <div className={cn(
-          "absolute w-8 sm:w-12 border-[var(--border-glass)] pointer-events-none",
+          "absolute w-8 sm:w-12 border-2 border-[var(--border-glass)]/60 pointer-events-none",
           isLeft ? "-right-8 sm:-right-12" : "-left-8 sm:-left-12",
           isTopMatch ? "border-t border-r rounded-tr-xl h-[50%]" : "border-b border-r rounded-br-xl h-[50%] -top-[50%]"
         )}
@@ -160,31 +164,32 @@ export default function BracketPage() {
     <div className="min-h-screen pt-24 pb-20 relative overflow-hidden bg-[var(--bg-primary)]">
       
       {/* Background styling matching the dark premium vibe */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#003da5]/10 via-[#000000]/5 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[var(--fifa-gold)]/5 via-[var(--bg-primary)] to-[var(--bg-primary)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[url('/pattern.png')] bg-repeat opacity-[0.03] mix-blend-overlay pointer-events-none" />
 
-      <div className="max-w-[1600px] mx-auto px-4 relative z-10">
+      <div className="w-full mx-auto px-4 relative z-10">
         
-        <div className="text-center mb-8">
-          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-black mb-4 uppercase tracking-tighter text-gradient-gold drop-shadow-xl flex items-center justify-center gap-4">
-            <Map className="text-[var(--fifa-gold)] hidden sm:block" size={48} />
+        <div className="text-center mb-12 mt-4 relative z-10">
+          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black mb-4 uppercase tracking-tighter text-gradient-gold drop-shadow-xl flex items-center justify-center gap-3">
+            <Map className="text-[var(--fifa-gold)] hidden sm:block" size={32} />
             Round of 32 Bracket
           </h1>
-          <div className="max-w-2xl mx-auto px-4 space-y-3">
+          <div className="max-w-2xl mx-auto px-4 space-y-5">
             <p className="text-[var(--text-primary)] font-bold text-lg">
               Predict the path to glory!
             </p>
-            <div className="inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-4 bg-[var(--bg-card)] border border-[var(--border-glass)] rounded-xl p-3 sm:px-6 shadow-lg">
+            <div className="inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-6 glass-card-gold rounded-full p-2 sm:px-8 shadow-lg">
               <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--fifa-gold)] text-black font-black text-xs">1</span>
-              <p className="text-sm text-[var(--text-secondary)]">Click on the team you think will win each match</p>
+              <p className="text-sm font-medium text-[var(--text-secondary)]">Click on the team you think will win each match</p>
               <span className="hidden sm:block text-[var(--border-glass)]">|</span>
               <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--fifa-gold)] text-black font-black text-xs">2</span>
-              <p className="text-sm text-[var(--text-secondary)]">Advance them all the way to the Final!</p>
+              <p className="text-sm font-medium text-[var(--text-secondary)]">Advance them all the way to the Final!</p>
             </div>
           </div>
         </div>
 
         {/* BRACKET WRAPPER (Scrollable horizontally on mobile) */}
-        <div className="relative bg-black/40 border border-[var(--border-glass)] rounded-3xl p-4 sm:p-8 backdrop-blur-md overflow-x-auto pb-12 shadow-2xl">
+        <div className="relative glass-card rounded-3xl p-4 sm:p-8 overflow-x-auto pb-12 shadow-2xl scrollbar-thin scrollbar-thumb-[var(--fifa-gold)]/30 scrollbar-track-transparent">
           
           {/* Lock Overlay */}
           <AnimatePresence>
@@ -247,8 +252,8 @@ export default function BracketPage() {
               </h3>
               
               {/* Trophy Glow */}
-              <div className="relative w-40 h-56 flex items-center justify-center mb-8">
-                <div className="absolute inset-0 bg-[var(--fifa-gold)]/20 blur-3xl rounded-full animate-pulse" />
+              <div className="relative w-48 h-64 flex items-center justify-center mb-10">
+                <div className="absolute inset-0 bg-[var(--fifa-gold)]/30 blur-[80px] rounded-full animate-pulse" />
                 {champion ? (
                   <div className="relative z-10 flex flex-col items-center">
                     <Trophy size={80} className="text-[var(--fifa-gold)] mb-4 drop-shadow-[0_0_15px_rgba(250,220,102,0.5)]" />
@@ -260,57 +265,57 @@ export default function BracketPage() {
               </div>
 
               {/* Final Match Node */}
-              <div className="w-36 z-10 mb-12">
+              <div className="w-40 sm:w-48 z-10 mb-12">
                  <div className={cn(
-                    "flex flex-col border-2 border-[var(--fifa-gold)]/50 rounded-lg bg-[var(--bg-card)] shadow-[0_0_20px_rgba(250,220,102,0.15)] overflow-hidden",
+                    "flex flex-col border-2 border-[var(--fifa-gold)] rounded-xl bg-[var(--bg-card)] shadow-[0_0_25px_rgba(250,220,102,0.25)] overflow-hidden transition-all duration-300 hover:scale-[1.02]",
                   )}>
                   <button 
                     onClick={() => handleSelect("FINAL", finalTop)}
                     className={cn(
-                      "px-2 py-2.5 text-xs font-bold text-left border-b border-[var(--border-glass)] transition-colors flex items-center gap-2",
-                      champion === finalTop && finalTop ? "bg-[var(--fifa-gold)] text-black" : "text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]"
+                      "px-3 py-3 text-xs sm:text-sm font-black text-left border-b border-[var(--border-glass)] transition-colors flex items-center gap-3 cursor-pointer",
+                      champion === finalTop && finalTop ? "bg-[var(--fifa-gold)]/10 text-[var(--fifa-gold)]" : "text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]"
                     )}
                   >
-                    {finalTopFlag && <span className="text-sm">{finalTopFlag}</span>}
-                    <span className="truncate">{finalTop || "TBD"}</span>
+                    {finalTopFlag && <span className="text-lg drop-shadow-sm">{finalTopFlag}</span>}
+                    <span className={cn("truncate", !finalTop || finalTop === "TBD" ? "text-[var(--text-muted)] font-medium" : "")}>{finalTop || "TBD"}</span>
                   </button>
                   <button 
                     onClick={() => handleSelect("FINAL", finalBottom)}
                     className={cn(
-                      "px-2 py-2.5 text-xs font-bold text-left transition-colors flex items-center gap-2",
-                      champion === finalBottom && finalBottom ? "bg-[var(--fifa-gold)] text-black" : "text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]"
+                      "px-3 py-3 text-xs sm:text-sm font-black text-left transition-colors flex items-center gap-3 cursor-pointer",
+                      champion === finalBottom && finalBottom ? "bg-[var(--fifa-gold)]/10 text-[var(--fifa-gold)]" : "text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]"
                     )}
                   >
-                    {finalBottomFlag && <span className="text-sm">{finalBottomFlag}</span>}
-                    <span className="truncate">{finalBottom || "TBD"}</span>
+                    {finalBottomFlag && <span className="text-lg drop-shadow-sm">{finalBottomFlag}</span>}
+                    <span className={cn("truncate", !finalBottom || finalBottom === "TBD" ? "text-[var(--text-muted)] font-medium" : "")}>{finalBottom || "TBD"}</span>
                   </button>
                 </div>
               </div>
 
               {/* Bronze Match */}
               <div className="flex flex-col items-center">
-                <span className="text-[10px] font-bold text-[var(--text-muted)] tracking-widest uppercase mb-2">Third Place</span>
-                <div className="w-32 sm:w-36">
-                  <div className="flex flex-col border border-[var(--border-glass)] rounded-md bg-[var(--bg-secondary)]/50 overflow-hidden">
+                <span className="text-[10px] font-bold text-[var(--text-muted)] tracking-widest uppercase mb-3 mt-4">Third Place</span>
+                <div className="w-28 sm:w-32">
+                  <div className="flex flex-col border border-[#CD7F32]/30 rounded-xl bg-[var(--bg-card)] shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-[#CD7F32]/60 hover:scale-[1.02]">
                     <button 
                       onClick={() => handleSelect("BRONZE", leftSFLoser || "")}
                       className={cn(
-                        "px-2 py-2 text-[10px] sm:text-xs font-bold text-left border-b border-[var(--border-glass)] transition-colors flex items-center gap-2",
-                        bronzeWinner === leftSFLoser && leftSFLoser ? "bg-[#CD7F32] text-white" : "text-[var(--text-primary)] hover:bg-[var(--bg-card)]"
+                        "px-3 py-2 text-[10px] sm:text-xs font-black text-left border-b border-[#CD7F32]/20 transition-colors flex items-center gap-2 cursor-pointer",
+                        bronzeWinner === leftSFLoser && leftSFLoser ? "bg-[#CD7F32]/10 text-[#CD7F32]" : "text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]"
                       )}
                     >
-                      {leftSFLoserFlag && <span className="text-sm">{leftSFLoserFlag}</span>}
-                      <span className="truncate">{leftSFLoser || "Loser SF1"}</span>
+                      {leftSFLoserFlag && <span className="text-sm drop-shadow-sm">{leftSFLoserFlag}</span>}
+                      <span className={cn("truncate", !leftSFLoser ? "text-[var(--text-muted)] font-medium" : "")}>{leftSFLoser || "Loser SF1"}</span>
                     </button>
                     <button 
                       onClick={() => handleSelect("BRONZE", rightSFLoser || "")}
                       className={cn(
-                        "px-2 py-2 text-[10px] sm:text-xs font-bold text-left transition-colors flex items-center gap-2",
-                        bronzeWinner === rightSFLoser && rightSFLoser ? "bg-[#CD7F32] text-white" : "text-[var(--text-primary)] hover:bg-[var(--bg-card)]"
+                        "px-3 py-2 text-[10px] sm:text-xs font-black text-left transition-colors flex items-center gap-2 cursor-pointer",
+                        bronzeWinner === rightSFLoser && rightSFLoser ? "bg-[#CD7F32]/10 text-[#CD7F32]" : "text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]"
                       )}
                     >
-                      {rightSFLoserFlag && <span className="text-sm">{rightSFLoserFlag}</span>}
-                      <span className="truncate">{rightSFLoser || "Loser SF2"}</span>
+                      {rightSFLoserFlag && <span className="text-sm drop-shadow-sm">{rightSFLoserFlag}</span>}
+                      <span className={cn("truncate", !rightSFLoser ? "text-[var(--text-muted)] font-medium" : "")}>{rightSFLoser || "Loser SF2"}</span>
                     </button>
                   </div>
                 </div>
