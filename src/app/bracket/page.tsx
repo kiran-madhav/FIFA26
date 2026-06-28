@@ -285,7 +285,7 @@ export default function BracketPage() {
                         priority
                       />
                     </div>
-                    <span className="text-2xl font-black text-white uppercase tracking-widest">{champion}</span>
+                    <span className="absolute -bottom-12 text-2xl font-black text-white uppercase tracking-widest whitespace-nowrap drop-shadow-lg">{champion}</span>
                   </div>
                 ) : (
                   <div className="relative z-10 flex flex-col items-center gap-6 mt-4 opacity-40 grayscale contrast-125 transition-all">
