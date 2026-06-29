@@ -84,12 +84,12 @@ export function calcPrediction(homeRanking = 50, awayRanking = 50) {
 
 export function getPhaseName(phase: string) {
   const names: Record<string, string> = {
-    Group: "Group Stage",
+    Group: "Group",
     R32: "Round of 32",
     R16: "Round of 16",
-    QF: "Quarter-final",
-    SF: "Semi-final",
-    "3P": "3rd Place Play-off",
+    QF: "Quarter-finals",
+    SF: "Semi-finals",
+    "3P": "Third place play-off",
     F: "Final",
   };
   return names[phase] ?? phase;

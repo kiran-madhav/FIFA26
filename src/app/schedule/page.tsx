@@ -18,7 +18,7 @@ export default function SchedulePage() {
 
   const filtered = useMemo(() => {
     return MATCHES.filter((m) => {
-      if (phase !== "all" && m.phase !== phase) return false;
+      if (phase !== "all" && m.phase !== getPhaseName(phase)) return false;
       if (selectedGroup !== "all" && m.group !== selectedGroup) return false;
       if (selectedTeamId !== "all") {
         const id = parseInt(selectedTeamId);
