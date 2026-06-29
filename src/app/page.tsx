@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import {
   Calendar, Radio, BarChart3, GitBranch, ChevronRight,
-  MapPin, Users, Clock, Trophy, Zap, TrendingUp
+  MapPin, Users, Clock, Trophy, Zap, TrendingUp, Sparkles
 } from "lucide-react";
 import { NEWS } from "@/lib/data/news";
 import { MATCHES } from "@/lib/data/matches";
@@ -446,6 +446,7 @@ export default function HomePage() {
             { href: "/highlights", icon: Zap, label: "Highlights", desc: "Goals & key moments" },
             { href: "/fantasy", icon: Trophy, label: "Fantasy XI", desc: "Build your dream team" },
             { href: "/polls", icon: TrendingUp, label: "Fan Polls", desc: "Vote for the winner" },
+            { href: "/specialities", icon: Sparkles, label: "2026 Specialities", desc: "Unique features of 2026" },
           ].map(({ href, icon: Icon, label, desc }, i) => (
             <motion.div
               key={href}
