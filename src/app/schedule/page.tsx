@@ -18,6 +18,9 @@ export default function SchedulePage() {
 
   const filtered = useMemo(() => {
     return MATCHES.filter((m) => {
+      // Hide matches that haven't been decided yet
+      if (m.homeTeam.name === "TBD" || m.awayTeam.name === "TBD") return false;
+
       if (phase !== "all" && m.phase !== getPhaseName(phase)) return false;
       if (selectedGroup !== "all" && m.group !== selectedGroup) return false;
       if (selectedTeamId !== "all") {
