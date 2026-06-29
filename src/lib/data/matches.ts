@@ -1539,10 +1539,10 @@ export const MATCHES = [
     "status": "FINISHED",
     "homeTeam": {
       "id": 6,
-      "name": "UEFA Playoff Winner",
-      "shortName": "UEFA PO",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "name": "Bosnia and Herzegovina",
+      "shortName": "Bosnia & Herz.",
+      "tla": "BIH",
+      "flag": "🇧🇦"
     },
     "awayTeam": {
       "id": 7,
@@ -2163,7 +2163,7 @@ export const MATCHES = [
   {
     "id": 73,
     "phase": "Round of 32",
-    "date": "2026-06-22T20:00:00.000Z",
+    "date": "2026-06-29T16:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
       "id": 17,
@@ -2191,7 +2191,7 @@ export const MATCHES = [
   {
     "id": 74,
     "phase": "Round of 32",
-    "date": "2026-06-23T00:00:00.000Z",
+    "date": "2026-06-30T16:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
       "id": 33,
@@ -2219,8 +2219,8 @@ export const MATCHES = [
   {
     "id": 75,
     "phase": "Round of 32",
-    "date": "2026-06-23T04:00:00.000Z",
-    "status": "SCHEDULED",
+    "date": "2026-06-28T16:00:00Z",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 2,
       "name": "South Africa",
@@ -2235,8 +2235,8 @@ export const MATCHES = [
       "tla": "CAN",
       "flag": "🇨🇦"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 0,
+    "awayScore": 1,
     "stadium": {
       "name": "BC Place",
       "city": "Vancouver",
@@ -2247,7 +2247,7 @@ export const MATCHES = [
   {
     "id": 76,
     "phase": "Round of 32",
-    "date": "2026-06-23T08:00:00.000Z",
+    "date": "2026-06-29T20:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
       "id": 21,
@@ -2275,7 +2275,7 @@ export const MATCHES = [
   {
     "id": 77,
     "phase": "Round of 32",
-    "date": "2026-06-23T12:00:00.000Z",
+    "date": "2026-07-02T16:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
       "id": 41,
@@ -2303,7 +2303,7 @@ export const MATCHES = [
   {
     "id": 78,
     "phase": "Round of 32",
-    "date": "2026-06-23T16:00:00.000Z",
+    "date": "2026-07-02T12:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
       "id": 29,
@@ -2331,7 +2331,7 @@ export const MATCHES = [
   {
     "id": 79,
     "phase": "Round of 32",
-    "date": "2026-06-23T20:00:00.000Z",
+    "date": "2026-07-01T20:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
       "id": 13,
@@ -2342,10 +2342,10 @@ export const MATCHES = [
     },
     "awayTeam": {
       "id": 6,
-      "name": "UEFA Playoff Winner",
-      "shortName": "UEFA PO",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "name": "Bosnia and Herzegovina",
+      "shortName": "Bosnia & Herz.",
+      "tla": "BIH",
+      "flag": "🇧🇦"
     },
     "homeScore": null,
     "awayScore": null,
@@ -2359,7 +2359,7 @@ export const MATCHES = [
   {
     "id": 80,
     "phase": "Round of 32",
-    "date": "2026-06-24T00:00:00.000Z",
+    "date": "2026-07-01T16:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
       "id": 25,
@@ -2387,7 +2387,7 @@ export const MATCHES = [
   {
     "id": 81,
     "phase": "Round of 32",
-    "date": "2026-06-24T04:00:00.000Z",
+    "date": "2026-06-29T12:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
       "id": 9,
@@ -2415,7 +2415,7 @@ export const MATCHES = [
   {
     "id": 82,
     "phase": "Round of 32",
-    "date": "2026-06-24T08:00:00.000Z",
+    "date": "2026-06-30T12:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
       "id": 19,
@@ -2443,7 +2443,7 @@ export const MATCHES = [
   {
     "id": 83,
     "phase": "Round of 32",
-    "date": "2026-06-24T12:00:00.000Z",
+    "date": "2026-06-30T20:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
       "id": 1,
@@ -2471,7 +2471,7 @@ export const MATCHES = [
   {
     "id": 84,
     "phase": "Round of 32",
-    "date": "2026-06-24T16:00:00.000Z",
+    "date": "2026-07-01T12:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
       "id": 45,
@@ -2499,7 +2499,7 @@ export const MATCHES = [
   {
     "id": 85,
     "phase": "Round of 32",
-    "date": "2026-06-24T20:00:00.000Z",
+    "date": "2026-07-03T16:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
       "id": 37,
@@ -2527,7 +2527,7 @@ export const MATCHES = [
   {
     "id": 86,
     "phase": "Round of 32",
-    "date": "2026-06-25T00:00:00.000Z",
+    "date": "2026-07-03T12:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
       "id": 15,
@@ -2555,7 +2555,7 @@ export const MATCHES = [
   {
     "id": 87,
     "phase": "Round of 32",
-    "date": "2026-06-25T04:00:00.000Z",
+    "date": "2026-07-02T20:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
       "id": 8,
@@ -2583,7 +2583,7 @@ export const MATCHES = [
   {
     "id": 88,
     "phase": "Round of 32",
-    "date": "2026-06-25T08:00:00.000Z",
+    "date": "2026-07-03T20:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
       "id": 44,
