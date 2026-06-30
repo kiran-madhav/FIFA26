@@ -2164,7 +2164,7 @@ export const MATCHES = [
     "id": 73,
     "phase": "Round of 32",
     "date": "2026-06-29T16:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 17,
       "name": "Germany",
@@ -2179,14 +2179,16 @@ export const MATCHES = [
       "tla": "PAR",
       "flag": "🇵🇾"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 1,
+    "awayScore": 1,
     "stadium": {
       "name": "Estadio Azteca",
       "city": "Mexico City",
       "capacity": 83264,
       "countryFlag": "🇲🇽"
-    }
+    },
+    "homePenalties": 3,
+    "awayPenalties": 4
   },
   {
     "id": 74,
@@ -2248,7 +2250,7 @@ export const MATCHES = [
     "id": 76,
     "phase": "Round of 32",
     "date": "2026-06-29T20:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 21,
       "name": "Netherlands",
@@ -2263,14 +2265,16 @@ export const MATCHES = [
       "tla": "MAR",
       "flag": "🇲🇦"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 1,
+    "awayScore": 1,
     "stadium": {
       "name": "BMO Field",
       "city": "Toronto",
       "capacity": 45000,
       "countryFlag": "🇨🇦"
-    }
+    },
+    "homePenalties": 2,
+    "awayPenalties": 3
   },
   {
     "id": 77,
@@ -2388,7 +2392,7 @@ export const MATCHES = [
     "id": 81,
     "phase": "Round of 32",
     "date": "2026-06-29T12:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 9,
       "name": "Brazil",
@@ -2403,8 +2407,8 @@ export const MATCHES = [
       "tla": "JPN",
       "flag": "🇯🇵"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 2,
+    "awayScore": 1,
     "stadium": {
       "name": "BC Place",
       "city": "Vancouver",
