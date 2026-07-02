@@ -2194,7 +2194,7 @@ export const MATCHES = [
     "id": 74,
     "phase": "Round of 32",
     "date": "2026-06-30T16:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 33,
       "name": "France",
@@ -2209,8 +2209,8 @@ export const MATCHES = [
       "tla": "SWE",
       "flag": "🇸🇪"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 3,
+    "awayScore": 0,
     "stadium": {
       "name": "BC Place",
       "city": "Vancouver",
@@ -2336,7 +2336,7 @@ export const MATCHES = [
     "id": 79,
     "phase": "Round of 32",
     "date": "2026-07-01T20:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 13,
       "name": "United States",
@@ -2351,8 +2351,8 @@ export const MATCHES = [
       "tla": "BIH",
       "flag": "🇧🇦"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 2,
+    "awayScore": 0,
     "stadium": {
       "name": "MetLife Stadium",
       "city": "New York/New Jersey",
@@ -2364,7 +2364,7 @@ export const MATCHES = [
     "id": 80,
     "phase": "Round of 32",
     "date": "2026-07-01T16:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 25,
       "name": "Belgium",
@@ -2379,8 +2379,8 @@ export const MATCHES = [
       "tla": "SEN",
       "flag": "🇸🇳"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 3,
+    "awayScore": 2,
     "stadium": {
       "name": "MetLife Stadium",
       "city": "New York/New Jersey",
@@ -2420,7 +2420,7 @@ export const MATCHES = [
     "id": 82,
     "phase": "Round of 32",
     "date": "2026-06-30T12:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 19,
       "name": "Côte d'Ivoire",
@@ -2435,8 +2435,8 @@ export const MATCHES = [
       "tla": "NOR",
       "flag": "🇳🇴"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 1,
+    "awayScore": 2,
     "stadium": {
       "name": "Estadio Azteca",
       "city": "Mexico City",
@@ -2448,7 +2448,7 @@ export const MATCHES = [
     "id": 83,
     "phase": "Round of 32",
     "date": "2026-06-30T20:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 1,
       "name": "Mexico",
@@ -2463,8 +2463,8 @@ export const MATCHES = [
       "tla": "ECU",
       "flag": "🇪🇨"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 2,
+    "awayScore": 0,
     "stadium": {
       "name": "AT&T Stadium",
       "city": "Dallas",
@@ -2476,7 +2476,7 @@ export const MATCHES = [
     "id": 84,
     "phase": "Round of 32",
     "date": "2026-07-01T12:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 45,
       "name": "England",
@@ -2491,8 +2491,8 @@ export const MATCHES = [
       "tla": "COD",
       "flag": "🇨🇩"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 2,
+    "awayScore": 1,
     "stadium": {
       "name": "Estadio Azteca",
       "city": "Mexico City",
