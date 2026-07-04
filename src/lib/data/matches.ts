@@ -2280,7 +2280,7 @@ export const MATCHES = [
     "id": 77,
     "phase": "Round of 32",
     "date": "2026-07-02T16:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 41,
       "name": "Portugal",
@@ -2295,8 +2295,8 @@ export const MATCHES = [
       "tla": "CRO",
       "flag": "🇭🇷"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 2,
+    "awayScore": 1,
     "stadium": {
       "name": "BC Place",
       "city": "Vancouver",
@@ -2308,7 +2308,7 @@ export const MATCHES = [
     "id": 78,
     "phase": "Round of 32",
     "date": "2026-07-02T12:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 29,
       "name": "Spain",
@@ -2323,8 +2323,8 @@ export const MATCHES = [
       "tla": "AUT",
       "flag": "🇦🇹"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 3,
+    "awayScore": 0,
     "stadium": {
       "name": "AT&T Stadium",
       "city": "Dallas",
@@ -2504,7 +2504,7 @@ export const MATCHES = [
     "id": 85,
     "phase": "Round of 32",
     "date": "2026-07-03T16:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 37,
       "name": "Argentina",
@@ -2519,8 +2519,8 @@ export const MATCHES = [
       "tla": "CPV",
       "flag": "🇨🇻"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 3,
+    "awayScore": 2,
     "stadium": {
       "name": "SoFi Stadium",
       "city": "Los Angeles",
@@ -2532,7 +2532,7 @@ export const MATCHES = [
     "id": 86,
     "phase": "Round of 32",
     "date": "2026-07-03T12:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 15,
       "name": "Australia",
@@ -2547,20 +2547,22 @@ export const MATCHES = [
       "tla": "EGY",
       "flag": "🇪🇬"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 1,
+    "awayScore": 1,
     "stadium": {
       "name": "BMO Field",
       "city": "Toronto",
       "capacity": 45000,
       "countryFlag": "🇨🇦"
-    }
+    },
+    "homePenalties": 2,
+    "awayPenalties": 4
   },
   {
     "id": 87,
     "phase": "Round of 32",
     "date": "2026-07-02T20:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 8,
       "name": "Switzerland",
@@ -2575,8 +2577,8 @@ export const MATCHES = [
       "tla": "ALG",
       "flag": "🇩🇿"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 2,
+    "awayScore": 0,
     "stadium": {
       "name": "BMO Field",
       "city": "Toronto",
@@ -2588,7 +2590,7 @@ export const MATCHES = [
     "id": 88,
     "phase": "Round of 32",
     "date": "2026-07-03T20:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 44,
       "name": "Colombia",
@@ -2603,8 +2605,8 @@ export const MATCHES = [
       "tla": "GHA",
       "flag": "🇬🇭"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 1,
+    "awayScore": 0,
     "stadium": {
       "name": "MetLife Stadium",
       "city": "New York/New Jersey",
