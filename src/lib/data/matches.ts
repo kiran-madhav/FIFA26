@@ -2617,21 +2617,21 @@ export const MATCHES = [
   {
     "id": 89,
     "phase": "Round of 16",
-    "date": "2026-06-27T12:00:00.000Z",
+    "date": "2026-07-04T16:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
-      "id": 989,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 5,
+      "name": "Canada",
+      "shortName": "Canada",
+      "tla": "CAN",
+      "flag": "🇨🇦"
     },
     "awayTeam": {
-      "id": 1039,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 10,
+      "name": "Morocco",
+      "shortName": "Morocco",
+      "tla": "MAR",
+      "flag": "🇲🇦"
     },
     "homeScore": null,
     "awayScore": null,
@@ -2645,21 +2645,21 @@ export const MATCHES = [
   {
     "id": 90,
     "phase": "Round of 16",
-    "date": "2026-06-27T16:00:00.000Z",
+    "date": "2026-07-04T20:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
-      "id": 990,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 14,
+      "name": "Paraguay",
+      "shortName": "Paraguay",
+      "tla": "PAR",
+      "flag": "🇵🇾"
     },
     "awayTeam": {
-      "id": 1040,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 33,
+      "name": "France",
+      "shortName": "France",
+      "tla": "FRA",
+      "flag": "🇫🇷"
     },
     "homeScore": null,
     "awayScore": null,
@@ -2673,21 +2673,21 @@ export const MATCHES = [
   {
     "id": 91,
     "phase": "Round of 16",
-    "date": "2026-06-27T20:00:00.000Z",
+    "date": "2026-07-05T16:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
-      "id": 991,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 9,
+      "name": "Brazil",
+      "shortName": "Brazil",
+      "tla": "BRA",
+      "flag": "🇧🇷"
     },
     "awayTeam": {
-      "id": 1041,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 36,
+      "name": "Norway",
+      "shortName": "Norway",
+      "tla": "NOR",
+      "flag": "🇳🇴"
     },
     "homeScore": null,
     "awayScore": null,
@@ -2701,21 +2701,21 @@ export const MATCHES = [
   {
     "id": 92,
     "phase": "Round of 16",
-    "date": "2026-06-28T00:00:00.000Z",
+    "date": "2026-07-05T20:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
-      "id": 992,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 1,
+      "name": "Mexico",
+      "shortName": "Mexico",
+      "tla": "MEX",
+      "flag": "🇲🇽"
     },
     "awayTeam": {
-      "id": 1042,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 45,
+      "name": "England",
+      "shortName": "England",
+      "tla": "ENG",
+      "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
     },
     "homeScore": null,
     "awayScore": null,
@@ -2729,21 +2729,21 @@ export const MATCHES = [
   {
     "id": 93,
     "phase": "Round of 16",
-    "date": "2026-06-28T04:00:00.000Z",
+    "date": "2026-07-06T16:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
-      "id": 993,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 41,
+      "name": "Portugal",
+      "shortName": "Portugal",
+      "tla": "POR",
+      "flag": "🇵🇹"
     },
     "awayTeam": {
-      "id": 1043,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 29,
+      "name": "Spain",
+      "shortName": "Spain",
+      "tla": "ESP",
+      "flag": "🇪🇸"
     },
     "homeScore": null,
     "awayScore": null,
@@ -2757,21 +2757,21 @@ export const MATCHES = [
   {
     "id": 94,
     "phase": "Round of 16",
-    "date": "2026-06-28T08:00:00.000Z",
+    "date": "2026-07-06T20:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
-      "id": 994,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 13,
+      "name": "United States",
+      "shortName": "USA",
+      "tla": "USA",
+      "flag": "🇺🇸"
     },
     "awayTeam": {
-      "id": 1044,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 25,
+      "name": "Belgium",
+      "shortName": "Belgium",
+      "tla": "BEL",
+      "flag": "🇧🇪"
     },
     "homeScore": null,
     "awayScore": null,
@@ -2785,21 +2785,21 @@ export const MATCHES = [
   {
     "id": 95,
     "phase": "Round of 16",
-    "date": "2026-06-28T12:00:00.000Z",
+    "date": "2026-07-07T16:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
-      "id": 995,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 37,
+      "name": "Argentina",
+      "shortName": "Argentina",
+      "tla": "ARG",
+      "flag": "🇦🇷"
     },
     "awayTeam": {
-      "id": 1045,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 26,
+      "name": "Egypt",
+      "shortName": "Egypt",
+      "tla": "EGY",
+      "flag": "🇪🇬"
     },
     "homeScore": null,
     "awayScore": null,
@@ -2813,21 +2813,21 @@ export const MATCHES = [
   {
     "id": 96,
     "phase": "Round of 16",
-    "date": "2026-06-28T16:00:00.000Z",
+    "date": "2026-07-07T20:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
-      "id": 996,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 8,
+      "name": "Switzerland",
+      "shortName": "Switzerland",
+      "tla": "SUI",
+      "flag": "🇨🇭"
     },
     "awayTeam": {
-      "id": 1046,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 44,
+      "name": "Colombia",
+      "shortName": "Colombia",
+      "tla": "COL",
+      "flag": "🇨🇴"
     },
     "homeScore": null,
     "awayScore": null,
