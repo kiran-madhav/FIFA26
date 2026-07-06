@@ -2618,7 +2618,7 @@ export const MATCHES = [
     "id": 89,
     "phase": "Round of 16",
     "date": "2026-07-04T16:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 5,
       "name": "Canada",
@@ -2633,8 +2633,8 @@ export const MATCHES = [
       "tla": "MAR",
       "flag": "🇲🇦"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 0,
+    "awayScore": 3,
     "stadium": {
       "name": "Estadio Azteca",
       "city": "Mexico City",
@@ -2646,7 +2646,7 @@ export const MATCHES = [
     "id": 90,
     "phase": "Round of 16",
     "date": "2026-07-04T20:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 14,
       "name": "Paraguay",
@@ -2661,8 +2661,8 @@ export const MATCHES = [
       "tla": "FRA",
       "flag": "🇫🇷"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 0,
+    "awayScore": 1,
     "stadium": {
       "name": "BMO Field",
       "city": "Toronto",
@@ -2674,7 +2674,7 @@ export const MATCHES = [
     "id": 91,
     "phase": "Round of 16",
     "date": "2026-07-05T16:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 9,
       "name": "Brazil",
@@ -2689,8 +2689,8 @@ export const MATCHES = [
       "tla": "NOR",
       "flag": "🇳🇴"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 1,
+    "awayScore": 2,
     "stadium": {
       "name": "SoFi Stadium",
       "city": "Los Angeles",
@@ -2702,7 +2702,7 @@ export const MATCHES = [
     "id": 92,
     "phase": "Round of 16",
     "date": "2026-07-05T20:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 1,
       "name": "Mexico",
@@ -2717,8 +2717,8 @@ export const MATCHES = [
       "tla": "ENG",
       "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 2,
+    "awayScore": 3,
     "stadium": {
       "name": "AT&T Stadium",
       "city": "Dallas",
