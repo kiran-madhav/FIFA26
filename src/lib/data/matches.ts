@@ -2843,113 +2843,113 @@ export const MATCHES = [
   {
     "id": 97,
     "phase": "Quarter-finals",
-    "date": "2026-06-30T20:00:00.000Z",
+    "date": "2026-07-09T20:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
-      "id": 997,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 33,
+      "name": "France",
+      "shortName": "France",
+      "tla": "FRA",
+      "flag": "🇫🇷"
     },
     "awayTeam": {
-      "id": 1047,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 10,
+      "name": "Morocco",
+      "shortName": "Morocco",
+      "tla": "MAR",
+      "flag": "🇲🇦"
     },
     "homeScore": null,
     "awayScore": null,
     "stadium": {
-      "name": "AT&T Stadium",
-      "city": "Dallas",
-      "capacity": 80000,
+      "name": "Gillette Stadium",
+      "city": "Boston",
+      "capacity": 65878,
       "countryFlag": "🇺🇸"
     }
   },
   {
     "id": 98,
     "phase": "Quarter-finals",
-    "date": "2026-07-01T00:00:00.000Z",
+    "date": "2026-07-10T19:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
-      "id": 998,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 29,
+      "name": "Spain",
+      "shortName": "Spain",
+      "tla": "ESP",
+      "flag": "🇪🇸"
     },
     "awayTeam": {
-      "id": 1048,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 25,
+      "name": "Belgium",
+      "shortName": "Belgium",
+      "tla": "BEL",
+      "flag": "🇧🇪"
     },
     "homeScore": null,
     "awayScore": null,
     "stadium": {
-      "name": "AT&T Stadium",
-      "city": "Dallas",
-      "capacity": 80000,
+      "name": "SoFi Stadium",
+      "city": "Los Angeles",
+      "capacity": 70240,
       "countryFlag": "🇺🇸"
     }
   },
   {
     "id": 99,
     "phase": "Quarter-finals",
-    "date": "2026-07-01T04:00:00.000Z",
+    "date": "2026-07-11T21:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
-      "id": 999,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 36,
+      "name": "Norway",
+      "shortName": "Norway",
+      "tla": "NOR",
+      "flag": "🇳🇴"
     },
     "awayTeam": {
-      "id": 1049,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 45,
+      "name": "England",
+      "shortName": "England",
+      "tla": "ENG",
+      "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
     },
     "homeScore": null,
     "awayScore": null,
     "stadium": {
-      "name": "BC Place",
-      "city": "Vancouver",
-      "capacity": 54500,
-      "countryFlag": "🇨🇦"
+      "name": "Hard Rock Stadium",
+      "city": "Miami",
+      "capacity": 64767,
+      "countryFlag": "🇺🇸"
     }
   },
   {
     "id": 100,
     "phase": "Quarter-finals",
-    "date": "2026-07-01T08:00:00.000Z",
+    "date": "2026-07-12T01:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
-      "id": 1000,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 37,
+      "name": "Argentina",
+      "shortName": "Argentina",
+      "tla": "ARG",
+      "flag": "🇦🇷"
     },
     "awayTeam": {
-      "id": 1050,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 8,
+      "name": "Switzerland",
+      "shortName": "Switzerland",
+      "tla": "SUI",
+      "flag": "🇨🇭"
     },
     "homeScore": null,
     "awayScore": null,
     "stadium": {
-      "name": "BC Place",
-      "city": "Vancouver",
-      "capacity": 54500,
-      "countryFlag": "🇨🇦"
+      "name": "Arrowhead Stadium",
+      "city": "Kansas City",
+      "capacity": 76416,
+      "countryFlag": "🇺🇸"
     }
   },
   {

@@ -48,17 +48,19 @@ const RIGHT_R32 = [
   ["Colombia", "Ghana", "M16"],
 ];
 
-const REAL_R32_WINNERS: Record<string, string> = {
+const REAL_WINNERS: Record<string, string> = {
   M1: "Paraguay", M2: "France", M3: "Canada", M4: "Morocco",
   M5: "Portugal", M6: "Spain", M7: "United States", M8: "Belgium",
   M9: "Brazil", M10: "Norway", M11: "Mexico", M12: "England",
-  M13: "Argentina", M14: "Egypt", M15: "Switzerland", M16: "Colombia"
+  M13: "Argentina", M14: "Egypt", M15: "Switzerland", M16: "Colombia",
+  L_R16_1: "France", L_R16_2: "Morocco", L_R16_3: "Spain", L_R16_4: "Belgium",
+  R_R16_1: "Norway", R_R16_2: "England", R_R16_3: "Argentina", R_R16_4: "Switzerland"
 };
 
 function MatchNode({ matchId, topLabel, bottomLabel, onSelect, picks, isLeft, roundIdx }: any) {
   // Determine who won this match
-  // If it's an R32 match, force the real winner
-  const winner = REAL_R32_WINNERS[matchId] || picks[matchId];
+  // Force the real winner if the match is already finished in real life
+  const winner = REAL_WINNERS[matchId] || picks[matchId];
   
   // Calculate relative sizes to draw connector lines
   // We'll use simple CSS borders for the bracket tree
@@ -74,36 +76,36 @@ function MatchNode({ matchId, topLabel, bottomLabel, onSelect, picks, isLeft, ro
       <div className={cn(
         "flex flex-col border rounded-xl bg-[var(--bg-card)] shadow-lg overflow-hidden w-32 sm:w-40 xl:w-44 flex-shrink-0 relative z-10 transition-all duration-300",
         winner ? "border-[var(--fifa-gold)] shadow-[0_0_15px_rgba(250,220,102,0.15)] scale-[1.01]" : "border-[var(--border-glass)] hover:border-[var(--border-glass)]/60 hover:scale-[1.01] hover:shadow-xl"
-      )}>
-        {/* Top Team */}
+      )}>        {/* Top Team */}
         <button
           onClick={() => {
-            // Disable selection for R32 matches since they are already decided
-            if (!REAL_R32_WINNERS[matchId]) onSelect(matchId, topLabel);
+            // Disable selection for matches since they are already decided
+            if (!REAL_WINNERS[matchId]) onSelect(matchId, topLabel);
           }}
           className={cn(
             "px-4 py-2 text-[10px] sm:text-xs font-black text-left border-b border-[var(--border-glass)] transition-colors flex items-center gap-3 cursor-pointer",
             winner === topLabel 
-              ? "bg-[var(--fifa-gold)]/5 text-[var(--fifa-gold)]" 
+              ? "bg-[#e8b525]/20 text-white" 
               : "text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]",
-            REAL_R32_WINNERS[matchId] && "cursor-default hover:bg-transparent"
+            REAL_WINNERS[matchId] && "cursor-default hover:bg-transparent"
           )}
         >
           {topFlag && <FlagEmoji emoji={topFlag} className="text-xl drop-shadow-sm" />}
-          <span className={cn("truncate", !topLabel || topLabel === "TBD" ? "text-[var(--text-muted)]/40 font-normal" : "")}>{topLabel || "TBD"}</span>
+          <span className="truncate">{topLabel}</span>
         </button>
+
         {/* Bottom Team */}
         <button
           onClick={() => {
-            // Disable selection for R32 matches since they are already decided
-            if (!REAL_R32_WINNERS[matchId]) onSelect(matchId, bottomLabel);
+            // Disable selection for matches since they are already decided
+            if (!REAL_WINNERS[matchId]) onSelect(matchId, bottomLabel);
           }}
           className={cn(
             "px-4 py-2 text-[10px] sm:text-xs font-black text-left transition-colors flex items-center gap-3 cursor-pointer",
             winner === bottomLabel 
-              ? "bg-[var(--fifa-gold)]/5 text-[var(--fifa-gold)]" 
+              ? "bg-[#e8b525]/20 text-white" 
               : "text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]",
-            REAL_R32_WINNERS[matchId] && "cursor-default hover:bg-transparent"
+            REAL_WINNERS[matchId] && "cursor-default hover:bg-transparent"
           )}
         >
           {bottomFlag && <FlagEmoji emoji={bottomFlag} className="text-xl drop-shadow-sm" />}
@@ -159,26 +161,26 @@ export default function BracketPage() {
   // Left side
   const lR16 = Array.from({ length: 4 }).map((_, i) => ({
     id: `L_R16_${i+1}`,
-    top: REAL_R32_WINNERS[LEFT_R32[i*2][2]],
-    bottom: REAL_R32_WINNERS[LEFT_R32[i*2+1][2]],
+    top: REAL_WINNERS[LEFT_R32[i*2][2]],
+    bottom: REAL_WINNERS[LEFT_R32[i*2+1][2]],
   }));
   const lQF = Array.from({ length: 2 }).map((_, i) => ({
     id: `L_QF_${i+1}`,
-    top: picks[`L_R16_${i*2+1}`],
-    bottom: picks[`L_R16_${i*2+2}`],
+    top: REAL_WINNERS[`L_R16_${i*2+1}`] || picks[`L_R16_${i*2+1}`],
+    bottom: REAL_WINNERS[`L_R16_${i*2+2}`] || picks[`L_R16_${i*2+2}`],
   }));
   const lSF = [{ id: "L_SF_1", top: picks["L_QF_1"], bottom: picks["L_QF_2"] }];
 
   // Right side
   const rR16 = Array.from({ length: 4 }).map((_, i) => ({
     id: `R_R16_${i+1}`,
-    top: REAL_R32_WINNERS[RIGHT_R32[i*2][2]],
-    bottom: REAL_R32_WINNERS[RIGHT_R32[i*2+1][2]],
+    top: REAL_WINNERS[RIGHT_R32[i*2][2]],
+    bottom: REAL_WINNERS[RIGHT_R32[i*2+1][2]],
   }));
   const rQF = Array.from({ length: 2 }).map((_, i) => ({
     id: `R_QF_${i+1}`,
-    top: picks[`R_R16_${i*2+1}`],
-    bottom: picks[`R_R16_${i*2+2}`],
+    top: REAL_WINNERS[`R_R16_${i*2+1}`] || picks[`R_R16_${i*2+1}`],
+    bottom: REAL_WINNERS[`R_R16_${i*2+2}`] || picks[`R_R16_${i*2+2}`],
   }));
   const rSF = [{ id: "R_SF_1", top: picks["R_QF_1"], bottom: picks["R_QF_2"] }];
 
