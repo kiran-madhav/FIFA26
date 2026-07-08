@@ -2730,7 +2730,7 @@ export const MATCHES = [
     "id": 93,
     "phase": "Round of 16",
     "date": "2026-07-06T16:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 41,
       "name": "Portugal",
@@ -2745,8 +2745,8 @@ export const MATCHES = [
       "tla": "ESP",
       "flag": "🇪🇸"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 0,
+    "awayScore": 1,
     "stadium": {
       "name": "Estadio Azteca",
       "city": "Mexico City",
@@ -2758,7 +2758,7 @@ export const MATCHES = [
     "id": 94,
     "phase": "Round of 16",
     "date": "2026-07-06T20:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 13,
       "name": "United States",
@@ -2773,8 +2773,8 @@ export const MATCHES = [
       "tla": "BEL",
       "flag": "🇧🇪"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 1,
+    "awayScore": 4,
     "stadium": {
       "name": "BC Place",
       "city": "Vancouver",
@@ -2786,7 +2786,7 @@ export const MATCHES = [
     "id": 95,
     "phase": "Round of 16",
     "date": "2026-07-07T16:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 37,
       "name": "Argentina",
@@ -2801,8 +2801,8 @@ export const MATCHES = [
       "tla": "EGY",
       "flag": "🇪🇬"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 3,
+    "awayScore": 2,
     "stadium": {
       "name": "BMO Field",
       "city": "Toronto",
@@ -2814,7 +2814,7 @@ export const MATCHES = [
     "id": 96,
     "phase": "Round of 16",
     "date": "2026-07-07T20:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 8,
       "name": "Switzerland",
@@ -2829,14 +2829,16 @@ export const MATCHES = [
       "tla": "COL",
       "flag": "🇨🇴"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 0,
+    "awayScore": 0,
     "stadium": {
       "name": "SoFi Stadium",
       "city": "Los Angeles",
       "capacity": 70240,
       "countryFlag": "🇺🇸"
-    }
+    },
+    "homePenalties": 4,
+    "awayPenalties": 3
   },
   {
     "id": 97,
