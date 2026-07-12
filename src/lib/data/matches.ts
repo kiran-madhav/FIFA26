@@ -2955,56 +2955,56 @@ export const MATCHES = [
   {
     "id": 101,
     "phase": "Semi-finals",
-    "date": "2026-07-03T12:00:00.000Z",
+    "date": "2026-07-14T19:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
-      "id": 1001,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 33,
+      "name": "France",
+      "shortName": "France",
+      "tla": "FRA",
+      "flag": "🇫🇷"
     },
     "awayTeam": {
-      "id": 1051,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 29,
+      "name": "Spain",
+      "shortName": "Spain",
+      "tla": "ESP",
+      "flag": "🇪🇸"
     },
     "homeScore": null,
     "awayScore": null,
     "stadium": {
-      "name": "Estadio Azteca",
-      "city": "Mexico City",
-      "capacity": 83264,
-      "countryFlag": "🇲🇽"
+      "name": "AT&T Stadium",
+      "city": "Dallas",
+      "capacity": 80000,
+      "countryFlag": "🇺🇸"
     }
   },
   {
     "id": 102,
     "phase": "Semi-finals",
-    "date": "2026-07-03T16:00:00.000Z",
+    "date": "2026-07-15T19:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
-      "id": 1002,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 45,
+      "name": "England",
+      "shortName": "England",
+      "tla": "ENG",
+      "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
     },
     "awayTeam": {
-      "id": 1052,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 37,
+      "name": "Argentina",
+      "shortName": "Argentina",
+      "tla": "ARG",
+      "flag": "🇦🇷"
     },
     "homeScore": null,
     "awayScore": null,
     "stadium": {
-      "name": "MetLife Stadium",
-      "city": "New York/New Jersey",
-      "capacity": 82500,
+      "name": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "capacity": 71000,
       "countryFlag": "🇺🇸"
     }
   },
