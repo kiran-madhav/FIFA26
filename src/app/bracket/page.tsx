@@ -54,7 +54,9 @@ const REAL_WINNERS: Record<string, string> = {
   M9: "Brazil", M10: "Norway", M11: "Mexico", M12: "England",
   M13: "Argentina", M14: "Egypt", M15: "Switzerland", M16: "Colombia",
   L_R16_1: "France", L_R16_2: "Morocco", L_R16_3: "Spain", L_R16_4: "Belgium",
-  R_R16_1: "Norway", R_R16_2: "England", R_R16_3: "Argentina", R_R16_4: "Switzerland"
+  R_R16_1: "Norway", R_R16_2: "England", R_R16_3: "Argentina", R_R16_4: "Switzerland",
+  L_QF_1: "France", L_QF_2: "Spain",
+  R_QF_1: "England", R_QF_2: "Argentina"
 };
 
 function MatchNode({ matchId, topLabel, bottomLabel, onSelect, picks, isLeft, roundIdx }: any) {
@@ -169,7 +171,11 @@ export default function BracketPage() {
     top: REAL_WINNERS[`L_R16_${i*2+1}`] || picks[`L_R16_${i*2+1}`],
     bottom: REAL_WINNERS[`L_R16_${i*2+2}`] || picks[`L_R16_${i*2+2}`],
   }));
-  const lSF = [{ id: "L_SF_1", top: picks["L_QF_1"], bottom: picks["L_QF_2"] }];
+  const lSF = [{ 
+    id: "L_SF_1", 
+    top: REAL_WINNERS["L_QF_1"] || picks["L_QF_1"], 
+    bottom: REAL_WINNERS["L_QF_2"] || picks["L_QF_2"] 
+  }];
 
   // Right side
   const rR16 = Array.from({ length: 4 }).map((_, i) => ({
@@ -182,7 +188,11 @@ export default function BracketPage() {
     top: REAL_WINNERS[`R_R16_${i*2+1}`] || picks[`R_R16_${i*2+1}`],
     bottom: REAL_WINNERS[`R_R16_${i*2+2}`] || picks[`R_R16_${i*2+2}`],
   }));
-  const rSF = [{ id: "R_SF_1", top: picks["R_QF_1"], bottom: picks["R_QF_2"] }];
+  const rSF = [{ 
+    id: "R_SF_1", 
+    top: REAL_WINNERS["R_QF_1"] || picks["R_QF_1"], 
+    bottom: REAL_WINNERS["R_QF_2"] || picks["R_QF_2"] 
+  }];
 
   const finalTop = picks["L_SF_1"];
   const finalBottom = picks["R_SF_1"];

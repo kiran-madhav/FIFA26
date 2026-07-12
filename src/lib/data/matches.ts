@@ -2844,7 +2844,7 @@ export const MATCHES = [
     "id": 97,
     "phase": "Quarter-finals",
     "date": "2026-07-09T20:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 33,
       "name": "France",
@@ -2859,8 +2859,8 @@ export const MATCHES = [
       "tla": "MAR",
       "flag": "🇲🇦"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 2,
+    "awayScore": 0,
     "stadium": {
       "name": "Gillette Stadium",
       "city": "Boston",
@@ -2872,7 +2872,7 @@ export const MATCHES = [
     "id": 98,
     "phase": "Quarter-finals",
     "date": "2026-07-10T19:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 29,
       "name": "Spain",
@@ -2887,8 +2887,8 @@ export const MATCHES = [
       "tla": "BEL",
       "flag": "🇧🇪"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 2,
+    "awayScore": 1,
     "stadium": {
       "name": "SoFi Stadium",
       "city": "Los Angeles",
@@ -2900,7 +2900,7 @@ export const MATCHES = [
     "id": 99,
     "phase": "Quarter-finals",
     "date": "2026-07-11T21:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 36,
       "name": "Norway",
@@ -2915,8 +2915,8 @@ export const MATCHES = [
       "tla": "ENG",
       "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 1,
+    "awayScore": 2,
     "stadium": {
       "name": "Hard Rock Stadium",
       "city": "Miami",
@@ -2928,7 +2928,7 @@ export const MATCHES = [
     "id": 100,
     "phase": "Quarter-finals",
     "date": "2026-07-12T01:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 37,
       "name": "Argentina",
@@ -2943,8 +2943,8 @@ export const MATCHES = [
       "tla": "SUI",
       "flag": "🇨🇭"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 3,
+    "awayScore": 1,
     "stadium": {
       "name": "Arrowhead Stadium",
       "city": "Kansas City",
