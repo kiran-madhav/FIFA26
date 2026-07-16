@@ -3039,29 +3039,29 @@ export const MATCHES = [
   {
     "id": 104,
     "phase": "Final",
-    "date": "2026-07-08T00:00:00.000Z",
+    "date": "2026-07-19T19:00:00Z",
     "status": "SCHEDULED",
     "homeTeam": {
-      "id": 1004,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 29,
+      "name": "Spain",
+      "shortName": "Spain",
+      "tla": "ESP",
+      "flag": "🇪🇸"
     },
     "awayTeam": {
-      "id": 1054,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 37,
+      "name": "Argentina",
+      "shortName": "Argentina",
+      "tla": "ARG",
+      "flag": "🇦🇷"
     },
     "homeScore": null,
     "awayScore": null,
     "stadium": {
-      "name": "Estadio Azteca",
-      "city": "Mexico City",
-      "capacity": 83264,
-      "countryFlag": "🇲🇽"
+      "name": "MetLife Stadium",
+      "city": "New York/New Jersey",
+      "capacity": 82500,
+      "countryFlag": "🇺🇸"
     }
   }
 ];
