@@ -56,7 +56,8 @@ const REAL_WINNERS: Record<string, string> = {
   L_R16_1: "France", L_R16_2: "Morocco", L_R16_3: "Spain", L_R16_4: "Belgium",
   R_R16_1: "Norway", R_R16_2: "England", R_R16_3: "Argentina", R_R16_4: "Switzerland",
   L_QF_1: "France", L_QF_2: "Spain",
-  R_QF_1: "England", R_QF_2: "Argentina"
+  R_QF_1: "England", R_QF_2: "Argentina",
+  L_SF_1: "Spain", R_SF_1: "Argentina"
 };
 
 function MatchNode({ matchId, topLabel, bottomLabel, onSelect, picks, isLeft, roundIdx }: any) {
@@ -194,9 +195,12 @@ export default function BracketPage() {
     bottom: REAL_WINNERS["R_QF_2"] || picks["R_QF_2"] 
   }];
 
-  const finalTop = picks["L_SF_1"];
-  const finalBottom = picks["R_SF_1"];
-  const champion = picks["FINAL"];
+  const finalTop = REAL_WINNERS["L_SF_1"] || picks["L_SF_1"];
+  const finalBottom = REAL_WINNERS["R_SF_1"] || picks["R_SF_1"];
+  // For the final winner, check if it's already decided
+  // If the tournament is finished, we could add FINAL: "..." to REAL_WINNERS
+  // But for now, just fallback to picks
+  const champion = REAL_WINNERS["FINAL"] || picks["FINAL"];
 
   const finalTopFlag = TEAMS.find(t => t.name === finalTop)?.flag || "";
   const finalBottomFlag = TEAMS.find(t => t.name === finalBottom)?.flag || "";

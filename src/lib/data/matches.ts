@@ -2956,7 +2956,7 @@ export const MATCHES = [
     "id": 101,
     "phase": "Semi-finals",
     "date": "2026-07-14T19:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 33,
       "name": "France",
@@ -2971,8 +2971,8 @@ export const MATCHES = [
       "tla": "ESP",
       "flag": "🇪🇸"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 0,
+    "awayScore": 2,
     "stadium": {
       "name": "AT&T Stadium",
       "city": "Dallas",
@@ -2984,7 +2984,7 @@ export const MATCHES = [
     "id": 102,
     "phase": "Semi-finals",
     "date": "2026-07-15T19:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 45,
       "name": "England",
@@ -2999,8 +2999,8 @@ export const MATCHES = [
       "tla": "ARG",
       "flag": "🇦🇷"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 1,
+    "awayScore": 2,
     "stadium": {
       "name": "Mercedes-Benz Stadium",
       "city": "Atlanta",
