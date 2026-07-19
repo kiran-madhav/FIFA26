@@ -3011,29 +3011,29 @@ export const MATCHES = [
   {
     "id": 103,
     "phase": "Third place play-off",
-    "date": "2026-07-05T20:00:00.000Z",
-    "status": "SCHEDULED",
+    "date": "2026-07-18T20:00:00Z",
+    "status": "FINISHED",
     "homeTeam": {
-      "id": 1003,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 45,
+      "name": "England",
+      "shortName": "England",
+      "tla": "ENG",
+      "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
     },
     "awayTeam": {
-      "id": 1053,
-      "name": "TBD",
-      "shortName": "TBD",
-      "tla": "TBD",
-      "flag": "🏳️"
+      "id": 33,
+      "name": "France",
+      "shortName": "France",
+      "tla": "FRA",
+      "flag": "🇫🇷"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 6,
+    "awayScore": 4,
     "stadium": {
-      "name": "Estadio Azteca",
-      "city": "Mexico City",
-      "capacity": 83264,
-      "countryFlag": "🇲🇽"
+      "name": "Hard Rock Stadium",
+      "city": "Miami",
+      "capacity": 64767,
+      "countryFlag": "🇺🇸"
     }
   },
   {
