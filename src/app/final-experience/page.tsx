@@ -387,7 +387,7 @@ export default function FinalExperiencePage() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
                 "Champions.jpg", 
-                "golden ball, clove and young player.jpg", 
+                "golden ball,clove young.jpg", 
                 "golden boot.jpg"
               ].map((imgName, i) => (
                 <FadeIn key={i} delay={i * 0.05}>
