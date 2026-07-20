@@ -29,11 +29,27 @@ function CountdownTimer() {
 
   if (parts.started) {
     return (
-      <div className="text-center">
-        <span className="font-display text-2xl text-gradient-gold">
-          🏆 SPAIN ARE CHAMPIONS
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        className="flex flex-col items-center justify-center gap-3"
+      >
+        <span className="font-display text-xs sm:text-sm tracking-[0.3em] text-white/70 uppercase">
+          World Champions
         </span>
-      </div>
+        <div className="flex items-center gap-4 bg-gradient-to-r from-[var(--bg-card)]/40 via-[var(--bg-card)] to-[var(--bg-card)]/40 px-8 py-4 rounded-2xl border border-[var(--fifa-gold)]/30 shadow-[0_0_30px_rgba(250,220,102,0.15)] backdrop-blur-md">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img 
+            src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f1ea-1f1f8.svg" 
+            alt="Spain Flag"
+            className="w-8 h-8 sm:w-10 sm:h-10 drop-shadow-md"
+            draggable={false}
+          />
+          <span className="font-display text-3xl sm:text-5xl text-gradient-gold tracking-widest">
+            SPAIN
+          </span>
+        </div>
+      </motion.div>
     );
   }
 
