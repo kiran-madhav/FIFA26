@@ -252,10 +252,11 @@ export default function FinalExperiencePage() {
           <section id="match-highlights">
             <SectionTitle>Match Highlights</SectionTitle>
 
-            {/* VIDEO PLACEHOLDER — replace src with your video */}
-            {/* To use a local video: <video src="/videos/final-highlights.mp4" controls /> */}
-            {/* To embed YouTube: replace with <iframe> */}
-            <VideoPlaceholder id="video-highlights" label="Final Match Highlights" />
+            <video 
+              src="/videos/highlights.mp4" 
+              controls 
+              className="w-full aspect-video rounded-2xl overflow-hidden border border-[var(--fifa-gold)]/20 bg-[var(--bg-secondary)] shadow-[0_0_30px_rgba(250,220,102,0.1)]"
+            />
 
             {/* Match Summary */}
             <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -285,8 +286,11 @@ export default function FinalExperiencePage() {
         <FadeIn>
           <section id="halftime-show">
             <SectionTitle>Half-Time Show</SectionTitle>
-            {/* VIDEO PLACEHOLDER — replace with your half-time show video */}
-            <VideoPlaceholder id="video-halftime" label="Half-Time Show" />
+            <video 
+              src="/videos/halftime.mp4" 
+              controls 
+              className="w-full aspect-video rounded-2xl overflow-hidden border border-[var(--fifa-gold)]/20 bg-[var(--bg-secondary)] shadow-[0_0_30px_rgba(250,220,102,0.1)]"
+            />
             <p className="text-center text-[var(--text-muted)] text-sm mt-4 max-w-lg mx-auto leading-relaxed">
               A spectacular live performance marked the midpoint of the 2026 FIFA World Cup Final, 
               captivating fans inside MetLife Stadium and millions watching worldwide.
@@ -303,8 +307,11 @@ export default function FinalExperiencePage() {
             }}>
               <div className="rounded-[22px] p-6 sm:p-8" style={{ background: "var(--bg-card)" }}>
                 <SectionTitle>World Champions Celebration</SectionTitle>
-                {/* VIDEO PLACEHOLDER — replace with your ceremony video */}
-                <VideoPlaceholder id="video-ceremony" label="Trophy Lift & Champions Celebration" />
+                <video 
+                  src="/videos/ceremony.mp4" 
+                  controls 
+                  className="w-full aspect-video rounded-2xl overflow-hidden border border-[var(--fifa-gold)]/20 bg-[var(--bg-secondary)] shadow-[0_0_30px_rgba(250,220,102,0.1)]"
+                />
                 <div className="mt-6 grid grid-cols-2 sm:grid-cols-5 gap-2 text-center">
                   {["Medal Ceremony", "Trophy Lift", "Champions Celebration", "Fireworks", "Crowd Celebration"].map(item => (
                     <div key={item} className="px-3 py-2 rounded-lg bg-[var(--bg-secondary)] border border-[var(--fifa-gold)]/15">
@@ -342,11 +349,15 @@ export default function FinalExperiencePage() {
             <p className="text-center text-[var(--text-muted)] text-sm mb-6">
               Final match photos will be added here shortly.
             </p>
-            {/* GALLERY GRID — replace GalleryCard placeholders with real <img> or <Image> */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-              {Array.from({ length: 6 }).map((_, i) => (
+              {["aspect-square", "aspect-[4/5]", "aspect-video", "aspect-square", "aspect-[3/4]", "aspect-square"].map((aspect, i) => (
                 <FadeIn key={i} delay={i * 0.05}>
-                  <GalleryCard index={i} />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img 
+                    src={`/images/gallery-${i + 1}.jpg`} 
+                    alt={`Celebration ${i + 1}`}
+                    className={`w-full ${aspect} object-cover rounded-xl border border-[var(--border-glass)] hover:border-[var(--fifa-gold)]/40 hover:scale-[1.02] transition-all duration-300`} 
+                  />
                 </FadeIn>
               ))}
             </div>
