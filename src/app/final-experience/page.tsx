@@ -133,24 +133,12 @@ function GalleryCard({ index }: { index: number }) {
 
 /* ── YouTube Facade ── */
 function YouTubeFacade({ videoId, title, thumbnail }: { videoId: string; title: string; thumbnail: string }) {
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  if (isPlaying) {
-    return (
-      <iframe 
-        src={`https://www.youtube.com/embed/${videoId}?autoplay=1`} 
-        title={title}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        className="w-full aspect-video rounded-2xl overflow-hidden border border-[var(--fifa-gold)]/20 bg-[var(--bg-secondary)] shadow-[0_0_30px_rgba(250,220,102,0.1)]"
-      />
-    );
-  }
-
   return (
-    <div 
-      className="relative w-full aspect-video rounded-2xl overflow-hidden border border-[var(--fifa-gold)]/20 bg-[var(--bg-secondary)] shadow-[0_0_30px_rgba(250,220,102,0.1)] cursor-pointer group"
-      onClick={() => setIsPlaying(true)}
+    <a 
+      href={`https://youtu.be/${videoId}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block relative w-full aspect-video rounded-2xl overflow-hidden border border-[var(--fifa-gold)]/20 bg-[var(--bg-secondary)] shadow-[0_0_30px_rgba(250,220,102,0.1)] cursor-pointer group"
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img 
@@ -165,7 +153,7 @@ function YouTubeFacade({ videoId, title, thumbnail }: { videoId: string; title: 
           </svg>
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 
