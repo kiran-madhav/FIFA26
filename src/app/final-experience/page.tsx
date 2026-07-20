@@ -362,23 +362,7 @@ export default function FinalExperiencePage() {
           </section>
         </FadeIn>
 
-        {/* ── MATCH TIMELINE ── */}
-        <FadeIn>
-          <section id="match-timeline">
-            <SectionTitle>Match Timeline</SectionTitle>
-            <div className="flex flex-col items-center">
-              <TimelineStep icon={Zap} label="Kickoff" time="3:00 PM ET" />
-              <TimelineStep icon={Target} label="1st Half" time="45 min" />
-              <TimelineStep icon={Clock} label="Half-Time Show" time="45'" />
-              <TimelineStep icon={Zap} label="2nd Half" time="45 min" />
-              <TimelineStep icon={Trophy} label="Extra Time" time="AET" />
-              <TimelineStep icon={Target} label="Goal — Ferran Torres" time="106'" />
-              <TimelineStep icon={Clock} label="Final Whistle" time="120'" />
-              <TimelineStep icon={Award} label="Medal Ceremony" />
-              <TimelineStep icon={Trophy} label="Trophy Lift" isLast />
-            </div>
-          </section>
-        </FadeIn>
+
 
         {/* ── GALLERY ── */}
         <FadeIn>
