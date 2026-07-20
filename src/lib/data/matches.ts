@@ -3040,7 +3040,7 @@ export const MATCHES = [
     "id": 104,
     "phase": "Final",
     "date": "2026-07-19T19:00:00Z",
-    "status": "SCHEDULED",
+    "status": "FINISHED",
     "homeTeam": {
       "id": 29,
       "name": "Spain",
@@ -3055,8 +3055,8 @@ export const MATCHES = [
       "tla": "ARG",
       "flag": "🇦🇷"
     },
-    "homeScore": null,
-    "awayScore": null,
+    "homeScore": 1,
+    "awayScore": 0,
     "stadium": {
       "name": "MetLife Stadium",
       "city": "New York/New Jersey",

@@ -57,7 +57,8 @@ const REAL_WINNERS: Record<string, string> = {
   R_R16_1: "Norway", R_R16_2: "England", R_R16_3: "Argentina", R_R16_4: "Switzerland",
   L_QF_1: "France", L_QF_2: "Spain",
   R_QF_1: "England", R_QF_2: "Argentina",
-  L_SF_1: "Spain", R_SF_1: "Argentina"
+  L_SF_1: "Spain", R_SF_1: "Argentina",
+  FINAL: "Spain"
 };
 
 function MatchNode({ matchId, topLabel, bottomLabel, onSelect, picks, isLeft, roundIdx }: any) {
