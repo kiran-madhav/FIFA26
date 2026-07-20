@@ -270,15 +270,7 @@ export default function FinalExperiencePage() {
             <span className="flex items-center gap-1.5"><Trophy size={12} /> MetLife Stadium</span>
           </motion.div>
 
-          {/* Floating trophy */}
-          <motion.div
-            animate={{ y: [0, -12, 0] }}
-            transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-            className="mt-4 relative"
-          >
-            <div className="absolute inset-0 rounded-full blur-2xl opacity-20 bg-[var(--fifa-gold)]" style={{ transform: "scale(1.4)" }} />
-            <Trophy size={80} className="relative z-10 text-[var(--fifa-gold)] opacity-25" strokeWidth={0.8} />
-          </motion.div>
+
         </div>
       </section>
 
