@@ -260,18 +260,23 @@ export default function FinalExperiencePage() {
             {/* Match Summary */}
             <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3">
               <StatCard label="Final Score" value="1 – 0" icon={Target} />
-              <StatCard label="Goal Scorer" value="Yamal 94'" icon={Zap} />
-              <StatCard label="Man of the Match" value="Pedri" icon={Star} />
-              <StatCard label="Attendance" value="82,500" icon={Users} />
+              <StatCard label="Goal Scorer" value="Ferran Torres 106'" icon={Zap} />
+              <StatCard label="Man of the Match" value="Ferran Torres" icon={Star} />
+              <StatCard label="Attendance" value="80,000" icon={Users} />
             </div>
 
-            <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3">
-              <StatCard label="Possession (Spain)" value="58%" />
-              <StatCard label="Shots (Spain)" value="14" />
-              <StatCard label="Shots on Target" value="6" />
-              <StatCard label="Possession (Argentina)" value="42%" />
-              <StatCard label="Shots (Argentina)" value="9" />
-              <StatCard label="Pass Accuracy (Spain)" value="89%" />
+            <div className="mt-4 grid grid-cols-2 sm:grid-cols-5 gap-3">
+              <StatCard label="Possession (ESP)" value="68%" />
+              <StatCard label="Shots (ESP)" value="20" />
+              <StatCard label="On Target (ESP)" value="11" />
+              <StatCard label="Pass Acc. (ESP)" value="90%" />
+              <StatCard label="Passes (ESP)" value="803" />
+              
+              <StatCard label="Possession (ARG)" value="32%" />
+              <StatCard label="Shots (ARG)" value="3" />
+              <StatCard label="On Target (ARG)" value="0" />
+              <StatCard label="Pass Acc. (ARG)" value="78%" />
+              <StatCard label="Passes (ARG)" value="445" />
             </div>
           </section>
         </FadeIn>
@@ -322,7 +327,7 @@ export default function FinalExperiencePage() {
               <TimelineStep icon={Clock} label="Half-Time Show" time="45'" />
               <TimelineStep icon={Zap} label="2nd Half" time="45 min" />
               <TimelineStep icon={Trophy} label="Extra Time" time="AET" />
-              <TimelineStep icon={Target} label="Goal — Yamal" time="94'" />
+              <TimelineStep icon={Target} label="Goal — Ferran Torres" time="106'" />
               <TimelineStep icon={Clock} label="Final Whistle" time="120'" />
               <TimelineStep icon={Award} label="Medal Ceremony" />
               <TimelineStep icon={Trophy} label="Trophy Lift" isLast />
@@ -355,13 +360,13 @@ export default function FinalExperiencePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               <AwardCard
                 title="Golden Ball"
-                winner="Pedri — Spain"
+                winner="Rodri — Spain"
                 description="Best player of the tournament, orchestrating Spain's path to glory."
                 icon={Star}
               />
               <AwardCard
                 title="Golden Boot"
-                winner="L. Martínez — Argentina"
+                winner="Kylian Mbappé — France"
                 description="Top scorer of the 2026 FIFA World Cup."
                 icon={Target}
               />
@@ -373,20 +378,20 @@ export default function FinalExperiencePage() {
               />
               <AwardCard
                 title="Best Young Player"
-                winner="Lamine Yamal — Spain"
+                winner="Pau Cubarsí — Spain"
                 description="Outstanding performance from the tournament's youngest star."
                 icon={Zap}
               />
               <AwardCard
                 title="Fair Play Award"
-                winner="Japan"
+                winner="Netherlands"
                 description="Awarded for the best sporting conduct during the tournament."
                 icon={Trophy}
               />
               <AwardCard
                 title="Best Goal"
-                winner="Lamine Yamal — Spain"
-                description="The winning goal in extra time of the Final."
+                winner="Sidny Lopes Cabral — Cape Verde"
+                description="Awarded for the most spectacular goal of the tournament."
                 icon={Star}
               />
             </div>
