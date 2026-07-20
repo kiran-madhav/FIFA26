@@ -252,9 +252,11 @@ export default function FinalExperiencePage() {
           <section id="match-highlights">
             <SectionTitle>Match Highlights</SectionTitle>
 
-            <video 
-              src={`/videos/${encodeURIComponent("Highlights   Spain 1-0 Argentina   FIFA World Cup 2026™ FINAL.mp4")}`}
-              controls 
+            <iframe 
+              src="https://www.youtube.com/embed/6HaHNYjnghE" 
+              title="Final Match Highlights"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
               className="w-full aspect-video rounded-2xl overflow-hidden border border-[var(--fifa-gold)]/20 bg-[var(--bg-secondary)] shadow-[0_0_30px_rgba(250,220,102,0.1)]"
             />
 
