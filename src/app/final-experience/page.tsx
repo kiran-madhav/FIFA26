@@ -288,9 +288,11 @@ export default function FinalExperiencePage() {
         <FadeIn>
           <section id="halftime-show">
             <SectionTitle>Half-Time Show</SectionTitle>
-            <video 
-              src={`/videos/${encodeURIComponent("The FIFA World Cup Final 2026™ Topps Halftime Show.mp4")}`}
-              controls 
+            <iframe 
+              src="https://www.youtube.com/embed/B7hIiaXBpco" 
+              title="Half-Time Show"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
               className="w-full aspect-video rounded-2xl overflow-hidden border border-[var(--fifa-gold)]/20 bg-[var(--bg-secondary)] shadow-[0_0_30px_rgba(250,220,102,0.1)]"
             />
             <p className="text-center text-[var(--text-muted)] text-sm mt-4 max-w-lg mx-auto leading-relaxed">
