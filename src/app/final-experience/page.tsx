@@ -311,9 +311,11 @@ export default function FinalExperiencePage() {
             }}>
               <div className="rounded-[22px] p-6 sm:p-8" style={{ background: "var(--bg-card)" }}>
                 <SectionTitle>World Champions Celebration</SectionTitle>
-                <video 
-                  src={`/videos/${encodeURIComponent("ABSOLUTE CINEMA   The Story Of The 2026 FIFA World Cup!.mp4")}`}
-                  controls 
+                <iframe 
+                  src="https://www.youtube.com/embed/BRv3KW-NIQc" 
+                  title="World Champions Celebration"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
                   className="w-full aspect-video rounded-2xl overflow-hidden border border-[var(--fifa-gold)]/20 bg-[var(--bg-secondary)] shadow-[0_0_30px_rgba(250,220,102,0.1)]"
                 />
                 <div className="mt-6 grid grid-cols-2 sm:grid-cols-5 gap-2 text-center">
