@@ -253,7 +253,7 @@ export default function FinalExperiencePage() {
             <SectionTitle>Match Highlights</SectionTitle>
 
             <video 
-              src="/videos/highlights.mp4" 
+              src={`/videos/${encodeURIComponent("Highlights   Spain 1-0 Argentina   FIFA World Cup 2026™ FINAL.mp4")}`}
               controls 
               className="w-full aspect-video rounded-2xl overflow-hidden border border-[var(--fifa-gold)]/20 bg-[var(--bg-secondary)] shadow-[0_0_30px_rgba(250,220,102,0.1)]"
             />
@@ -287,7 +287,7 @@ export default function FinalExperiencePage() {
           <section id="halftime-show">
             <SectionTitle>Half-Time Show</SectionTitle>
             <video 
-              src="/videos/halftime.mp4" 
+              src={`/videos/${encodeURIComponent("The FIFA World Cup Final 2026™ Topps Halftime Show.mp4")}`}
               controls 
               className="w-full aspect-video rounded-2xl overflow-hidden border border-[var(--fifa-gold)]/20 bg-[var(--bg-secondary)] shadow-[0_0_30px_rgba(250,220,102,0.1)]"
             />
@@ -308,7 +308,7 @@ export default function FinalExperiencePage() {
               <div className="rounded-[22px] p-6 sm:p-8" style={{ background: "var(--bg-card)" }}>
                 <SectionTitle>World Champions Celebration</SectionTitle>
                 <video 
-                  src="/videos/ceremony.mp4" 
+                  src={`/videos/${encodeURIComponent("ABSOLUTE CINEMA   The Story Of The 2026 FIFA World Cup!.mp4")}`}
                   controls 
                   className="w-full aspect-video rounded-2xl overflow-hidden border border-[var(--fifa-gold)]/20 bg-[var(--bg-secondary)] shadow-[0_0_30px_rgba(250,220,102,0.1)]"
                 />
@@ -346,17 +346,18 @@ export default function FinalExperiencePage() {
         <FadeIn>
           <section id="gallery">
             <SectionTitle>Gallery</SectionTitle>
-            <p className="text-center text-[var(--text-muted)] text-sm mb-6">
-              Final match photos will be added here shortly.
-            </p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-              {["aspect-square", "aspect-[4/5]", "aspect-video", "aspect-square", "aspect-[3/4]", "aspect-square"].map((aspect, i) => (
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              {[
+                "Champions.jpg", 
+                "golden ball, clove and young player.jpg", 
+                "golden boot.jpg"
+              ].map((imgName, i) => (
                 <FadeIn key={i} delay={i * 0.05}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img 
-                    src={`/images/gallery-${i + 1}.jpg`} 
+                    src={`/images/${encodeURIComponent(imgName)}`} 
                     alt={`Celebration ${i + 1}`}
-                    className={`w-full ${aspect} object-cover rounded-xl border border-[var(--border-glass)] hover:border-[var(--fifa-gold)]/40 hover:scale-[1.02] transition-all duration-300`} 
+                    className="w-full aspect-square object-cover rounded-xl border border-[var(--border-glass)] hover:border-[var(--fifa-gold)]/40 hover:scale-[1.02] transition-all duration-300" 
                   />
                 </FadeIn>
               ))}
