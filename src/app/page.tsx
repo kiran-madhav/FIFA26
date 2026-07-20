@@ -30,8 +30,8 @@ function CountdownTimer() {
   if (parts.started) {
     return (
       <div className="text-center">
-        <span className="font-display text-2xl text-gradient-gold animate-live-pulse">
-          ⚽ TOURNAMENT UNDERWAY
+        <span className="font-display text-2xl text-gradient-gold">
+          🏆 SPAIN ARE CHAMPIONS
         </span>
       </div>
     );
