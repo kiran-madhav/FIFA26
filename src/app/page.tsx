@@ -294,11 +294,14 @@ export default function HomePage() {
             className="flex flex-wrap gap-3 justify-center"
           >
             <Link
-              id="cta-schedule"
-              href="/schedule"
-              className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[var(--fifa-blue)] to-[var(--fifa-blue-light)] text-white font-semibold text-sm hover:opacity-90 hover:scale-105 transition-all glow-blue"
+              id="cta-final-experience"
+              href="/final-experience"
+              className="group flex items-center gap-2.5 px-7 py-3.5 rounded-full border border-[var(--fifa-gold)]/50 bg-[var(--bg-card)]/60 backdrop-blur-md text-[var(--fifa-gold)] font-semibold text-sm hover:border-[var(--fifa-gold)] hover:bg-[var(--fifa-gold)]/10 hover:shadow-[0_0_24px_rgba(250,220,102,0.3)] transition-all duration-300"
             >
-              <Calendar size={16} /> View Schedule
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="opacity-90 group-hover:translate-x-0.5 transition-transform duration-200">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+              Final Experience
             </Link>
           </motion.div>
         </div>
