@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { ArrowLeft, Trophy, Target, Users, Clock, Award, Star, Zap } from "lucide-react";
@@ -131,6 +131,44 @@ function GalleryCard({ index }: { index: number }) {
   );
 }
 
+/* ── YouTube Facade ── */
+function YouTubeFacade({ videoId, title, thumbnail }: { videoId: string; title: string; thumbnail: string }) {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  if (isPlaying) {
+    return (
+      <iframe 
+        src={`https://www.youtube.com/embed/${videoId}?autoplay=1`} 
+        title={title}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        className="w-full aspect-video rounded-2xl overflow-hidden border border-[var(--fifa-gold)]/20 bg-[var(--bg-secondary)] shadow-[0_0_30px_rgba(250,220,102,0.1)]"
+      />
+    );
+  }
+
+  return (
+    <div 
+      className="relative w-full aspect-video rounded-2xl overflow-hidden border border-[var(--fifa-gold)]/20 bg-[var(--bg-secondary)] shadow-[0_0_30px_rgba(250,220,102,0.1)] cursor-pointer group"
+      onClick={() => setIsPlaying(true)}
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img 
+        src={`/images/${encodeURIComponent(thumbnail)}`} 
+        alt={title} 
+        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+      />
+      <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+        <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[var(--fifa-gold)]/90 backdrop-blur-sm flex items-center justify-center shadow-[0_0_30px_rgba(250,220,102,0.4)] group-hover:scale-110 transition-transform duration-300">
+          <svg className="w-8 h-8 sm:w-10 sm:h-10 text-[var(--bg-base)] ml-1" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 /* ═══════════════════════════════════════════ */
 export default function FinalExperiencePage() {
   useEffect(() => {
@@ -252,12 +290,10 @@ export default function FinalExperiencePage() {
           <section id="match-highlights">
             <SectionTitle>Match Highlights</SectionTitle>
 
-            <iframe 
-              src="https://www.youtube.com/embed/6HaHNYjnghE" 
-              title="Final Match Highlights"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full aspect-video rounded-2xl overflow-hidden border border-[var(--fifa-gold)]/20 bg-[var(--bg-secondary)] shadow-[0_0_30px_rgba(250,220,102,0.1)]"
+            <YouTubeFacade 
+              videoId="6HaHNYjnghE" 
+              title="Final Match Highlights" 
+              thumbnail="Match Highlights.jpg" 
             />
 
             {/* Match Summary */}
@@ -288,12 +324,10 @@ export default function FinalExperiencePage() {
         <FadeIn>
           <section id="halftime-show">
             <SectionTitle>Half-Time Show</SectionTitle>
-            <iframe 
-              src="https://www.youtube.com/embed/B7hIiaXBpco" 
-              title="Half-Time Show"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full aspect-video rounded-2xl overflow-hidden border border-[var(--fifa-gold)]/20 bg-[var(--bg-secondary)] shadow-[0_0_30px_rgba(250,220,102,0.1)]"
+            <YouTubeFacade 
+              videoId="B7hIiaXBpco" 
+              title="Half-Time Show" 
+              thumbnail="Half-Time Show.jpg" 
             />
             <p className="text-center text-[var(--text-muted)] text-sm mt-4 max-w-lg mx-auto leading-relaxed">
               A spectacular live performance marked the midpoint of the 2026 FIFA World Cup Final, 
@@ -311,12 +345,10 @@ export default function FinalExperiencePage() {
             }}>
               <div className="rounded-[22px] p-6 sm:p-8" style={{ background: "var(--bg-card)" }}>
                 <SectionTitle>World Champions Celebration</SectionTitle>
-                <iframe 
-                  src="https://www.youtube.com/embed/BRv3KW-NIQc" 
-                  title="World Champions Celebration"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full aspect-video rounded-2xl overflow-hidden border border-[var(--fifa-gold)]/20 bg-[var(--bg-secondary)] shadow-[0_0_30px_rgba(250,220,102,0.1)]"
+                <YouTubeFacade 
+                  videoId="BRv3KW-NIQc" 
+                  title="World Champions Celebration" 
+                  thumbnail="World Champions Celebration.jpg" 
                 />
                 <div className="mt-6 grid grid-cols-2 sm:grid-cols-5 gap-2 text-center">
                   {["Medal Ceremony", "Trophy Lift", "Champions Celebration", "Fireworks", "Crowd Celebration"].map(item => (
