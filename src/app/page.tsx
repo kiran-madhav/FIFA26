@@ -518,9 +518,9 @@ export default function HomePage() {
               { country: "Italy", count: 4, years: "1934, 1938, 1982, 2006", flag: "🇮🇹" },
               { country: "Argentina", count: 3, years: "1978, 1986, 2022", flag: "🇦🇷" },
               { country: "France", count: 2, years: "1998, 2018", flag: "🇫🇷" },
+              { country: "Spain", count: 2, years: "2010, 2026", flag: "🇪🇸" },
               { country: "Uruguay", count: 2, years: "1930, 1950", flag: "🇺🇾" },
               { country: "England", count: 1, years: "1966", flag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿" },
-              { country: "Spain", count: 1, years: "2010", flag: "🇪🇸" },
             ].map((winner, i) => (
               <motion.div
                 key={winner.country}
