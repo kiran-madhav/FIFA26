@@ -1,34 +1,10 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowLeft, Trophy, Target, Users, Clock, Award, Star, Zap } from "lucide-react";
-
-/* ── Fade-in wrapper ── */
-function FadeIn({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 28 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.65, delay, ease: "easeOut" }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-}
-
-/* ── Section Title ── */
-function SectionTitle({ children }: { children: React.ReactNode }) {
-  return (
-    <h2 className="font-display text-2xl sm:text-3xl text-white text-center mb-8 tracking-wide">
-      <span className="text-gradient-gold">{children}</span>
-    </h2>
-  );
-}
+import { FadeIn } from "@/components/ui/FadeIn";
+import { SectionTitle } from "@/components/ui/SectionTitle";
 
 /* ── Video Placeholder ── */
 function VideoPlaceholder({ id, label }: { id: string; label: string }) {

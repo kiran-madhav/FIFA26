@@ -1,9 +1,10 @@
 // Football Data API Client
 // API: football-data.org
 // Auth: X-Auth-Token header
+import * as Sentry from "@sentry/nextjs";
 
 const API_BASE = "https://api.football-data.org/v4";
-const API_TOKEN = process.env.NEXT_PUBLIC_FOOTBALL_API_TOKEN || "d1228ff63c344cb3a18067ccba7aa03f";
+const API_TOKEN = process.env.NEXT_PUBLIC_FOOTBALL_API_TOKEN ?? "";
 
 const headers = {
   "X-Auth-Token": API_TOKEN,
@@ -18,6 +19,7 @@ async function fetchApi<T>(path: string): Promise<T | null> {
     }
     return res.json() as Promise<T>;
   } catch (err) {
+    Sentry.captureException(err, { extra: { path } });
     console.warn(`API fetch failed for ${path}:`, err);
     return null;
   }

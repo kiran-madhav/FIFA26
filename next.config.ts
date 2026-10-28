@@ -23,4 +23,7 @@ const nextConfig: NextConfig = {
   },
 };
 
+// Sentry source-map uploads can be enabled later via:
+//   npx @sentry/wizard@latest -i nextjs
+// which will auto-patch this file with withSentryConfig()
 export default nextConfig;

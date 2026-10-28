@@ -1,6 +1,7 @@
 "use client";
 import { useState, useMemo, useEffect } from "react";
 import fpPromise from "@fingerprintjs/fingerprintjs";
+import * as Sentry from "@sentry/nextjs";
 import { supabase } from "@/lib/supabase";
 import confetti from "canvas-confetti";
 import { useRouter } from "next/navigation";
@@ -668,6 +669,7 @@ export default function PollsPage() {
     setIsSubmitting(false);
 
     if (error) {
+      Sentry.captureException(error, { extra: { fingerprint, teamId: prediction.teamId } });
       if (error.message.includes('DUPLICATE_SUBMISSION')) {
         alert("You have already submitted your predictions!");
       } else {
